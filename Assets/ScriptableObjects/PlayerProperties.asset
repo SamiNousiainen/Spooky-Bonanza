@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ee3e3fc1291a549a67a3fe2746ff53, type: 3}
   m_Name: PlayerProperties
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3
   jumpHeight: 2
-  gravityModifier: -9.81
+  gravityModifier: -20
   hitPoints: 0

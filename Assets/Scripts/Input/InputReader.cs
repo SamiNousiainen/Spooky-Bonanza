@@ -28,15 +28,11 @@ public class InputReader : ScriptableObject, PlayerInput.IPlayerActions {
     public void OnJump(InputAction.CallbackContext context) {
         if (context.performed) {
             JumpPressed = true;
-            Debug.Log(JumpPressed);
-            //ConsumeJumpInput();
         }
     }
 
-    public bool ConsumeJumpInput() {
-        
+    public bool ConsumeJumpInput() {       
         if (JumpPressed == true) {
-            Debug.Log(JumpPressed + "!!");
             JumpPressed = false;
             return true;
         }
