@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2476689935937506049}
   - component: {fileID: 2342101463511219348}
   - component: {fileID: 2011125722754099833}
+  - component: {fileID: 5664876260176373687}
   m_Layer: 0
   m_Name: MovingPlatform
   m_TagString: Untagged
@@ -122,4 +123,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45791c05748f6d64f86bc6c3931504ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: []
+  point1: {fileID: 0}
+  point2: {fileID: 0}
+  speed: 1
+--- !u!65 &5664876260176373687
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551468680967934853}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
+  m_Center: {x: 0, y: 1, z: 0}

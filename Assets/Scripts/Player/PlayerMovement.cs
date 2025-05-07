@@ -1,5 +1,5 @@
-using UnityEngine;
 using KBCore.Refs;
+using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour {
@@ -60,6 +60,10 @@ public class PlayerMovement : MonoBehaviour {
         if (inputReader.ConsumeJumpInput() == true && isGrounded == true) {
             velocity.y = Mathf.Sqrt(playerProperties.jumpHeight * -2f * playerProperties.gravityModifier);
         }
+    }
+
+    public void LaunchPlayer(float jumpForce) {
+        velocity.y = jumpForce;
     }
 
     private void ApplyGravity() {

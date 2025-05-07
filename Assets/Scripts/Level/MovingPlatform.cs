@@ -1,4 +1,3 @@
-using System.Net;
 using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour {
@@ -8,13 +7,13 @@ public class MovingPlatform : MonoBehaviour {
     [SerializeField] private float speed = 1f;
 
     private Vector3 targetPosition;
-    private int direction = 1; 
+    private int direction = 1;
 
     private void Awake() {
         transform.position = point1.position;
     }
 
-    void Update() {
+    void FixedUpdate() {
         Move();
         CheckDirection();
     }
@@ -36,5 +35,14 @@ public class MovingPlatform : MonoBehaviour {
         } else {
             return point2.position;
         }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        other.transform.SetParent(transform);
+    }
+
+    private void OnTriggerExit(Collider other) {
+        other.transform.SetParent(null);
+
     }
 }
