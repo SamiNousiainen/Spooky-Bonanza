@@ -22,7 +22,7 @@ public class GhostPatrolRoute : MonoBehaviour {
             reversing = false;
         }
 
-        NavMesh.SamplePosition(patrolRouteParent.GetChild(currentPatrolPoint).position, out NavMeshHit hit, 20f, NavMesh.AllAreas);
+        NavMesh.SamplePosition(patrolRouteParent.GetChild(currentPatrolPoint).position, out NavMeshHit hit, 4f, NavMesh.AllAreas);
         return hit.position;
     }
 }

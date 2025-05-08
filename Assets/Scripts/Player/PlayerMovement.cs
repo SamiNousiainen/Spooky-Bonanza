@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour {
         HandleJump();
         ApplyGravity();
         GroundCheck();
+        RoofCheck();
     }
 
     private void HandleMovement() {
@@ -77,6 +78,13 @@ public class PlayerMovement : MonoBehaviour {
 
     private void GroundCheck() {
         isGrounded = Physics.CheckSphere(groundCheckTransform.position, groundCheckRadius, LayerMask.GetMask("Walkable Surface"));
+    }
+
+    private void RoofCheck() {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.up, out hit, 0.6f)) {
+            velocity.y = -2f;
+        }
     }
 
     private void OnDrawGizmos() {

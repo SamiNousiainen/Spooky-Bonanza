@@ -83,6 +83,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
 
     private void Attack() {
+        //TODO karkkien varastus
         Debug.Log("yoink! Hit the bricks!!");
         currentState = EnemyState.Flee;
         candyStolen = true;

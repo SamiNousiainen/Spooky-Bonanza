@@ -31,15 +31,6 @@ public class MovingPlatform : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter(Collider other) {
-        other.transform.SetParent(transform);
-    }
-
-    private void OnTriggerExit(Collider other) {
-        other.transform.SetParent(null);
-
-    }
-
     private void OnDrawGizmos() {
         if (points != null) {
             for (int i = 0; i < points.Length - 1; i++) {

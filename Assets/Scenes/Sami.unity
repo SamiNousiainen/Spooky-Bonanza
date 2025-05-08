@@ -953,6 +953,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1853302484587588244, guid: d23e28d12534bd545a376b0633221726, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853302484587588244, guid: d23e28d12534bd545a376b0633221726, type: 3}
       propertyPath: patrolRouteParent
       value: 
       objectReference: {fileID: 1597205247}
