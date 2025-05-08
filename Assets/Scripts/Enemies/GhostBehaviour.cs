@@ -15,6 +15,8 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
     private EnemyState currentState = EnemyState.Default;
     private GhostPatrolRoute ghostPatrolRoute;
 
+    private bool candyStolen = false;
+
     //components
     [HideInInspector, SerializeField, Self] private NavMeshAgent agent;
 
@@ -24,7 +26,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
     }
 
     private void Update() {
-        Debug.Log(currentState);
+       
         Vector3 playerPos = Player.instance.transform.position;
         float distanceToPlayer = Vector3.Distance(transform.position, playerPos);
 
@@ -33,12 +35,13 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
             case EnemyState.Default:
                 if (agent.remainingDistance <= agent.stoppingDistance || agent.isStopped) {
                     agent.speed = ghostProperties.partolMoveSpeed;
-                    Vector3 point = ghostPatrolRoute.GetNextPatrolPoint();
-                    agent.SetDestination(point);
+                    Vector3 targetPoint = ghostPatrolRoute.GetNextPatrolPoint();
+                    agent.SetDestination(targetPoint);
+                    Debug.DrawLine(transform.position, targetPoint);
                     agent.isStopped = false;
                 }
 
-                if (distanceToPlayer <= ghostProperties.detectionRange) {
+                if (distanceToPlayer <= ghostProperties.detectionRange && candyStolen == false) {
                     currentState = EnemyState.Chase;
                     Debug.Log("player detected");
                 }
@@ -57,14 +60,22 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
             case EnemyState.Flee:
                 agent.speed = ghostProperties.fleeMoveSpeed;
-
                 Vector3 fleeDirection = (transform.position - playerPos).normalized;
-                float fleeDistance = Random.Range(20f, 30f);
-                Vector3 targetPos = transform.position + fleeDirection * fleeDistance;
 
-                if (NavMesh.SamplePosition(targetPos, out NavMeshHit hit, 5f, NavMesh.AllAreas)) {
-                    agent.SetDestination(hit.position);
-                    currentState = EnemyState.Default;
+                int maxAttempts = 10;
+                float sampleRadius = 4f;
+                
+                for (int i = 0; i < maxAttempts; i++) {
+                    float fleeDistance = Random.Range(20f, 30f);
+                    Vector3 targetPos = transform.position + fleeDirection * fleeDistance;
+
+                    targetPos += Random.insideUnitSphere * 2f;
+
+                    if (NavMesh.SamplePosition(targetPos, out NavMeshHit hit, sampleRadius, NavMesh.AllAreas)) {
+                        agent.SetDestination(hit.position);
+                        currentState = EnemyState.Default;
+                        break;
+                    }
                 }
                 break;
         }
@@ -74,6 +85,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
     private void Attack() {
         Debug.Log("yoink! Hit the bricks!!");
         currentState = EnemyState.Flee;
+        candyStolen = true;
     }
 
     private void OnDrawGizmos() {
@@ -81,6 +93,5 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
         Gizmos.DrawWireSphere(transform.position, ghostProperties.detectionRange);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, ghostProperties.attackRange);
-
     }
 }

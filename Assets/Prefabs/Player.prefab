@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 132657836499834516}
   - component: {fileID: -656007375641647150}
   - component: {fileID: 374257138193211574}
-  m_Layer: 2
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 5950019364317525166}
   - component: {fileID: 5106613459466978712}
   - component: {fileID: 8715585066619329895}
-  m_Layer: 2
+  m_Layer: 3
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4218444695604006624}
-  m_Layer: 2
+  m_Layer: 3
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

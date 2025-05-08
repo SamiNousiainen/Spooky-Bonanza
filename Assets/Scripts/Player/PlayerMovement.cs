@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void GroundCheck() {
-        isGrounded = Physics.CheckSphere(groundCheckTransform.position, groundCheckRadius);
+        isGrounded = Physics.CheckSphere(groundCheckTransform.position, groundCheckRadius, LayerMask.GetMask("Walkable Surface"));
     }
 
     private void OnDrawGizmos() {
