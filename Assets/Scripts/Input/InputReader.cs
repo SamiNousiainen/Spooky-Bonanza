@@ -31,6 +31,12 @@ public class InputReader : ScriptableObject, PlayerInput.IPlayerActions {
         }
     }
 
+    public void OnAttack(InputAction.CallbackContext context) {
+        if (context.performed) { 
+            Player.instance.Attack();
+        }
+    }
+
     public bool ConsumeJumpInput() {       
         if (JumpPressed == true) {
             JumpPressed = false;
