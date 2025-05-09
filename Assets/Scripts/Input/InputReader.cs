@@ -37,6 +37,11 @@ public class InputReader : ScriptableObject, PlayerInput.IPlayerActions {
         }
     }
 
+    public void OnGlide(InputAction.CallbackContext context)
+    {
+
+    }
+
     public bool ConsumeJumpInput() {       
         if (JumpPressed == true) {
             JumpPressed = false;
