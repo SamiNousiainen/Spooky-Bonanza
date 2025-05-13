@@ -17,3 +17,4 @@ MonoBehaviour:
   chaseMoveSpeed: 2
   attackRange: 1
   detectionRange: 3
+  hitPoints: 1

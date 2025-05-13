@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour, IDamageable {
 
+    [SerializeField] private GameObject candyPrefab;
     [SerializeField] private float maxHealth = 3f;
     private float currentHealth;
     
@@ -13,7 +14,14 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
         currentHealth -= damage;
 
         if (currentHealth <= 0) {
+            DropCandy();
             Destroy(gameObject);
+        }
+    }
+
+    public void DropCandy() {
+        if (candyPrefab != null) {
+            Instantiate(candyPrefab, transform.position, Quaternion.identity);
         }
     }
 }
