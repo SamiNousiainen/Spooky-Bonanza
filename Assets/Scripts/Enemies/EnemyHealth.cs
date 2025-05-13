@@ -34,7 +34,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
             GameObject prefab = candyPrefabs[Random.Range(0, candyPrefabs.Length)];
 
             Vector3 offset = Random.insideUnitSphere * spawnRadius;
-            offset.y = Mathf.Abs(offset.y); // make sure it's above ground
+            offset.y = Mathf.Abs(offset.y);
 
             GameObject candy = Instantiate(prefab, transform.position + offset, Quaternion.identity);
 
