@@ -13,7 +13,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
     [SerializeField] private float spawnForce = 2f;
     [SerializeField] private float spawnRadius = 2f;
 
-    
+
     void Awake() {
         currentHealth = maxHealth;
     }
@@ -22,8 +22,10 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
         currentHealth -= damage;
 
         if (currentHealth <= 0) {
+            //vois olla omassa funktiossa
             DropCandy();
             Destroy(gameObject);
+            //death anim + particle effect
         }
     }
 

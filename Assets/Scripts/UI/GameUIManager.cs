@@ -1,14 +1,6 @@
-using DG.Tweening;
-using DG.Tweening.Core.Easing;
 using System.Collections;
 using TMPro;
-using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.Audio;
-using UnityEngine.Rendering;
-using UnityEngine.Rendering.Universal;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 /// <summary>
 /// TODO, kaikki lev‰ll‰‰n
 /// </summary>
@@ -39,7 +31,7 @@ public class GameUIManager : MonoBehaviour {
 
 
 
-    
+
 
     private void Awake() {
         if (instance == null) {
@@ -54,7 +46,7 @@ public class GameUIManager : MonoBehaviour {
     }
 
     private void OnDisable() {
-        
+
     }
 
     private void Start() {
@@ -62,22 +54,22 @@ public class GameUIManager : MonoBehaviour {
     }
 
     public void UpdatePumpkinAmount() {
-        pumpkinAmountText.DOFade(1f, 0f);
+        //pumpkinAmountText.DOFade(1f, 0f);
         pumpkinAmountText.text = "Pumpkins: " + InventoryManager.instance.Data.collectedPumpkins.Count;
         //purkkaratkasu
-        pumpkinAmountText.DOFade(0f, 5f);
+        //pumpkinAmountText.DOFade(0f, 5f);
 
     }
 
     public void UpdateCandyAmount() {
         candyAmountText.text = "Candy: " + InventoryManager.instance.Data.candyCount;
-       
+
     }
 
     private IEnumerator FadeUI() {
         //TODO
         yield return new WaitForSeconds(2f);
-        
+
     }
 
     #region UI Callbacks

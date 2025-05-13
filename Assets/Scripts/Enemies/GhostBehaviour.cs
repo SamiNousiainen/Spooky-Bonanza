@@ -1,7 +1,6 @@
-using System.Collections;
+using KBCore.Refs;
 using UnityEngine;
 using UnityEngine.AI;
-using KBCore.Refs;
 
 /// <summary>
 /// Ghost enemy AI
@@ -29,7 +28,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
     }
 
     private void Update() {
-       
+
         Vector3 playerPos = Player.instance.transform.position;
         float distanceToPlayer = Vector3.Distance(transform.position, playerPos);
 
@@ -67,7 +66,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
                 int maxAttempts = 10;
                 float sampleRadius = 4f;
-                
+
                 for (int i = 0; i < maxAttempts; i++) {
                     float fleeDistance = Random.Range(20f, 30f);
                     Vector3 targetPos = transform.position + fleeDirection * fleeDistance;
@@ -86,7 +85,6 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
 
     private void Attack() {
-        //TODO karkkien varastus
         if (InventoryManager.instance.Data.candyCount < stealAmount) {
             currentState = EnemyState.Flee;
             Debug.Log("no candy found, escape!");
