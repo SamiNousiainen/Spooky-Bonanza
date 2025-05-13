@@ -13,19 +13,29 @@ public class PlayerMovement : MonoBehaviour
 
     //private Vector2 currentMovementInput;
     //private Vector3 currentMovement;
-    private bool isMovementPressed;
     private Vector3 velocity;
 
     //private float rotationFactorPerFrame = 15f;
     private float gravity = -9.8f;
     private float groundedGravity = -.05f;
 
-    private bool isJumpPressed = false;
+    private bool isJumpPressed;
     private float initialJumpVelocity;
     private float maxJumpHeight = 4.0f;
     private float maxJumpTime = 0.75f;
-    //private bool isJumping = false;
-    //private float timeToApex;
+    private bool isJumping = false;
+    private float timeToApex;
+
+    [SerializeField] private float coyoteTime = 0.2f;
+    private float coyoteTimeCounter;
+
+    [SerializeField] private float jumpBufferTime = 0.2f;
+    private float jumpBufferCounter;
+
+    private void OnValidate()
+    {
+        this.ValidateRefs();
+    }
 
     private void Awake()
     {
@@ -34,63 +44,21 @@ public class PlayerMovement : MonoBehaviour
         {
             cameraTransform = Camera.main.transform;
         }
-        //animator = GetComponent<Animator>();
-
-        //isWalkingHash = Animator.StringToHash("isWalking");
-        //isRunningHash = Animator.StringToHash("isRunning");
-        // = Animator.StringToHash("isJumping");
 
         SetUpJumpVariable();
     } // Awake
 
-    public void LaunchPlayer(float jumpForce)
-    {
-        velocity.y = jumpForce;
-    }
-
-    void HandleGravity()
-    {
-        bool isFalling = velocity.y <= 0.0f || !isJumpPressed;
-        float fallMultiplier = 2.0f;
-
-        if (characterController.isGrounded && velocity.y < 0f)
-        {
-            /*if (isJumpAnimating)
-            {
-                animator.SetBool(isJumpingHash, false);
-                isJumpAnimating = false;
-            }*/
-            velocity.y = -2f;
-        }
-        velocity.y += playerProperties.gravityModifier * Time.deltaTime;
-        characterController.Move(new Vector3(0f, velocity.y, 0f) * Time.deltaTime);
-
-        /*else if (isFalling)
-        {
-            float previousYVelocity = velocity.y;
-            float newYVelocity = velocity.y + (gravity * fallMultiplier * Time.deltaTime);
-            float nextYVelocity = Mathf.Max((previousYVelocity + newYVelocity) * .5f, -20.0f);
-            velocity.y = nextYVelocity;
-        }
-        else
-        {
-            float previousYVelocity = velocity.y;
-            float newYVelocity = velocity.y + (gravity * Time.deltaTime);
-            float nextYVelocity = (previousYVelocity + newYVelocity) * .5f;
-            velocity.y = nextYVelocity;
-        }*/
-    } //HandleGravity
-
     void Update()
     {
         HandleMovement();
-        //HandleAnimation();
+        isJumpPressed = inputReader.IsJumpPressed;
         HandleGravity();
         HandleJump();
     } // Update
+
     void SetUpJumpVariable()
     {
-        float timeToApex = maxJumpTime / 2;
+        timeToApex = maxJumpTime / 2;
         gravity = (-2 * maxJumpHeight) / Mathf.Pow(timeToApex, 2);
         initialJumpVelocity = (2 * maxJumpHeight) / timeToApex;
     } // SetUpJumpVariable
@@ -118,26 +86,79 @@ public class PlayerMovement : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
         }
-    } // HandleRotation
-    void HandleJump()
+    } // HandleMovement
+
+    public void LaunchPlayer(float jumpForce)
     {
-        if (inputReader.ConsumeJumpInput() == true && characterController.isGrounded == true)
+        velocity.y = jumpForce;
+    }
+
+    void HandleGravity()
+    {
+        bool isFalling = velocity.y <= 0.0f || !isJumpPressed;
+        float fallMultiplier = 2.0f;
+
+        if (characterController.isGrounded && velocity.y < 0f)
         {
-            velocity.y = Mathf.Sqrt(playerProperties.jumpHeight * -2f * playerProperties.gravityModifier);
+            velocity.y = groundedGravity;
+        }
+        else if (isFalling)
+        {
+            float previousYVelocity = velocity.y;
+            float newYVelocity = velocity.y + (gravity * fallMultiplier * Time.deltaTime);
+            float nextYVelocity = Mathf.Max((previousYVelocity + newYVelocity) * 0.5f, -20.0f);
+            velocity.y = nextYVelocity;
         }
 
-        /*if (!isJumping && characterController.isGrounded && isJumpPressed)
+        else
         {
-            //animator.SetBool(isJumpingHash, true);
-            //isJumpAnimating = true;
+            float previousYVelocity = velocity.y;
+            float newYVelocity = velocity.y + (gravity * Time.deltaTime);
+            float nextYVelocity = (previousYVelocity + newYVelocity) * 0.5f;
+            velocity.y = nextYVelocity;
+        }
+
+        //velocity.y += playerProperties.gravityModifier * Time.deltaTime;
+        characterController.Move(new Vector3(0f, velocity.y, 0f) * Time.deltaTime);
+    } //HandleGravity
+
+    void HandleJump()
+    {
+        if (jumpBufferCounter > 0f && coyoteTimeCounter > 0f && isJumpPressed && characterController.isGrounded)
+        {
             isJumping = true;
             velocity.y = initialJumpVelocity * .5f;
+            jumpBufferCounter = 0f;
+            coyoteTimeCounter = 0f;
         }
-        else if (!isJumpPressed && isJumping && characterController.isGrounded)
+        else if (!isJumpPressed && velocity.y > 0f && isJumping)
         {
-            isJumping = false;*/
+            isJumping = false;
         }
     } // HandleJump
+
+    private void FixedUpdate()
+    {
+        // P‰ivitet‰‰n coyote time ja jump bufferin laskenta
+        if (characterController.isGrounded)
+        {
+            coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+
+        if (isJumpPressed)
+        {
+            jumpBufferCounter = jumpBufferTime;
+        }
+        else
+        {
+            jumpBufferCounter -= Time.deltaTime;
+        }
+    }
+} 
 
     /*void OnMovementInput(InputAction.CallbackContext context)
     {
