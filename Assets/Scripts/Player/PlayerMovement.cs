@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField, Self] private CharacterController characterController;
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private PlayerProperties playerProperties;
+    [SerializeField] private LayerMask groundMask;
 
     //private Vector2 currentMovementInput;
     //private Vector3 currentMovement;
@@ -21,8 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isJumpPressed;
     private float initialJumpVelocity;
-    private float maxJumpHeight = 4.0f;
-    private float maxJumpTime = 0.75f;
+    private float maxJumpHeight = 6.0f;
+    private float maxJumpTime = 1.2f;
     private bool isJumping = false;
     private float timeToApex;
 
@@ -107,6 +108,12 @@ public class PlayerMovement : MonoBehaviour
                 velocity.y = -2f; 
             }
         }
+    }
+
+    private bool CheckGround()
+    {
+        RaycastHit hit;
+        return Physics.Raycast(transform.position, Vector3.down, out hit, 0.1f, groundMask);
     }
 
     void HandleGravity()

@@ -9,6 +9,7 @@ public class InputReader : ScriptableObject, PlayerInput.IPlayerActions {
     private PlayerInput playerInput;
 
     public bool JumpPressed { get; private set; }
+    public bool GlidePressed { get; private set; }
 
     public bool IsJumpPressed => playerInput.Player.Jump.ReadValue<float>() > 0;
 
@@ -41,6 +42,10 @@ public class InputReader : ScriptableObject, PlayerInput.IPlayerActions {
 
     public void OnGlide(InputAction.CallbackContext context)
     {
+        if (context.performed)
+        {
+            GlidePressed = true;
+        }
 
     }
 
