@@ -127,6 +127,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  candyPrefabs:
+  - {fileID: 3407659217935857711, guid: dc5b896b328e9624691bbf473752341e, type: 3}
+  - {fileID: 3407659217935857711, guid: 06cbb64c3c299b14080ffa92538a8c76, type: 3}
+  - {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+  candyDropAmount: 3
+  spawnForce: 2
+  spawnRadius: 2
 --- !u!114 &5165426774182224874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostProperties: {fileID: 11400000, guid: 8802595f139835a45b54aef6632cb0d9, type: 2}
   agent: {fileID: 7125191807010703543}
+  stealAmount: 2
 --- !u!114 &1853302484587588244
 MonoBehaviour:
   m_ObjectHideFlags: 0

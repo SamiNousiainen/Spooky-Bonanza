@@ -8,7 +8,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
     private float currentHealth;
 
     [Header("Candy drop settings")]
-    [SerializeField] private GameObject[] candyPrefabs;
+    [SerializeField] private GameObject candyPrefab;
     [SerializeField] private int candyDropAmount = 3;
     [SerializeField] private float spawnForce = 2f;
     [SerializeField] private float spawnRadius = 2f;
@@ -28,15 +28,15 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
     }
 
     private void DropCandy() {
-        if (candyPrefabs.Length == 0) return;
+        //if (candyPrefabs.Length == 0) return;
 
         for (int i = 0; i < candyDropAmount; i++) {
-            GameObject prefab = candyPrefabs[Random.Range(0, candyPrefabs.Length)];
+            //GameObject prefab = candyPrefabs[Random.Range(0, candyPrefabs.Length)];
 
             Vector3 offset = Random.insideUnitSphere * spawnRadius;
             offset.y = Mathf.Abs(offset.y);
 
-            GameObject candy = Instantiate(prefab, transform.position + offset, Quaternion.identity);
+            GameObject candy = Instantiate(candyPrefab, transform.position + offset, Quaternion.identity);
 
             Rigidbody rb = candy.GetComponent<Rigidbody>();
             if (rb != null) {

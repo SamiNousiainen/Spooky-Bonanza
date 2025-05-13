@@ -1,5 +1,6 @@
 using DG.Tweening;
 using DG.Tweening.Core.Easing;
+using System.Collections;
 using TMPro;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -8,7 +9,9 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+/// <summary>
+/// TODO, kaikki lev‰ll‰‰n
+/// </summary>
 public class GameUIManager : MonoBehaviour {
 
     public static GameUIManager instance;
@@ -44,7 +47,6 @@ public class GameUIManager : MonoBehaviour {
         } else {
             Destroy(gameObject);
         }
-
     }
 
     private void OnEnable() {
@@ -55,9 +57,27 @@ public class GameUIManager : MonoBehaviour {
         
     }
 
-    public void UpdateUI() {
-        candyAmountText.text = "Candy: " + InventoryManager.instance.Data.candyCount;
+    private void Start() {
+        UpdatePumpkinAmount();
+    }
+
+    public void UpdatePumpkinAmount() {
+        pumpkinAmountText.DOFade(1f, 0f);
         pumpkinAmountText.text = "Pumpkins: " + InventoryManager.instance.Data.collectedPumpkins.Count;
+        //purkkaratkasu
+        pumpkinAmountText.DOFade(0f, 5f);
+
+    }
+
+    public void UpdateCandyAmount() {
+        candyAmountText.text = "Candy: " + InventoryManager.instance.Data.candyCount;
+       
+    }
+
+    private IEnumerator FadeUI() {
+        //TODO
+        yield return new WaitForSeconds(2f);
+        
     }
 
     #region UI Callbacks
@@ -92,10 +112,10 @@ public class GameUIManager : MonoBehaviour {
     //    m_liftGammaGain.gamma.Override(new Vector4(1f, 1f, 1f, value));
     //}
 
-    
+
 
     //private void InitializeSettings() {
-        
+
     //}
 
     //TODO

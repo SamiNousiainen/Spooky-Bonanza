@@ -13,10 +13,26 @@ public class Candy : MonoBehaviour {
     public float attractionSpeed = 7f;
     public float snapDistance = 0.5f;
 
+    [Header("Visual randomization")]
+    [SerializeField] private Mesh[] possibleMeshes;
+    [SerializeField] private Material[] possibleMaterials;
+
     private Transform player;
 
     void Start() {
         player = Player.instance.transform;
+
+        //pick a random mesh
+        MeshFilter meshFilter = GetComponent<MeshFilter>();
+        if (possibleMeshes.Length > 0 && meshFilter != null) {
+            meshFilter.mesh = possibleMeshes[Random.Range(0, possibleMeshes.Length)];
+        }
+
+        //pick a random material?
+        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+        if (possibleMaterials.Length > 0 && meshRenderer != null) {
+            meshRenderer.material = possibleMaterials[Random.Range(0, possibleMaterials.Length)];
+        }
     }
 
     void Update() {
@@ -38,7 +54,6 @@ public class Candy : MonoBehaviour {
     private void CollectCandy() {
         InventoryManager.instance.AddCandy();
         Destroy(gameObject);
-        Debug.Log("collected candy ");
     }
 
 }
