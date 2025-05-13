@@ -54,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
         isJumpPressed = inputReader.IsJumpPressed;
         HandleGravity();
         HandleJump();
+        RoofCheck();
     } // Update
 
     void SetUpJumpVariable()
@@ -91,6 +92,21 @@ public class PlayerMovement : MonoBehaviour
     public void LaunchPlayer(float jumpForce)
     {
         velocity.y = jumpForce;
+    }
+
+    private void RoofCheck()
+    {
+        if (!characterController.isGrounded) // Vain ilmassa
+        {
+            RaycastHit hit;
+
+            // Tarkistetaan, onko p‰‰ osunut kattoon
+            if (Physics.Raycast(transform.position, Vector3.up, out hit, 0.6f))
+            {
+                
+                velocity.y = -2f; 
+            }
+        }
     }
 
     void HandleGravity()
