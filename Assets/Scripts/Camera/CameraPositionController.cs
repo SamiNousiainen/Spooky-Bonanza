@@ -1,7 +1,9 @@
 using UnityEngine;
 using Unity.Cinemachine;
-using System.Runtime.CompilerServices;
 
+/// <summary>
+///Class for controlling the values of CinemachinePositionComposer based on player movement
+/// </summary>
 public class CameraPositionController : MonoBehaviour {
 
     private CinemachinePositionComposer positionComposer;
@@ -16,12 +18,12 @@ public class CameraPositionController : MonoBehaviour {
     [SerializeField] private float defaultScreenPosY = 0.18f;
     [SerializeField] private float fallScreenPosY = 0f;
 
-    [SerializeField] private float lerpSpeed = 5f;
+    [SerializeField] private float lerpSpeed = 3f;
 
     private void Start() {
         positionComposer = GetComponent<CinemachinePositionComposer>();
         
-        var player = Player.instance != null ? Player.instance : FindObjectOfType<Player>();
+        var player = Player.instance != null ? Player.instance : FindAnyObjectByType<Player>();
         if (player != null) {
             characterController = player.GetComponent<CharacterController>();
         } else {
