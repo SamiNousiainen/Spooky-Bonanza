@@ -20,6 +20,8 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
     //components
     [HideInInspector, SerializeField, Self] private NavMeshAgent agent;
 
+    [SerializeField] private int stealAmount;
+
     private void Awake() {
         agent.isStopped = true;
         ghostPatrolRoute = GetComponent<GhostPatrolRoute>();
@@ -84,8 +86,14 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
     private void Attack() {
         //TODO karkkien varastus
-        Debug.Log("yoink! Hit the bricks!!");
-        currentState = EnemyState.Flee;
+        if (InventoryManager.instance.Data.candyCount < stealAmount) {
+            currentState = EnemyState.Flee;
+            Debug.Log("no candy found, escape!");
+        } else {
+            InventoryManager.instance.RemoveCandy(stealAmount);
+            Debug.Log("yoink! Hit the bricks!!");
+            currentState = EnemyState.Flee;
+        }
         candyStolen = true;
     }
 

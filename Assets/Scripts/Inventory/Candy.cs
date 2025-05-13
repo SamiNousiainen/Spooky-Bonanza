@@ -38,6 +38,7 @@ public class Candy : MonoBehaviour {
     private void CollectCandy() {
         InventoryManager.instance.AddCandy(candyValue);
         Destroy(gameObject);
+        Debug.Log("collected candy with score value of " + candyValue);
     }
 
 }
