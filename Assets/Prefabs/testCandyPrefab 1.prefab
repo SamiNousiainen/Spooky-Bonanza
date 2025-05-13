@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3858632089721928815}
   - component: {fileID: 4999019723526195246}
   - component: {fileID: 920179034977671943}
-  - component: {fileID: 159761743252064402}
-  - component: {fileID: -1917990243443760163}
+  - component: {fileID: -2942344150089488191}
+  - component: {fileID: 666074082550377372}
   m_Layer: 8
-  m_Name: testCandyPrefab
+  m_Name: testCandyPrefab 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b24cc2bb33e293c43b8918188797eff6, type: 2}
+  - {fileID: 2100000, guid: d60af3ac0ed160f4ab63c215129782d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   attractionRange: 2
   attractionSpeed: 5
   snapDistance: 0.5
---- !u!54 &159761743252064402
+--- !u!54 &-2942344150089488191
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,7 +131,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &-1917990243443760163
+--- !u!65 &666074082550377372
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

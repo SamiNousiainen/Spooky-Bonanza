@@ -2,9 +2,17 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour, IDamageable {
 
-    [SerializeField] private GameObject candyPrefab;
+
+    //health settings
     [SerializeField] private float maxHealth = 3f;
     private float currentHealth;
+
+    [Header("Candy drop settings")]
+    [SerializeField] private GameObject[] candyPrefabs;
+    [SerializeField] private int candyDropAmount = 3;
+    [SerializeField] private float spawnForce = 2f;
+    [SerializeField] private float spawnRadius = 2f;
+
     
     void Awake() {
         currentHealth = maxHealth;
@@ -19,9 +27,22 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
         }
     }
 
-    public void DropCandy() {
-        if (candyPrefab != null) {
-            Instantiate(candyPrefab, transform.position, Quaternion.identity);
+    private void DropCandy() {
+        if (candyPrefabs.Length == 0) return;
+
+        for (int i = 0; i < candyDropAmount; i++) {
+            GameObject prefab = candyPrefabs[Random.Range(0, candyPrefabs.Length)];
+
+            Vector3 offset = Random.insideUnitSphere * spawnRadius;
+            offset.y = Mathf.Abs(offset.y); // make sure it's above ground
+
+            GameObject candy = Instantiate(prefab, transform.position + offset, Quaternion.identity);
+
+            Rigidbody rb = candy.GetComponent<Rigidbody>();
+            if (rb != null) {
+                Vector3 direction = (offset + Vector3.up).normalized;
+                rb.AddForce(direction * spawnForce, ForceMode.Impulse);
+            }
         }
     }
 }

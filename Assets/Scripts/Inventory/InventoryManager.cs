@@ -15,9 +15,9 @@ public class InventoryManager : MonoBehaviour {
         }
     }
 
-    public void AddCandy(int amount) {
+    public void AddCandy() {
 
-        Data.candyCount += amount;
+        Data.candyCount++;
         Debug.Log("total score:" + Data.candyCount);
         //update score UI here
     }

@@ -20,6 +20,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
     //components
     [HideInInspector, SerializeField, Self] private NavMeshAgent agent;
 
+    [Tooltip("How many candies does this ghost steal?")]
     [SerializeField] private int stealAmount;
 
     private void Awake() {

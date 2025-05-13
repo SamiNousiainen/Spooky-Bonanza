@@ -5,8 +5,8 @@ using UnityEngine;
 /// </summary>
 public class Candy : MonoBehaviour {
 
-    [Tooltip("How much score is this candy worth?")]
-    [SerializeField] private int candyValue = 1;
+    //[Tooltip("How much score is this candy worth?")]
+    //[SerializeField] private int candyValue = 1;
 
     [Header("Magnet behaviour settings")]
     public float attractionRange = 5f;
@@ -36,9 +36,9 @@ public class Candy : MonoBehaviour {
     }
 
     private void CollectCandy() {
-        InventoryManager.instance.AddCandy(candyValue);
+        InventoryManager.instance.AddCandy();
         Destroy(gameObject);
-        Debug.Log("collected candy with score value of " + candyValue);
+        Debug.Log("collected candy ");
     }
 
 }
