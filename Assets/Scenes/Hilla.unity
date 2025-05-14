@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 399932914}
   - component: {fileID: 399932913}
   - component: {fileID: 399932912}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 411379995}
   - component: {fileID: 411379994}
   - component: {fileID: 411379993}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,6 +464,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 374257138193211574, guid: 2b35338d64897b64398aa192e3019951, type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 374257138193211574, guid: 2b35338d64897b64398aa192e3019951, type: 3}
+      propertyPath: groundCheckTransform
+      value: 
+      objectReference: {fileID: 640650894}
     - target: {fileID: 1690678845129632132, guid: 2b35338d64897b64398aa192e3019951, type: 3}
       propertyPath: m_Name
       value: Player
@@ -511,8 +519,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1690678845129632132, guid: 2b35338d64897b64398aa192e3019951, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 640650896}
   m_SourcePrefab: {fileID: 100100000, guid: 2b35338d64897b64398aa192e3019951, type: 3}
+--- !u!1 &640650892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1690678845129632132, guid: 2b35338d64897b64398aa192e3019951, type: 3}
+  m_PrefabInstance: {fileID: 640650891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &640650893 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 374257138193211574, guid: 2b35338d64897b64398aa192e3019951, type: 3}
+  m_PrefabInstance: {fileID: 640650891}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640650892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb16e7b8d1f7cb04c8854ce1b546e488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &640650894 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4218444695604006624, guid: 2b35338d64897b64398aa192e3019951, type: 3}
+  m_PrefabInstance: {fileID: 640650891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &640650895 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 132657836499834516, guid: 2b35338d64897b64398aa192e3019951, type: 3}
+  m_PrefabInstance: {fileID: 640650891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &640650896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640650892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c74455527cd081498b318ff3b596a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputReader: {fileID: 11400000, guid: c8f804768a2f44e48ad62a9dc5886aa8, type: 2}
+  playerMovement: {fileID: 640650893}
+  playerProperties: {fileID: 11400000, guid: 8479f8b7a1d2a1f458ad1f299abefa9a, type: 2}
+  characterController: {fileID: 640650895}
+  weaponCollider: {fileID: 0}
+  glideGravity: 2
 --- !u!1 &1008211682
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,7 +688,7 @@ GameObject:
   - component: {fileID: 1115991064}
   - component: {fileID: 1115991063}
   - component: {fileID: 1115991062}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -741,7 +796,7 @@ GameObject:
   - component: {fileID: 1960487504}
   - component: {fileID: 1960487503}
   - component: {fileID: 1960487502}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -987,7 +1042,7 @@ GameObject:
   - component: {fileID: 2118568336}
   - component: {fileID: 2118568335}
   - component: {fileID: 2118568334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

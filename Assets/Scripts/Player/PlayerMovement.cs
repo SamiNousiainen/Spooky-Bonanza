@@ -19,10 +19,14 @@ public class PlayerMovement : MonoBehaviour
     //private float rotationFactorPerFrame = 15f;
     private float gravity = -9.8f;
     private float groundedGravity = -.05f;
+    private bool isGrounded;
+
+    [SerializeField] private Transform groundCheckTransform;
+    [SerializeField] private float groundCheckRadius = 0.2f;
 
     private bool isJumpPressed;
     private float initialJumpVelocity;
-    private float maxJumpHeight = 6.0f;
+    private float maxJumpHeight = 4.0f;
     private float maxJumpTime = 1.2f;
     private bool isJumping = false;
     private float timeToApex;
@@ -51,6 +55,26 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        CheckGround();
+
+        if (isGrounded == true)
+        {
+            coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+
+        if (isJumpPressed)
+        {
+            jumpBufferCounter = jumpBufferTime;
+        }
+        else
+        {
+            jumpBufferCounter -= Time.deltaTime;
+        }
+
         HandleMovement();
         isJumpPressed = inputReader.IsJumpPressed;
         HandleGravity();
@@ -105,23 +129,23 @@ public class PlayerMovement : MonoBehaviour
 
     private void RoofCheck()
     {
-        if (!characterController.isGrounded) // Vain ilmassa
+        if (isGrounded == false) // Vain ilmassa
         {
             RaycastHit hit;
+            int layerMask = ~(1 << LayerMask.NameToLayer("Collectible"));
 
             // Tarkistetaan, onko p‰‰ osunut kattoon
-            if (Physics.Raycast(transform.position, Vector3.up, out hit, 0.6f))
+            if (Physics.SphereCast(transform.position, characterController.radius, Vector3.up, out hit, 0.6f, layerMask))
             {
-                
-                velocity.y = -2f; 
+
+                velocity.y = -2f;
             }
         }
     }
 
-    private bool CheckGround()
+    private void CheckGround()
     {
-        RaycastHit hit;
-        return Physics.Raycast(transform.position, Vector3.down, out hit, 0.1f, groundMask);
+        isGrounded = Physics.SphereCast(transform.position, characterController.radius, Vector3.down, out RaycastHit hit, 0.25f, LayerMask.GetMask("Walkable Surface"));
     }
 
     void HandleGravity()
@@ -129,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
         bool isFalling = velocity.y <= 0.0f || !isJumpPressed;
         float fallMultiplier = 2.0f;
 
-        if (characterController.isGrounded && velocity.y < 0f)
+        if (isGrounded == true && velocity.y < 0f)
         {
             velocity.y = groundedGravity;
         }
@@ -155,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleJump()
     {
-        if (jumpBufferCounter > 0f && coyoteTimeCounter > 0f && isJumpPressed && characterController.isGrounded)
+        if (jumpBufferCounter > 0f && coyoteTimeCounter > 0f && isGrounded == true)
         {
             isJumping = true;
             velocity.y = initialJumpVelocity * .5f;
@@ -168,37 +192,20 @@ public class PlayerMovement : MonoBehaviour
         }
     } // HandleJump
 
-    private void FixedUpdate()
+    private void OnDrawGizmos()
     {
-        // P‰ivitet‰‰n coyote time ja jump bufferin laskenta
-        if (characterController.isGrounded)
-        {
-            coyoteTimeCounter = coyoteTime;
-        }
-        else
-        {
-            coyoteTimeCounter -= Time.deltaTime;
-        }
-
-        if (isJumpPressed)
-        {
-            jumpBufferCounter = jumpBufferTime;
-        }
-        else
-        {
-            jumpBufferCounter -= Time.deltaTime;
-        }
+        Gizmos.DrawWireSphere(groundCheckTransform.position, groundCheckRadius);
     }
-} 
+}
 
-    /*void OnMovementInput(InputAction.CallbackContext context)
-    {
-        currentMovementInput = context.ReadValue<Vector2>();
-        currentMovement.x = currentMovementInput.x;
-        currentMovement.z = currentMovementInput.y;
-        isMovementPressed = currentMovementInput.x != 0 || currentMovementInput.y != 0;
-    } // OnMovementInput*/
-    
+/*void OnMovementInput(InputAction.CallbackContext context)
+{
+    currentMovementInput = context.ReadValue<Vector2>();
+    currentMovement.x = currentMovementInput.x;
+    currentMovement.z = currentMovementInput.y;
+    isMovementPressed = currentMovementInput.x != 0 || currentMovementInput.y != 0;
+} // OnMovementInput*/
+
 
 /*using KBCore.Refs;
 using UnityEngine;
