@@ -10,17 +10,18 @@ using UnityEngine.AI;
 public class GhostBehaviour : ValidatedMonoBehaviour {
 
     [SerializeField] private GhostProperties ghostProperties;
+    [SerializeField] private Transform fleeTarget;
+    [SerializeField] private int stealAmount;
 
     private EnemyState currentState = EnemyState.Default;
     private GhostPatrolRoute ghostPatrolRoute;
-
-    private bool candyStolen = false;
 
     //components
     [HideInInspector, SerializeField, Self] private NavMeshAgent agent;
 
     [Tooltip("How many candies does this ghost steal?")]
-    [SerializeField] private int stealAmount;
+
+    private bool candyStolen = false;
 
     private void Awake() {
         agent.isStopped = true;
@@ -62,24 +63,15 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
             case EnemyState.Flee:
                 agent.speed = ghostProperties.fleeMoveSpeed;
-                Vector3 fleeDirection = (transform.position - playerPos).normalized;
 
-                int maxAttempts = 10;
-                float sampleRadius = 4f;
-
-                for (int i = 0; i < maxAttempts; i++) {
-                    float fleeDistance = Random.Range(20f, 30f);
-                    Vector3 targetPos = transform.position + fleeDirection * fleeDistance;
-
-                    targetPos += Random.insideUnitSphere * 2f;
-
-                    if (NavMesh.SamplePosition(targetPos, out NavMeshHit hit, sampleRadius, NavMesh.AllAreas)) {
-                        agent.SetDestination(hit.position);
-                        currentState = EnemyState.Default;
-                        break;
-                    }
+                if (fleeTarget != null) {
+                    agent.SetDestination(fleeTarget.position);
+                } else {
+                    Debug.LogWarning("Flee target not assigned!");
+                    currentState = EnemyState.Default;
                 }
                 break;
+
         }
     }
 

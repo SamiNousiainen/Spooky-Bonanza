@@ -24,7 +24,9 @@ public class InventoryManager : MonoBehaviour {
 
     public void RemoveCandy(int amount) {
         Data.candyCount -= amount;
-        GameUIManager.instance.UpdateCandyAmount();
+        if (GameUIManager.instance != null) {
+            GameUIManager.instance.UpdateCandyAmount();
+        }
     }
 
     public void AddPumpkin(string id) {
