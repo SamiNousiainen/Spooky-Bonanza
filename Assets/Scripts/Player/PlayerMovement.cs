@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     //private Vector2 currentMovementInput;
     //private Vector3 currentMovement;
-    private Vector3 velocity;
+    public Vector3 velocity;
 
     //private float rotationFactorPerFrame = 15f;
     private float gravity = -9.8f;
@@ -93,6 +93,14 @@ public class PlayerMovement : MonoBehaviour
     public void LaunchPlayer(float jumpForce)
     {
         velocity.y = jumpForce;
+    }
+
+    public void ApplyGlide(float glideFallSpeed)
+    {
+        if (velocity.y < 0f)
+        {
+            velocity.y = Mathf.Max(velocity.y, -glideFallSpeed);
+        }
     }
 
     private void RoofCheck()
