@@ -13,7 +13,7 @@ public class InputReader : ScriptableObject, PlayerInput.IPlayerActions {
 
     public bool IsJumpPressed => playerInput.Player.Jump.ReadValue<float>() > 0;
 
-    public bool IsGlidePressed => playerInput.Player.Jump.ReadValue<float>() > 0;
+    public bool IsGlidePressed => playerInput.Player.Glide.ReadValue<float>() > 0;
 
     private void OnEnable() {
         if (playerInput == null) {

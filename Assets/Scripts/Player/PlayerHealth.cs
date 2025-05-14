@@ -19,4 +19,9 @@ public class PlayerHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void Update()
+    {
+
+    }
 } // Class
