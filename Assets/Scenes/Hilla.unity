@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 411379994}
   - component: {fileID: 411379993}
   m_Layer: 6
-  m_Name: Cube (1)
+  m_Name: taso_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,7 +471,7 @@ PrefabInstance:
     - target: {fileID: 374257138193211574, guid: 2b35338d64897b64398aa192e3019951, type: 3}
       propertyPath: groundCheckTransform
       value: 
-      objectReference: {fileID: 640650894}
+      objectReference: {fileID: 0}
     - target: {fileID: 1690678845129632132, guid: 2b35338d64897b64398aa192e3019951, type: 3}
       propertyPath: m_Name
       value: Player
@@ -540,11 +540,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb16e7b8d1f7cb04c8854ce1b546e488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &640650894 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4218444695604006624, guid: 2b35338d64897b64398aa192e3019951, type: 3}
-  m_PrefabInstance: {fileID: 640650891}
-  m_PrefabAsset: {fileID: 0}
 --- !u!143 &640650895 stripped
 CharacterController:
   m_CorrespondingSourceObject: {fileID: 132657836499834516, guid: 2b35338d64897b64398aa192e3019951, type: 3}
@@ -581,7 +576,7 @@ GameObject:
   - component: {fileID: 1008211684}
   - component: {fileID: 1008211683}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: taso_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -797,7 +792,7 @@ GameObject:
   - component: {fileID: 1960487503}
   - component: {fileID: 1960487502}
   m_Layer: 6
-  m_Name: Plane
+  m_Name: lattia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

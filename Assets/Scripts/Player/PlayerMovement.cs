@@ -21,9 +21,6 @@ public class PlayerMovement : MonoBehaviour
     private float groundedGravity = -.05f;
     private bool isGrounded;
 
-    [SerializeField] private Transform groundCheckTransform;
-    [SerializeField] private float groundCheckRadius = 0.2f;
-
     private bool isJumpPressed;
     private float initialJumpVelocity;
     private float maxJumpHeight = 4.0f;
@@ -191,11 +188,6 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
         }
     } // HandleJump
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(groundCheckTransform.position, groundCheckRadius);
-    }
 }
 
 /*void OnMovementInput(InputAction.CallbackContext context)
