@@ -20,14 +20,12 @@ public class InventoryManager : MonoBehaviour {
         Data.candyCount++;
         Debug.Log("total score:" + Data.candyCount);
         //update score UI here
-        GameUIManager.instance.UpdateUI();
     }
 
     public void RemoveCandy(int amount) {
         Data.candyCount -= amount;
         Debug.Log("Candy removed! total score:" + Data.candyCount);
         //update score UI here
-        GameUIManager.instance.UpdateUI();
     }
 
     public void AddPumpkin(string id) {
@@ -36,7 +34,6 @@ public class InventoryManager : MonoBehaviour {
             Debug.Log("pumpkin ID " + id + " collected");
             Debug.Log("total pumpkins collected: " + Data.collectedPumpkins.Count);
             //update collectible UI here
-            GameUIManager.instance.UpdateUI();
         }
     }
 
