@@ -17,7 +17,9 @@ public class InventoryManager : MonoBehaviour {
 
     public void AddCandy() {
         Data.candyCount++;
-        GameUIManager.instance.UpdateCandyAmount();
+        if (GameUIManager.instance != null) {
+            GameUIManager.instance.UpdateCandyAmount();
+        }
     }
 
     public void RemoveCandy(int amount) {
@@ -29,7 +31,9 @@ public class InventoryManager : MonoBehaviour {
         if (Data.collectedPumpkins.Contains(id) == false) {
             Data.collectedPumpkins.Add(id);
             Debug.Log("pumpkin ID " + id + " collected");
-            GameUIManager.instance.UpdatePumpkinAmount();
+            if (GameUIManager.instance != null) {
+                GameUIManager.instance.UpdatePumpkinAmount();
+            }
         }
     }
 
