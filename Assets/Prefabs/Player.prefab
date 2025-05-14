@@ -93,6 +93,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 0
+  velocity: {x: 0, y: 0, z: 0}
   coyoteTime: 0.2
   jumpBufferTime: 0.2
 --- !u!1 &6573993613755631979
@@ -260,9 +261,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -741832106251744268, guid: d855a2ac537b2184c9647bf0db4b4bdc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -259972160606440404, guid: d855a2ac537b2184c9647bf0db4b4bdc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d855a2ac537b2184c9647bf0db4b4bdc, type: 3}
       propertyPath: m_Name
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d855a2ac537b2184c9647bf0db4b4bdc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8699652204047898494, guid: d855a2ac537b2184c9647bf0db4b4bdc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
