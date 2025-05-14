@@ -104,6 +104,15 @@ MonoBehaviour:
   attractionRange: 2
   attractionSpeed: 5
   snapDistance: 0.5
+  possibleMeshes:
+  - {fileID: 251014939817169093, guid: d514fdc8df731314fa4103e801032708, type: 3}
+  - {fileID: -6090847441327968624, guid: e88b77644b1a4754a9c266104a2c2628, type: 3}
+  - {fileID: 1616691108262468743, guid: ba61db7bf680f1d45ae03c86fbcb90be, type: 3}
+  - {fileID: -1255220166165468868, guid: 41828554fcf88c04cb0bb4deaa9a6d95, type: 3}
+  possibleMaterials:
+  - {fileID: 2100000, guid: c6d99efa422323348b2ff7ea38f25e43, type: 2}
+  - {fileID: 2100000, guid: d60af3ac0ed160f4ab63c215129782d0, type: 2}
+  - {fileID: 2100000, guid: 39281fa077e7d9d42802ea3832b8960d, type: 2}
 --- !u!54 &159761743252064402
 Rigidbody:
   m_ObjectHideFlags: 0

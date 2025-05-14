@@ -46,8 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c11bd95a089f743b4b7530df622572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  candyPrefab: {fileID: 0}
   maxHealth: 3
+  candyPrefab: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+  candyDropAmount: 3
+  spawnForce: 2
+  spawnRadius: 2
 --- !u!136 &1097566983852571490
 CapsuleCollider:
   m_ObjectHideFlags: 0
