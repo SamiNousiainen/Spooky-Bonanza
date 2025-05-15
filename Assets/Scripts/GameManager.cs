@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour {
         });
     }
 
-    public void SceneChange() {
+    public void SceneChange(string sceneName) {
         Time.timeScale = 0f;
 
         var tween = dim.DOFade(1f, 1f);
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour {
 
             OnSceneChange.Invoke();
 
-            SceneManager.LoadScene("2-Dungeon");
+            SceneManager.LoadScene(sceneName);
             Time.timeScale = 1f;
 
         });

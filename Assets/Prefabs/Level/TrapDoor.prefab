@@ -133,6 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door1: {fileID: 1927041141630393593}
   door2: {fileID: 4127308706679382069}
+  door1TargetRotation: {x: 0, y: 0, z: -0.6819984, w: 0.7313537}
+  door2TargetRotation: {x: 0, y: 0, z: 0.6819984, w: 0.7313537}
 --- !u!1001 &1314092783899325372
 PrefabInstance:
   m_ObjectHideFlags: 0
