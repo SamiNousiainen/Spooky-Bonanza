@@ -51,6 +51,7 @@ public class GameUIManager : MonoBehaviour {
 
     private void Start() {
         UpdatePumpkinAmount();
+        UpdateCandyAmount();
     }
 
     public void UpdatePumpkinAmount() {

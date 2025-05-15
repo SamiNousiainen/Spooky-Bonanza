@@ -73,7 +73,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4691165742934749597}
-  m_Layer: 6
+  - component: {fileID: 2563974682586164315}
+  - component: {fileID: 1318013898967095852}
+  m_Layer: 2
   m_Name: TrapDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,6 +98,41 @@ Transform:
   - {fileID: 1564474280887211095}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2563974682586164315
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5172369919957914779}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 1, z: 3}
+  m_Center: {x: 3, y: 0, z: 3}
+--- !u!114 &1318013898967095852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5172369919957914779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef12b6d5891ccae49887368e7bd935d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door1: {fileID: 1927041141630393593}
+  door2: {fileID: 4127308706679382069}
 --- !u!1001 &1314092783899325372
 PrefabInstance:
   m_ObjectHideFlags: 0

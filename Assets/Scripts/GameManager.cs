@@ -11,10 +11,11 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance;
 
     public UnityEvent OnDeath;
-    [SerializeField] private Image m_dim;
+    public UnityEvent OnSceneChange;
+    [SerializeField] private Image dim;
     public Image Dim {
         get {
-            return m_dim;
+            return dim;
         }
     }
     //private SoundBuilder soundBuilder;
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour {
     public void Awake() {
         if (instance == null) {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         } else {
             Destroy(gameObject);
         }
@@ -36,7 +38,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Update() {
-        GameTime += Time.deltaTime;
+        //GameTime += Time.deltaTime;
     }
 
     /// <summary>
@@ -45,7 +47,7 @@ public class GameManager : MonoBehaviour {
     public void PlayerDeath() {
         Time.timeScale = 0f;
 
-        var tween = m_dim.DOFade(1f, 1f);
+        var tween = dim.DOFade(1f, 1f);
         tween.SetUpdate(true); //independent from timescale
         tween.OnComplete(() => {
 
@@ -63,4 +65,19 @@ public class GameManager : MonoBehaviour {
             //}
         });
     }
+
+    public void SceneChange() {
+        Time.timeScale = 0f;
+
+        var tween = dim.DOFade(1f, 1f);
+        tween.SetUpdate(true);
+        tween.OnComplete(() => {
+
+            OnSceneChange.Invoke();
+
+            SceneManager.LoadScene("2-Dungeon");
+            Time.timeScale = 1f;
+
+        });
+        }
 }
