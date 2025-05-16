@@ -8,7 +8,7 @@ public class DealDamage : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            IDamageable damageable = GetComponent<IDamageable>();
+            IDamageable damageable = other.GetComponent<IDamageable>();
             damageable.TakeDamage(damage);
         }
     }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 3f;
-    private float currentHealth;
+    public float currentHealth { get; private set; }
 
     void Awake()
     {
@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        GameUIManager.instance.UpdatePlayerHp();
 
         if (currentHealth <= 0)
         {

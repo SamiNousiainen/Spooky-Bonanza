@@ -52,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
         CheckGround();
 
         if (isGrounded == true)

@@ -10,6 +10,8 @@ public class GameUIManager : MonoBehaviour {
 
     [SerializeField] private TMP_Text candyAmountText;
     [SerializeField] private TMP_Text pumpkinAmountText;
+    [SerializeField] private TMP_Text currentHealthText;
+    private PlayerHealth playerHp;
     //[Header("Pause Menu")]
     //[SerializeField] private AudioMixer m_audioMixer;
     //[SerializeField] private VolumeProfile m_globalVolumeProfile;
@@ -52,18 +54,29 @@ public class GameUIManager : MonoBehaviour {
     private void Start() {
         UpdatePumpkinAmount();
         UpdateCandyAmount();
+        if (Player.instance != null) {
+            playerHp = Player.instance.GetComponent<PlayerHealth>();
+        }
+        UpdatePlayerHp();
+    }
+
+    private void Update() {
+    }
+
+    public void UpdatePlayerHp() {
+        currentHealthText.text = playerHp.currentHealth.ToString();
     }
 
     public void UpdatePumpkinAmount() {
         //pumpkinAmountText.DOFade(1f, 0f);
-        pumpkinAmountText.text = "Pumpkins: " + InventoryManager.instance.Data.collectedPumpkins.Count;
+        pumpkinAmountText.text = InventoryManager.instance.Data.collectedPumpkins.Count.ToString();
         //purkkaratkasu
         //pumpkinAmountText.DOFade(0f, 5f);
 
     }
 
     public void UpdateCandyAmount() {
-        candyAmountText.text = "Candy: " + InventoryManager.instance.Data.candyCount;
+        candyAmountText.text = InventoryManager.instance.Data.candyCount.ToString();
 
     }
 

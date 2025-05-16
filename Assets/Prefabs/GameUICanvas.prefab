@@ -756,6 +756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   candyAmountText: {fileID: 271344279965808854}
   pumpkinAmountText: {fileID: 1941704998130341123}
+  currentHealthText: {fileID: 5911592270703167595}
 --- !u!1 &6870105216206273631
 GameObject:
   m_ObjectHideFlags: 0
