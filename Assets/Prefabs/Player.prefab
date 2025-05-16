@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 132657836499834516}
   - component: {fileID: -656007375641647150}
   - component: {fileID: 374257138193211574}
+  - component: {fileID: -8277710826377856109}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -93,10 +94,26 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   velocity: {x: 0, y: 0, z: 0}
-  groundCheckTransform: {fileID: 0}
-  groundCheckRadius: 0.2
   coyoteTime: 0.2
   jumpBufferTime: 0.2
+--- !u!114 &-8277710826377856109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690678845129632132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c74455527cd081498b318ff3b596a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputReader: {fileID: 11400000, guid: c8f804768a2f44e48ad62a9dc5886aa8, type: 2}
+  playerMovement: {fileID: 0}
+  playerProperties: {fileID: 11400000, guid: 8479f8b7a1d2a1f458ad1f299abefa9a, type: 2}
+  characterController: {fileID: 132657836499834516}
+  weaponCollider: {fileID: 0}
+  glideGravity: 2
 --- !u!1 &6573993613755631979
 GameObject:
   m_ObjectHideFlags: 0

@@ -77,6 +77,8 @@ public class PlayerMovement : MonoBehaviour
         HandleGravity();
         HandleJump();
         RoofCheck();
+
+        Debug.Log(isGrounded);
     } // Update
 
     void SetUpJumpVariable()
@@ -176,7 +178,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleJump()
     {
-        if (jumpBufferCounter > 0f && coyoteTimeCounter > 0f && isGrounded == true)
+        if (jumpBufferCounter > 0f && isGrounded == true || coyoteTimeCounter > 0f && isJumpPressed)
         {
             isJumping = true;
             velocity.y = initialJumpVelocity * .5f;
@@ -292,3 +294,4 @@ public class PlayerMovement : MonoBehaviour {
          Gizmos.DrawWireSphere(groundCheckTransform.position, groundCheckRadius);
      }
 }*/
+
