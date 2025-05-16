@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   candyPrefab: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
-  candyDropAmount: 3
+  candyDropAmount: 0
   spawnForce: 2
   spawnRadius: 2
 --- !u!136 &1097566983852571490
