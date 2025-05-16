@@ -5,7 +5,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
 
     //health settings
     [SerializeField] private float maxHealth = 3f;
-    private float currentHealth;
+    [SerializeField] private float currentHealth;
 
     [Header("Candy drop settings")]
     [SerializeField] private GameObject candyPrefab;
