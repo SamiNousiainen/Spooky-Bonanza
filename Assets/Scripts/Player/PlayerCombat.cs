@@ -11,6 +11,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private PlayerProperties playerProperties;
     [SerializeField, Self] private CharacterController characterController;
     [SerializeField] private Collider weaponCollider;
+    [SerializeField] private GameObject umbrella;
 
     private bool isGliding;
     private bool isAttacking;
@@ -43,6 +44,8 @@ public class PlayerCombat : MonoBehaviour
         {
             playerMovement.ApplyGlide(glideGravity);
         }
+
+        umbrella.SetActive(isGliding);
 
     } // HandleGlide
 

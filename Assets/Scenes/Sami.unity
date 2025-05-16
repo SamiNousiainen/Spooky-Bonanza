@@ -194,7 +194,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1690678845129632132, guid: 2b35338d64897b64398aa192e3019951, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1996717238}
   m_SourcePrefab: {fileID: 100100000, guid: 2b35338d64897b64398aa192e3019951, type: 3}
 --- !u!1 &346879163 stripped
 GameObject:
@@ -882,6 +885,11 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!1 &1503051126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1690678845129632132, guid: 2b35338d64897b64398aa192e3019951, type: 3}
+  m_PrefabInstance: {fileID: 7328209}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1552774615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1283,11 +1291,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8569473288924902827, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 2.03
       objectReference: {fileID: 0}
     - target: {fileID: 8569473288924902827, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.79
+      value: -2.36
       objectReference: {fileID: 0}
     - target: {fileID: 8569473288924902827, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1327,6 +1335,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2865878636755702251, guid: 2b35338d64897b64398aa192e3019951, type: 3}
   m_PrefabInstance: {fileID: 7328209}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1996717238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503051126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb779c9870e434a4cb8ab28d2a1a8d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
 --- !u!1 &2063195256
 GameObject:
   m_ObjectHideFlags: 0
