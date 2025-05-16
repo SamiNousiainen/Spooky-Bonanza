@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour {
             OnSceneChange.Invoke();
 
             SceneManager.LoadScene(sceneName);
+            dim.color = new Color(0f, 0f, 0f, 0f);
             Time.timeScale = 1f;
 
         });
