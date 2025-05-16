@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 3f;
-    [SerializeField] private float currentHealth;
+    private float currentHealth;
 
     void Awake()
     {
@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            GameManager.instance.PlayerDeath();
         }
     }
 

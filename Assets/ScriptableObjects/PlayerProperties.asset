@@ -15,4 +15,4 @@ MonoBehaviour:
   moveSpeed: 3
   jumpHeight: 2
   gravityModifier: -20
-  hitPoints: 0
+  hitPoints: 3
