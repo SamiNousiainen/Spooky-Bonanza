@@ -60,8 +60,8 @@ public class GameManager : MonoBehaviour {
             //    m_dim.color = new Color(0f, 0f, 0f, 0f);
             //    Time.timeScale = 1f;
             //} else {
-            //    Time.timeScale = 1f;
-            //    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             //}
         });
     }

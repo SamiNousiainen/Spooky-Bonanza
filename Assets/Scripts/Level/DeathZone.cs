@@ -1,19 +1,22 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.LowLevel;
 
 public class DeathZone : MonoBehaviour {
     [SerializeField] private Transform respawnPoint;
     private CharacterController controller;
-
+    private PlayerHealth playerHealth;
+    private float damage = 1f;
     private void Start() {
         if (Player.instance != null) {
             controller = Player.instance.GetComponent<CharacterController>();
+            playerHealth = Player.instance.GetComponent<PlayerHealth>();
         }
     }
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
-            //damage player
+            playerHealth.TakeDamage(damage);
             StartCoroutine(TeleportPlayer());
         }
     }
