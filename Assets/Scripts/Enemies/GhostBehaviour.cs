@@ -66,6 +66,9 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
                 if (fleeTarget != null) {
                     agent.SetDestination(fleeTarget.position);
+                    if (agent.remainingDistance <= agent.stoppingDistance) {
+                        Destroy(gameObject);
+                    }
                 } else {
                     Debug.LogWarning("Flee target not assigned!");
                     currentState = EnemyState.Default;
