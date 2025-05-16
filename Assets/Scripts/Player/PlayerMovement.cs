@@ -77,8 +77,6 @@ public class PlayerMovement : MonoBehaviour
         HandleGravity();
         HandleJump();
         RoofCheck();
-
-        Debug.Log(isGrounded);
     } // Update
 
     void SetUpJumpVariable()

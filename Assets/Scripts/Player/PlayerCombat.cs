@@ -7,7 +7,7 @@ using KBCore.Refs;
 public class PlayerCombat : MonoBehaviour
 {
     [SerializeField] private InputReader inputReader;
-    [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField, Self] private PlayerMovement playerMovement;
     [SerializeField] private PlayerProperties playerProperties;
     [SerializeField, Self] private CharacterController characterController;
     [SerializeField] private Collider weaponCollider;
@@ -24,7 +24,7 @@ public class PlayerCombat : MonoBehaviour
 
     void Awake()
     {
-
+        playerMovement = GetComponent<PlayerMovement>();
     } // Awake
 
     void Update()
