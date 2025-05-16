@@ -8,8 +8,8 @@ public class DealDamage : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            PlayerHealth enemy = other.GetComponent<PlayerHealth>();
-            enemy.TakeDamage(damage);
+            IDamageable damageable = GetComponent<IDamageable>();
+            damageable.TakeDamage(damage);
         }
     }
 
