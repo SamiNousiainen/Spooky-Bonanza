@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  currentHealth: 0
   candyPrefab: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
   candyDropAmount: 4
   spawnForce: 2
@@ -206,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a9f10ddc9a34845a92ba74de839677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 0}
+  spellPrefab: {fileID: 3968173057792806720, guid: ef8e83ef9c566b742b1fcd323085f6d1, type: 3}
   castPoint: {fileID: 3464024946558150174}
   wizardProperties: {fileID: 11400000, guid: cdcae1440659fa94db8691023b471359, type: 2}
   agent: {fileID: 0}
@@ -217,7 +218,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7432479503298337010}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
