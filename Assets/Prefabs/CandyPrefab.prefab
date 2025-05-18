@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6affe80931e09644bfdd65119891907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attractionRange: 2
+  attractionRange: 1
   attractionSpeed: 5
   snapDistance: 0.5
   possibleMeshes:
