@@ -9756,6 +9756,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1940697632368478850, guid: f7845e6d1890e934b9236ecf756f8f6e, type: 3}
+      propertyPath: CameraDistance
+      value: 3.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2417596664366745366, guid: f7845e6d1890e934b9236ecf756f8f6e, type: 3}
       propertyPath: m_Name
       value: CinemachineCamera
@@ -9766,19 +9770,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2569568572885496280, guid: f7845e6d1890e934b9236ecf756f8f6e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.307835
+      value: 1.8863448
       objectReference: {fileID: 0}
     - target: {fileID: 2569568572885496280, guid: f7845e6d1890e934b9236ecf756f8f6e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.0623264
+      value: -5.225633
       objectReference: {fileID: 0}
     - target: {fileID: 2569568572885496280, guid: f7845e6d1890e934b9236ecf756f8f6e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9914449
+      value: 0.9961947
       objectReference: {fileID: 0}
     - target: {fileID: 2569568572885496280, guid: f7845e6d1890e934b9236ecf756f8f6e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.13052616
+      value: 0.08715578
       objectReference: {fileID: 0}
     - target: {fileID: 2569568572885496280, guid: f7845e6d1890e934b9236ecf756f8f6e, type: 3}
       propertyPath: m_LocalRotation.y
@@ -9790,7 +9794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2569568572885496280, guid: f7845e6d1890e934b9236ecf756f8f6e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2569568572885496280, guid: f7845e6d1890e934b9236ecf756f8f6e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -10149,7 +10153,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 70
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -10175,8 +10179,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556503331}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 3, y: 2.307835, z: -5.0623264}
+  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: 3, y: 1.8863448, z: -5.225633}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
