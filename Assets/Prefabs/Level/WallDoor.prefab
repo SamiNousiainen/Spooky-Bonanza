@@ -41,6 +41,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 217342325947408656}
+  - component: {fileID: 7326396322975255956}
+  - component: {fileID: 8015705371687615370}
   m_Layer: 0
   m_Name: WallDoor
   m_TagString: Untagged
@@ -64,6 +66,43 @@ Transform:
   - {fileID: 7164842502921239151}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7326396322975255956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8878682238819616424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef12b6d5891ccae49887368e7bd935d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door1: {fileID: 967983801880027848}
+  door2: {fileID: 8794595015471561625}
+  door1TargetRotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
+  door2TargetRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+--- !u!65 &8015705371687615370
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8878682238819616424}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 3, z: 1}
+  m_Center: {x: 3, y: 1.6, z: -0.4}
 --- !u!1 &9017214894287703833
 GameObject:
   m_ObjectHideFlags: 0
