@@ -13,7 +13,7 @@ public class SpellProjectile : MonoBehaviour {
         //TODO
         //spawn particles 
         //damage player if hit
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
         Destroy(gameObject);
     }
 }

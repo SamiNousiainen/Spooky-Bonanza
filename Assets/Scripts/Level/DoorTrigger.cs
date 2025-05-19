@@ -7,12 +7,15 @@ public class DoorTrigger : MonoBehaviour {
     [SerializeField] private Quaternion door1TargetRotation;
     [SerializeField] private Quaternion door2TargetRotation;
 
+    private bool hasOpened = false;
+
     private void Start() {
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("Player") && hasOpened == false) {
             StartCoroutine(OpenDoors());
+            hasOpened = true;
         }
     }
 
