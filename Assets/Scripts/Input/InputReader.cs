@@ -12,11 +12,15 @@ public class InputReader : ScriptableObject, PlayerInput.IPlayerActions
     public bool JumpPressed { get; private set; }
     public bool GlidePressed { get; private set; }
 
+    public bool BlockPressed { get; private set; }
+
     public bool AttackPressed { get; private set; }
 
     public bool IsJumpPressed => playerInput.Player.Jump.ReadValue<float>() > 0;
 
     public bool IsGlidePressed => playerInput.Player.Glide.ReadValue<float>() > 0;
+
+    public bool IsBlockPressed => playerInput.Player.Block.ReadValue<float>() > 0;
 
     private void OnEnable()
     {
@@ -58,6 +62,11 @@ public class InputReader : ScriptableObject, PlayerInput.IPlayerActions
         {
             GlidePressed = true;
         }
+
+    }
+
+    public void OnBlock(InputAction.CallbackContext context)
+    {
 
     }
 
