@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     //private float rotationFactorPerFrame = 15f;
     private float gravity = -9.8f;
     private float groundedGravity = -.05f;
-    private bool isGrounded;
+    public bool isGrounded;
 
     private bool isJumpPressed;
     private float initialJumpVelocity;
@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void ApplyGlide(float glideFallSpeed)
     {
-        if (!isGrounded && velocity.y < 0f)
+        if (isGrounded == false && velocity.y < 0f)
         {
             velocity.y = Mathf.Max(velocity.y, -glideFallSpeed);
         }
