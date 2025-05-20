@@ -122,7 +122,7 @@ MonoBehaviour:
   characterController: {fileID: 132657836499834516}
   weaponCollider: {fileID: 6508325492116065534}
   umbrella: {fileID: 7742728934802204253}
-  shield: {fileID: 0}
+  shield: {fileID: 8841090092602519750}
   glideGravity: 2
 --- !u!114 &4539712018291856462
 MonoBehaviour:

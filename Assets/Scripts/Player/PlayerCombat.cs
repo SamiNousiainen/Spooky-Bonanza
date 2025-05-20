@@ -47,13 +47,13 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log("Block");
             playerMovement.canMove = false;
             shield.SetActive(true);
-            shield.GetComponent<SphereCollider>().isTrigger = true;
+            shield.GetComponent<SphereCollider>().isTrigger = false;
         }
         else if (!isBlocking)
         {
             playerMovement.canMove = true;
             shield.SetActive(false);
-            shield.GetComponent<SphereCollider>().isTrigger = false;
+            shield.GetComponent<SphereCollider>().isTrigger = true;
         }
     }
 
