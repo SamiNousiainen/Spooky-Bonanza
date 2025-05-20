@@ -55,9 +55,6 @@ public class GameUIManager : MonoBehaviour {
     private void Start() {
         UpdatePumpkinAmount();
         UpdateCandyAmount();
-        if (Player.instance != null) {
-            playerHp = Player.instance.GetComponent<PlayerHealth>();
-        }
         UpdatePlayerHp();
     }
 
@@ -65,7 +62,7 @@ public class GameUIManager : MonoBehaviour {
     }
 
     public void UpdatePlayerHp() {
-        currentHealthText.text = playerHp.currentHealth.ToString();
+        currentHealthText.text = Player.instance.GetComponent<PlayerHealth>().currentHealth.ToString();
     }
 
     public void UpdatePumpkinAmount() {

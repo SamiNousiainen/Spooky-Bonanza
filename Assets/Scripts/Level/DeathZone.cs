@@ -4,12 +4,10 @@ using UnityEngine.LowLevel;
 
 public class DeathZone : MonoBehaviour {
     [SerializeField] private Transform respawnPoint;
-    private CharacterController controller;
     private PlayerHealth playerHealth;
     private float damage = 1f;
     private void Start() {
         if (Player.instance != null) {
-            controller = Player.instance.GetComponent<CharacterController>();
             playerHealth = Player.instance.GetComponent<PlayerHealth>();
         }
     }
@@ -24,8 +22,8 @@ public class DeathZone : MonoBehaviour {
     }
 
     private IEnumerator TeleportPlayer() {
-        yield return new WaitForSeconds(0.1f);
-        controller.transform.position = respawnPoint.position;
+        yield return new WaitForSeconds(0.5f);
+        Player.instance.transform.position = respawnPoint.position;
         Physics.SyncTransforms();
     }
 }
