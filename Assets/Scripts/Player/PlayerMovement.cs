@@ -16,8 +16,6 @@ public class PlayerMovement : MonoBehaviour
     //private Vector3 currentMovement;
     public Vector3 velocity;
 
-    public bool canMove = true;
-
     //private float rotationFactorPerFrame = 15f;
     private float gravity = -9.8f;
     private float groundedGravity = -.05f;
@@ -83,9 +81,6 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleMovement()
     {
-        if (!canMove)
-            return;
-
         Vector2 input = inputReader.MoveInput;
 
         //Convert input into camera-relative direction
@@ -174,9 +169,6 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleJump()
     {
-        if (!canMove)
-            return;
-
         if (jumpBufferCounter > 0f && isGrounded == true || coyoteTimeCounter > 0f && inputReader.ConsumeJumpInput())
         {
             //isJumping = true;
@@ -293,5 +285,4 @@ public class PlayerMovement : MonoBehaviour {
          Gizmos.DrawWireSphere(groundCheckTransform.position, groundCheckRadius);
      }
 }*/
-
 

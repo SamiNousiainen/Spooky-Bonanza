@@ -12,10 +12,8 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField, Self] private CharacterController characterController;
     [SerializeField] private Collider weaponCollider;
     [SerializeField] private GameObject umbrella;
-    [SerializeField] private GameObject shield;
 
     private bool isGliding;
-    private bool isBlocking;
     private bool isAttacking;
 
     [SerializeField] private float glideGravity = 2.0f;
@@ -33,29 +31,10 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         isGliding = inputReader.IsGlidePressed;
-        isBlocking = inputReader.IsBlockPressed;
-
-        HandleBlock();
+        isAttacking = inputReader.AttackPressed;
         HandleGlide();
         //Attack();
     } // Update
-
-    private void HandleBlock()
-    {
-        if (isBlocking)
-        {
-            Debug.Log("Block");
-            playerMovement.canMove = false;
-            shield.SetActive(true);
-            shield.GetComponent<SphereCollider>().isTrigger = true;
-        }
-        else if (!isBlocking)
-        {
-            playerMovement.canMove = true;
-            shield.SetActive(false);
-            shield.GetComponent<SphereCollider>().isTrigger = false;
-        }
-    }
 
     private void HandleGlide()
     {
