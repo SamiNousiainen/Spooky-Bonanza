@@ -57,8 +57,10 @@ public class GameManager : MonoBehaviour {
                 Player.instance.transform.position = CheckpointManager.instance.LastCheckpoint.transform.position;
                 Physics.SyncTransforms();//sync transforms to hopefully avoid CharacterController.Move having incorrect position data after last line
 
-                dim.color = new Color(0f, 0f, 0f, 0f);
+                dim.DOFade(0f, 2f);
+                //dim.color = new Color(0f, 0f, 0f, 0f);
                 Time.timeScale = 1f;
+                
 
                 PlayerHealth playerHealth = Player.instance.GetComponent<PlayerHealth>();
 
@@ -69,7 +71,8 @@ public class GameManager : MonoBehaviour {
             } else {
                 Time.timeScale = 1f;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                dim.color = new Color(0f, 0f, 0f, 0f);
+                //dim.color = new Color(0f, 0f, 0f, 0f);
+                dim.DOFade(0f, 2f);
             }
         });
     }
@@ -84,7 +87,8 @@ public class GameManager : MonoBehaviour {
             OnSceneChange.Invoke();
 
             SceneManager.LoadScene(sceneName);
-            dim.color = new Color(0f, 0f, 0f, 0f);
+            //dim.color = new Color(0f, 0f, 0f, 0f);
+            dim.DOFade(0f, 2f);
             Time.timeScale = 1f;
 
         });

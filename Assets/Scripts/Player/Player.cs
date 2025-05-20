@@ -18,6 +18,9 @@ public class Player : MonoBehaviour {
         }
 
         attackPoint.gameObject.SetActive(false);
+    }
+
+    private void Start() {
         GameUIManager.instance.UpdatePlayerHp();
     }
 
