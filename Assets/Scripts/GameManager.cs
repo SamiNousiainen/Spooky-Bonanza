@@ -52,18 +52,26 @@ public class GameManager : MonoBehaviour {
         tween.OnComplete(() => {
 
             OnDeath.Invoke();
+            
+            if (CheckpointManager.instance.LastCheckpoint) {
+                Player.instance.transform.position = CheckpointManager.instance.LastCheckpoint.transform.position;
+                Physics.SyncTransforms();//sync transforms to hopefully avoid CharacterController.Move having incorrect position data after last line
 
-            //if (CheckpointManager.instance.LastCheckpoint) {
-            //    Player.instance.transform.position = CheckpointManager.instance.LastCheckpoint.transform.position;
-            //    Physics.SyncTransforms();//sync transforms to hopefully avoid CharacterController.Move having incorrect position data after last line
+                dim.color = new Color(0f, 0f, 0f, 0f);
+                Time.timeScale = 1f;
 
-            //    m_dim.color = new Color(0f, 0f, 0f, 0f);
-            //    Time.timeScale = 1f;
-            //} else {
-            Time.timeScale = 1f;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            dim.color = new Color(0f, 0f, 0f, 0f);
-            //}
+                PlayerHealth playerHealth = Player.instance.GetComponent<PlayerHealth>();
+
+                if (playerHealth != null) {
+                    playerHealth.ResetHP();
+                    GameUIManager.instance.UpdatePlayerHp();
+                }
+
+            } else {
+                Time.timeScale = 1f;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                dim.color = new Color(0f, 0f, 0f, 0f);
+            }
         });
     }
 
@@ -81,5 +89,5 @@ public class GameManager : MonoBehaviour {
             Time.timeScale = 1f;
 
         });
-        }
+    }
 }
