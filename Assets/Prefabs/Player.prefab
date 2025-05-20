@@ -99,6 +99,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   velocity: {x: 0, y: 0, z: 0}
+  isGrounded: 0
   coyoteTime: 0.2
   jumpBufferTime: 0.2
 --- !u!114 &-8277710826377856109
@@ -285,7 +286,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8672080079408147885
 Transform:
   m_ObjectHideFlags: 0

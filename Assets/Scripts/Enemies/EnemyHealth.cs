@@ -24,7 +24,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
         if (currentHealth <= 0) {
             //vois olla omassa funktiossa
             DropCandy();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             //death anim + particle effect
         }
     }

@@ -18,6 +18,7 @@ public class Player : MonoBehaviour {
         }
 
         attackPoint.gameObject.SetActive(false);
+        GameUIManager.instance.UpdatePlayerHp();
     }
 
     void Update() {
@@ -48,7 +49,7 @@ public class Player : MonoBehaviour {
             }
         }
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         attackPoint.gameObject.SetActive(false);
     }
 

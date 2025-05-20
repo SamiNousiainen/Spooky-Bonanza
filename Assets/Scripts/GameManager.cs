@@ -52,8 +52,8 @@ public class GameManager : MonoBehaviour {
         tween.OnComplete(() => {
 
             OnDeath.Invoke();
-            
-            if (CheckpointManager.instance.LastCheckpoint) {
+
+            if (CheckpointManager.instance.LastCheckpoint != null) {
                 Player.instance.transform.position = CheckpointManager.instance.LastCheckpoint.transform.position;
                 Physics.SyncTransforms();//sync transforms to hopefully avoid CharacterController.Move having incorrect position data after last line
 
@@ -64,7 +64,6 @@ public class GameManager : MonoBehaviour {
 
                 if (playerHealth != null) {
                     playerHealth.ResetHP();
-                    GameUIManager.instance.UpdatePlayerHp();
                 }
 
             } else {

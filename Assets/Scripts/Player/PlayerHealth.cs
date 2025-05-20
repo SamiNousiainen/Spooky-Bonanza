@@ -28,5 +28,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void ResetHP() {
         currentHealth = maxHealth;
+        GameUIManager.instance.UpdatePlayerHp();
     }
 } // Class
