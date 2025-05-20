@@ -144,10 +144,10 @@ public class GameUIManager : MonoBehaviour {
     /// <summary>
     /// Show checkpoint reached text
     /// </summary>
-    //public void ShowCheckpointReachedText() {
-    //    m_checkpointText.color = Color.white;
-    //    m_checkpointText.DOFade(0f, 2f);
-    //}
+    public void ShowCheckpointReachedText() {
+        //m_checkpointText.color = Color.white;
+        //m_checkpointText.DOFade(0f, 2f);
+    }
 
     /// <summary>
     /// Convert linear slider values to logarithmic decibel values

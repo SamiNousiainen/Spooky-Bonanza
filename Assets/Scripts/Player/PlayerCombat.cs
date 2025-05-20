@@ -40,12 +40,12 @@ public class PlayerCombat : MonoBehaviour
     {
         bool isFalling = playerMovement.velocity.y < 0f;
 
-        if (isGliding && !characterController.isGrounded && isFalling)
+        if (isGliding && playerMovement.isGrounded == false && isFalling)
         {
             playerMovement.ApplyGlide(glideGravity);
         }
 
-        umbrella.SetActive(isGliding);
+        umbrella.SetActive(isGliding && playerMovement.isGrounded == false);
 
     } // HandleGlide
 
