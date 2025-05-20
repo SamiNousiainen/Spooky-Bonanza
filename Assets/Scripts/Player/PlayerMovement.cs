@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private float initialJumpVelocity;
     private float maxJumpHeight = 4.0f;
     private float maxJumpTime = 1.2f;
-    private bool isJumping = false;
+    //private bool isJumping = false;
     private float timeToApex;
 
     [SerializeField] private float coyoteTime = 0.2f;
@@ -55,23 +55,15 @@ public class PlayerMovement : MonoBehaviour
 
         CheckGround();
 
-        if (isGrounded == true)
-        {
+        if (isGrounded)
             coyoteTimeCounter = coyoteTime;
-        }
         else
-        {
             coyoteTimeCounter -= Time.deltaTime;
-        }
 
-        if (isJumpPressed)
-        {
+        if (inputReader.ConsumeJumpInput())
             jumpBufferCounter = jumpBufferTime;
-        }
         else
-        {
             jumpBufferCounter -= Time.deltaTime;
-        }
 
         HandleMovement();
         isJumpPressed = inputReader.IsJumpPressed;
@@ -119,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void ApplyGlide(float glideFallSpeed)
     {
-        if (velocity.y < 0f)
+        if (!isGrounded && velocity.y < 0f)
         {
             velocity.y = Mathf.Max(velocity.y, -glideFallSpeed);
         }
@@ -177,16 +169,16 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleJump()
     {
-        if (jumpBufferCounter > 0f && isGrounded == true || coyoteTimeCounter > 0f && isJumpPressed)
+        if (jumpBufferCounter > 0f && isGrounded == true || coyoteTimeCounter > 0f && inputReader.ConsumeJumpInput())
         {
-            isJumping = true;
+            //isJumping = true;
             velocity.y = initialJumpVelocity * .5f;
             jumpBufferCounter = 0f;
             coyoteTimeCounter = 0f;
         }
-        else if (!isJumpPressed && velocity.y > 0f && isJumping)
+        else if (!isJumpPressed && velocity.y > 0f)
         {
-            isJumping = false;
+            //isJumping = false;
         }
     } // HandleJump
 }
