@@ -16,3 +16,4 @@ MonoBehaviour:
   jumpHeight: 2
   gravityModifier: -20
   hitPoints: 3
+  damage: 1

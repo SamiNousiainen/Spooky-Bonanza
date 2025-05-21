@@ -13,5 +13,5 @@ public class PlayerProperties : ScriptableObject {
 
     [Header("Combat")]
     public float hitPoints;
-    
+    public float damage;
 }
