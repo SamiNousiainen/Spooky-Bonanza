@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpBufferTime = 0.2f;
     private float jumpBufferCounter;
 
+    private Vector3 externalVelocity = Vector3.zero;
+
     private void OnValidate()
     {
         this.ValidateRefs();
@@ -99,6 +101,9 @@ public class PlayerMovement : MonoBehaviour
         Vector3 direction = (right * input.x + forward * input.y).normalized;
         Vector3 horizontalVelocity = direction * playerProperties.moveSpeed;
 
+        //apply externally added velocity to movement (bounce)
+        horizontalVelocity += new Vector3(externalVelocity.x, 0f, externalVelocity.z);
+
         //Apply horizontal movement only
         characterController.Move(horizontalVelocity * Time.deltaTime);
 
@@ -107,11 +112,23 @@ public class PlayerMovement : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
         }
+
+        //decrease external velocity to 0 over time
+        externalVelocity = Vector3.Lerp(externalVelocity, Vector3.zero, 2f * Time.deltaTime);
     } // HandleMovement
 
-    public void LaunchPlayer(float jumpForce)
+    /// <summary>
+    /// Launches the player when hitting a bounce mushroom
+    /// </summary>
+    /// <param name="launchDirection"></param>
+    public void LaunchPlayer(Vector3 launchDirection)
     {
-        velocity.y = jumpForce;
+        velocity.y = launchDirection.y;
+
+        //add this on top of movement to avoid input overriding launch direction on the next frame
+        externalVelocity = new Vector3(launchDirection.x, 0f, launchDirection.z);
+
+        //Debug.Log(launchDirection);
     }
 
     public void ApplyGlide(float glideFallSpeed)
@@ -169,7 +186,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //velocity.y += playerProperties.gravityModifier * Time.deltaTime;
-        characterController.Move(new Vector3(0f, velocity.y, 0f) * Time.deltaTime);
+        characterController.Move(new Vector3(0f, velocity.y + externalVelocity.y, 0f) * Time.deltaTime);
     } //HandleGravity
 
     void HandleJump()
