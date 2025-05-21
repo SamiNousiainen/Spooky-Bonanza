@@ -4642,6 +4642,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2236957409081474405, guid: f7799893a61689b4987465ab62813f4d, type: 3}
+      propertyPath: moveDurationMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236957409081474405, guid: f7799893a61689b4987465ab62813f4d, type: 3}
+      propertyPath: rotationDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236957409081474405, guid: f7799893a61689b4987465ab62813f4d, type: 3}
+      propertyPath: startRandomnessSeconds
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3790464685789233828, guid: f7799893a61689b4987465ab62813f4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31
@@ -13489,6 +13501,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2236957409081474405, guid: f7799893a61689b4987465ab62813f4d, type: 3}
+      propertyPath: moveDurationMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236957409081474405, guid: f7799893a61689b4987465ab62813f4d, type: 3}
+      propertyPath: rotationDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236957409081474405, guid: f7799893a61689b4987465ab62813f4d, type: 3}
+      propertyPath: startRandomnessSeconds
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3790464685789233828, guid: f7799893a61689b4987465ab62813f4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.6
@@ -14923,6 +14947,18 @@ PrefabInstance:
     - target: {fileID: 2236957409081474405, guid: f7799893a61689b4987465ab62813f4d, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236957409081474405, guid: f7799893a61689b4987465ab62813f4d, type: 3}
+      propertyPath: moveDurationMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236957409081474405, guid: f7799893a61689b4987465ab62813f4d, type: 3}
+      propertyPath: rotationDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236957409081474405, guid: f7799893a61689b4987465ab62813f4d, type: 3}
+      propertyPath: startRandomnessSeconds
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3790464685789233828, guid: f7799893a61689b4987465ab62813f4d, type: 3}
       propertyPath: m_LocalPosition.x

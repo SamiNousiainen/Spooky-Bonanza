@@ -37,8 +37,22 @@ public class PlayerCombat : MonoBehaviour
 
         HandleBlock();
         HandleGlide();
+
+        if (isBlocking)
+        {
+            UpdateShieldPosition();
+        }
         //Attack();
     } // Update
+
+    private void UpdateShieldPosition()
+    {
+        // Suunta johon pelaaja katsoo (forward)
+        Vector3 forward = transform.forward;
+
+        // K‰‰nnet‰‰n kilpi samaan suuntaan kuin pelaaja
+        shield.transform.rotation = Quaternion.LookRotation(forward);
+    }
 
     private void HandleBlock()
     {
