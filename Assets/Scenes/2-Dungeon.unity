@@ -21236,6 +21236,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8015705371687615370, guid: 61756628179a67841b3410503bac1cc4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8878682238819616424, guid: 61756628179a67841b3410503bac1cc4, type: 3}
       propertyPath: m_Name
       value: WallDoor
