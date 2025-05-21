@@ -10460,7 +10460,7 @@ MonoBehaviour:
   OnSceneChange:
     m_PersistentCalls:
       m_Calls: []
-  dim: {fileID: 0}
+  dim: {fileID: 1322883779}
 --- !u!4 &582601980
 Transform:
   m_ObjectHideFlags: 0
@@ -24258,6 +24258,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+--- !u!114 &1322883779 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6006794556479840836, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+  m_PrefabInstance: {fileID: 1322883778}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1328458584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7126580145467696645, guid: 33cf87c3d13c87d448c2e4a4d20fc1c5, type: 3}
