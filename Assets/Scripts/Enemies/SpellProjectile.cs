@@ -5,6 +5,8 @@ using UnityEngine;
 /// </summary>
 public class SpellProjectile : MonoBehaviour {
 
+    [SerializeField] private WizardProperties wizardProperties;
+
     private void Update() {
         //purkkaratkasu
         Destroy(gameObject, 5f);
@@ -12,8 +14,11 @@ public class SpellProjectile : MonoBehaviour {
     private void OnCollisionEnter(Collision collision) {
         //TODO
         //spawn particles 
-        //damage player if hit
-        //Debug.Log(collision.gameObject.name);
+        PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+        if (playerHealth != null) {
+            playerHealth.TakeDamage(wizardProperties.damage);
+        }
+
         Destroy(gameObject);
     }
 }
