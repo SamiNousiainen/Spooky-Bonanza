@@ -15,7 +15,7 @@ public static class PlayerSaveData {
             var json = File.ReadAllText(SavePath);
             var loadedData = JsonUtility.FromJson<InventoryData>(json);
             InventoryManager.instance.LoadData(loadedData);
-            Debug.Log(loadedData);
+            Debug.Log("inventory data loaded");
         }
     }
 

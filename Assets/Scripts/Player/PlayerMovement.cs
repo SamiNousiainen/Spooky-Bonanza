@@ -57,17 +57,18 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
+        //bool jumpInput = inputReader.ConsumeJumpInput();
+        //Debug.Log(jumpInput);
+
         CheckGround();
 
-        if (isGrounded)
+        if (isGrounded) {
             coyoteTimeCounter = coyoteTime;
-        else
+        } else {
             coyoteTimeCounter -= Time.deltaTime;
-
-        if (inputReader.ConsumeJumpInput())
-            jumpBufferCounter = jumpBufferTime;
-        else
-            jumpBufferCounter -= Time.deltaTime;
+        }
+           
+        jumpBufferCounter -= Time.deltaTime;
 
         HandleMovement();
         isJumpPressed = inputReader.IsJumpPressed;
@@ -189,26 +190,27 @@ public class PlayerMovement : MonoBehaviour
         characterController.Move(new Vector3(0f, velocity.y + externalVelocity.y, 0f) * Time.deltaTime);
     } //HandleGravity
 
-    void HandleJump()
-    {
+    void HandleJump() {
+
         if (!canMove)
             return;
 
-        bool bufferedJump = jumpBufferCounter > 0f;
-        bool jumpInput = inputReader.ConsumeJumpInput();
+        if (inputReader.ConsumeJumpInput() == true) {
 
-        if ((bufferedJump && isGrounded == true) || (coyoteTimeCounter > 0f && jumpInput))
-        {
-            //isJumping = true;
-            velocity.y = initialJumpVelocity * .5f;
-            jumpBufferCounter = 0f;
-            coyoteTimeCounter = 0f;
-        }
-        else if (!isJumpPressed && velocity.y > 0f)
-        {
-            //isJumping = false;
-        }
-    } // HandleJump
+                jumpBufferCounter = jumpBufferTime;
+                coyoteTimeCounter = 0f;
+
+            if (jumpBufferCounter > 0f && isGrounded || coyoteTimeCounter > 0f) {
+                velocity.y = initialJumpVelocity * 0.5f;
+                jumpBufferCounter = 0f;
+                coyoteTimeCounter = 0f;
+                Debug.Log(coyoteTimeCounter);
+                Debug.Log(jumpBufferCounter);
+
+            }
+        }     
+    }
+
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {

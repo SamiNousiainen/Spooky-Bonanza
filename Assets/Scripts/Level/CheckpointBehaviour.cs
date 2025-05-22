@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 /// <summary>
@@ -9,7 +10,8 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 //[RequireComponent(typeof(Renderer))]
 public class CheckpointBehaviour : MonoBehaviour {
-    [SerializeField] private string CheckpointID;
+
+    public string checkpointID;
     private bool checkPointReached;
     //private Material material;
 
@@ -21,6 +23,10 @@ public class CheckpointBehaviour : MonoBehaviour {
         if (other.CompareTag("Player") && checkPointReached == false) {
             CheckpointManager.instance.ActivateCheckpoint(this);
             checkPointReached = true;
+
+            InventoryManager.instance.Data.sceneName = SceneManager.GetActiveScene().name;
+            InventoryManager.instance.Data.checkpointID = checkpointID;
+
             PlayerSaveData.Save();
             //var color = Color.green;
             //color.a = 0.1f;
