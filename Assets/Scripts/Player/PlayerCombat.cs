@@ -88,7 +88,7 @@ public class PlayerCombat : MonoBehaviour
             IDamageable damageable = hits[0].GetComponent<IDamageable>();
             if (damageable != null)
             {
-                damageable.TakeDamage(1f);
+                damageable.TakeDamage(playerProperties.damage);
                 Debug.Log($"Damaged: {hits[0].name}");
             }
         }
