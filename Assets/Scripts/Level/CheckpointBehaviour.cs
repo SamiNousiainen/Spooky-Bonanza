@@ -9,6 +9,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 //[RequireComponent(typeof(Renderer))]
 public class CheckpointBehaviour : MonoBehaviour {
+    [SerializeField] private string CheckpointID;
     private bool checkPointReached;
     //private Material material;
 
