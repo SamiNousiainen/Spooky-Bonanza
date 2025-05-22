@@ -31,7 +31,7 @@ public class Player : MonoBehaviour {
     /// <summary>
     /// TEMPORARY, DELETE LATER
     /// </summary>
-    public void Attack() {
+    /*public void Attack() {
         StartCoroutine(DealDamage());
     }
 
@@ -59,6 +59,6 @@ public class Player : MonoBehaviour {
     private void OnDrawGizmos() {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, 0.5f);
-    }
+    }*/
 
 }

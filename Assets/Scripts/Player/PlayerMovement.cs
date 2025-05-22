@@ -31,10 +31,10 @@ public class PlayerMovement : MonoBehaviour
     private float timeToApex;
 
     [SerializeField] private float coyoteTime = 0.2f;
-    private float coyoteTimeCounter;
+    [SerializeField] private float coyoteTimeCounter;
 
     [SerializeField] private float jumpBufferTime = 0.2f;
-    private float jumpBufferCounter;
+    [SerializeField] private float jumpBufferCounter;
 
     private Vector3 externalVelocity = Vector3.zero;
 
@@ -194,7 +194,10 @@ public class PlayerMovement : MonoBehaviour
         if (!canMove)
             return;
 
-        if (jumpBufferCounter > 0f && isGrounded == true || coyoteTimeCounter > 0f && inputReader.ConsumeJumpInput())
+        bool bufferedJump = jumpBufferCounter > 0f;
+        bool jumpInput = inputReader.ConsumeJumpInput();
+
+        if ((bufferedJump && isGrounded == true) || (coyoteTimeCounter > 0f && jumpInput))
         {
             //isJumping = true;
             velocity.y = initialJumpVelocity * .5f;
@@ -206,19 +209,6 @@ public class PlayerMovement : MonoBehaviour
             //isJumping = false;
         }
     } // HandleJump
-
-    private void OnControllerColliderHit(ControllerColliderHit hit) {
-        Rigidbody rb = hit.collider.attachedRigidbody;
-
-        if (rb != null && !rb.isKinematic) {
-            
-            Vector3 pushDirection = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
-
-            rb.AddForceAtPosition(pushDirection * 2f, hit.point, ForceMode.Force);
-        }
-    }
-
-
 }
 
 /*void OnMovementInput(InputAction.CallbackContext context)
