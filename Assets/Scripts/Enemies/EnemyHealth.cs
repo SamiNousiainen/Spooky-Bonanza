@@ -13,7 +13,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
     [SerializeField] private float spawnForce = 2f;
     [SerializeField] private float spawnRadius = 2f;
 
-    public bool hasTakenDamage;
+    public bool HasTakenDamage { get; set; }
 
 
     void Awake() {
@@ -22,7 +22,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
 
     public void TakeDamage(float damage) {
         currentHealth -= damage;
-        hasTakenDamage = true;
+        HasTakenDamage = true;
         if (currentHealth <= 0) {
             //vois olla omassa funktiossa
             DropCandy();

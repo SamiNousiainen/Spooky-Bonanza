@@ -81,7 +81,7 @@ public class PlayerCombat : MonoBehaviour
         foreach (Collider hit in hits)
         {
             IDamageable damageable = hit.GetComponent<IDamageable>();
-            if (damageable != null)
+            if (damageable != null && damageable.HasTakenDamage == false)
             {
                 damageable.TakeDamage(playerProperties.damage);
                 damagedEnemies.Add(damageable);
@@ -91,6 +91,13 @@ public class PlayerCombat : MonoBehaviour
 
         yield return new WaitForSeconds(0.1f);
         attackPoint.gameObject.SetActive(false);
+        ReturnEnemiesToDamageable();
+    }
+
+    private void ReturnEnemiesToDamageable() {
+        foreach (IDamageable damagedEnemy in damagedEnemies) {
+            damagedEnemy.HasTakenDamage = false;
+        }
         damagedEnemies.Clear();
     }
 

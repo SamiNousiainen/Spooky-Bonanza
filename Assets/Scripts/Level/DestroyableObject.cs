@@ -18,6 +18,7 @@ public class DestroyableObject : MonoBehaviour, IDamageable {
     [SerializeField] private float spawnForce = 2f;
     [SerializeField] private float spawnRadius = 2f;
 
+    public bool HasTakenDamage { get; set; }
 
     private bool hasExploded = false;
     public void Start() {
@@ -25,6 +26,7 @@ public class DestroyableObject : MonoBehaviour, IDamageable {
     }
 
     public void TakeDamage(float damage) {
+        HasTakenDamage = true;
         hitPoints -= damage;
         if (hitPoints <= 0f && hasExploded == false) {
             StartCoroutine(Explode());
