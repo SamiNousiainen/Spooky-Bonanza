@@ -22,6 +22,7 @@ public class PlayerCombat : MonoBehaviour
     private bool isBlocking;
 
     public static PlayerCombat instance;
+    private List<IDamageable> damagedEnemies = new List<IDamageable>();
 
     [SerializeField] private float glideGravity = 2.0f;
 
@@ -71,31 +72,26 @@ public class PlayerCombat : MonoBehaviour
     {
         Debug.Log("Attack!");
 
-        Quaternion orientation = attackPoint.rotation;
+        float attackRange = 0.5f;
         LayerMask enemyMask = LayerMask.GetMask("Enemy");
 
-        Collider[] hitsArray = Physics.OverlapBox(attackPoint.position, halfExtents, orientation, enemyMask);
-        List<Collider> hits = new List<Collider>(hitsArray);
-
+        Collider[] hits = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
         attackPoint.gameObject.SetActive(true);
 
-        if (hits.Count > 0)
+        foreach (Collider hit in hits)
         {
-            hits.Sort((a, b) =>
-            Vector3.Distance(attackPoint.position, a.transform.position)
-            .CompareTo(Vector3.Distance(attackPoint.position, b.transform.position)));
-
-            IDamageable damageable = hits[0].GetComponent<IDamageable>();
+            IDamageable damageable = hit.GetComponent<IDamageable>();
             if (damageable != null)
             {
                 damageable.TakeDamage(playerProperties.damage);
-                Debug.Log($"Damaged: {hits[0].name}");
+                damagedEnemies.Add(damageable);
+                Debug.Log($"Damaged: {hit.name}");
             }
         }
 
         yield return new WaitForSeconds(0.1f);
         attackPoint.gameObject.SetActive(false);
-        hits.Clear();
+        damagedEnemies.Clear();
     }
 
 
@@ -150,12 +146,8 @@ public class PlayerCombat : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (attackPoint == null)
-            return;
-
         Gizmos.color = Color.red;
-        Gizmos.matrix = Matrix4x4.TRS(attackPoint.position, attackPoint.rotation, Vector3.one);
-        Gizmos.DrawWireCube(Vector3.zero, halfExtents * 2);
+        Gizmos.DrawWireSphere(attackPoint.position, 0.5f);
     }
 
 } // Class
