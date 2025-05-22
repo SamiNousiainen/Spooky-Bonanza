@@ -52,7 +52,7 @@ public class InputReader : ScriptableObject, PlayerInput.IPlayerActions
     {
         if (context.performed)
         {
-            Player.instance.Attack();
+            PlayerCombat.instance.Attack();
         }
     }
 

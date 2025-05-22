@@ -103,7 +103,9 @@ MonoBehaviour:
   canMove: 1
   isGrounded: 0
   coyoteTime: 0.2
+  coyoteTimeCounter: 0
   jumpBufferTime: 0.2
+  jumpBufferCounter: 0
 --- !u!114 &-8277710826377856109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +125,8 @@ MonoBehaviour:
   weaponCollider: {fileID: 6508325492116065534}
   umbrella: {fileID: 7742728934802204253}
   shield: {fileID: 8841090092602519750}
+  attackPoint: {fileID: 8672080079408147885}
+  halfExtents: {x: 0.5, y: 0.5, z: 0.5}
   glideGravity: 2
 --- !u!114 &4539712018291856462
 MonoBehaviour:
