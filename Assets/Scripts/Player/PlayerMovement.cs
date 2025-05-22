@@ -209,6 +209,20 @@ public class PlayerMovement : MonoBehaviour
             //isJumping = false;
         }
     } // HandleJump
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Rigidbody rb = hit.collider.attachedRigidbody;
+
+        if (rb != null && !rb.isKinematic)
+        {
+
+            Vector3 pushDirection = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+
+            rb.AddForceAtPosition(pushDirection * 2f, hit.point, ForceMode.Force);
+        }
+    }
+
 }
 
 /*void OnMovementInput(InputAction.CallbackContext context)
