@@ -334,6 +334,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 5884354748360448740, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: squishAmount
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884354748360448740, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: squishDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.008761

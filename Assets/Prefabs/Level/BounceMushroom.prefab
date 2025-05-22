@@ -177,3 +177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   launchForce: 20
+  mushroom: {fileID: 0}
+  squishAmount: 0.8
+  squishDuration: 0.2
