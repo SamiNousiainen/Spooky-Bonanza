@@ -20,6 +20,7 @@ public class CheckpointBehaviour : MonoBehaviour {
         if (other.CompareTag("Player") && checkPointReached == false) {
             CheckpointManager.instance.ActivateCheckpoint(this);
             checkPointReached = true;
+            PlayerSaveData.Save();
             //var color = Color.green;
             //color.a = 0.1f;
             //material.DOColor(color, 0.5f);

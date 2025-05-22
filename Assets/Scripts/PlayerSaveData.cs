@@ -7,6 +7,7 @@ public static class PlayerSaveData {
     public static void Save() {
         var json = JsonUtility.ToJson(InventoryManager.instance.Data);
         File.WriteAllText(SavePath, json);
+        Debug.Log("data saved");
     }
 
     public static void Load() {
@@ -14,6 +15,7 @@ public static class PlayerSaveData {
             var json = File.ReadAllText(SavePath);
             var loadedData = JsonUtility.FromJson<InventoryData>(json);
             InventoryManager.instance.LoadData(loadedData);
+            Debug.Log(loadedData);
         }
     }
 
