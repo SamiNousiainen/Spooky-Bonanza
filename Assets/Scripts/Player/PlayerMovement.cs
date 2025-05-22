@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField, Self] private CharacterController characterController;
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private PlayerProperties playerProperties;
-    [SerializeField] private LayerMask groundMask;
+    //[SerializeField] private LayerMask groundMask;
 
     //private Vector2 currentMovementInput;
     //private Vector3 currentMovement;
@@ -27,8 +27,8 @@ public class PlayerMovement : MonoBehaviour
     private float initialJumpVelocity;
     private float maxJumpHeight = 4.0f;
     private float maxJumpTime = 1.2f;
-    //private bool isJumping = false;
     private float timeToApex;
+    
 
     [SerializeField] private float coyoteTime = 0.2f;
     [SerializeField] private float coyoteTimeCounter;
@@ -57,18 +57,21 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        //bool jumpInput = inputReader.ConsumeJumpInput();
-        //Debug.Log(jumpInput);
+        bool jumpInput = inputReader.ConsumeJumpInput();
 
         CheckGround();
 
-        if (isGrounded) {
-            coyoteTimeCounter = coyoteTime;
-        } else {
-            coyoteTimeCounter -= Time.deltaTime;
-        }
-           
-        jumpBufferCounter -= Time.deltaTime;
+        
+            if (isGrounded && velocity.y <= 0f)
+                coyoteTimeCounter = coyoteTime;
+            else
+                coyoteTimeCounter -= Time.deltaTime;
+
+
+        if (jumpInput)
+            jumpBufferCounter = jumpBufferTime;
+        else
+            jumpBufferCounter -= Time.deltaTime;
 
         HandleMovement();
         isJumpPressed = inputReader.IsJumpPressed;
@@ -151,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
             if (Physics.SphereCast(transform.position, characterController.radius, Vector3.up, out hit, 0.6f, layerMask))
             {
 
-                velocity.y = -2f;
+                velocity.y = 0f;
             }
         }
     }
@@ -191,26 +194,17 @@ public class PlayerMovement : MonoBehaviour
     } //HandleGravity
 
     void HandleJump() {
-
         if (!canMove)
             return;
 
-        if (inputReader.ConsumeJumpInput() == true) {
+        bool bufferedJump = jumpBufferCounter > 0f;
 
-                jumpBufferCounter = jumpBufferTime;
-                coyoteTimeCounter = 0f;
-
-            if (jumpBufferCounter > 0f && isGrounded || coyoteTimeCounter > 0f) {
-                velocity.y = initialJumpVelocity * 0.5f;
-                jumpBufferCounter = 0f;
-                coyoteTimeCounter = 0f;
-                Debug.Log(coyoteTimeCounter);
-                Debug.Log(jumpBufferCounter);
-
-            }
-        }     
+        if (bufferedJump && (isGrounded || coyoteTimeCounter > 0f)) {
+            velocity.y = initialJumpVelocity * 0.5f;
+            jumpBufferCounter = 0f;
+            coyoteTimeCounter = 0f;
+        }
     }
-
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -224,7 +218,6 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForceAtPosition(pushDirection * 2f, hit.point, ForceMode.Force);
         }
     }
-
 }
 
 /*void OnMovementInput(InputAction.CallbackContext context)
