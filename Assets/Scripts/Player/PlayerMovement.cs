@@ -148,12 +148,11 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded == false) // Vain ilmassa
         {
             RaycastHit hit;
-            int layerMask = ~(1 << LayerMask.NameToLayer("Collectible"));
+            //int layerMask = ~(1 << LayerMask.NameToLayer("Collectible"));
 
             // Tarkistetaan, onko pää osunut kattoon
-            if (Physics.SphereCast(transform.position, characterController.radius, Vector3.up, out hit, 0.6f, layerMask))
+            if (Physics.SphereCast(transform.position, characterController.radius, Vector3.up, out hit, 0.3f, LayerMask.GetMask("Walkable Surface")))
             {
-
                 velocity.y = 0f;
             }
         }
