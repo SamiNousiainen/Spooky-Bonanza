@@ -4,13 +4,13 @@ public class InventoryManager : MonoBehaviour {
 
     public static InventoryManager instance;
 
-    public InventoryData Data { get; private set; } = new InventoryData();
+    public PlayerData Data { get; private set; } = new PlayerData();
 
     private void Awake() {
         if (instance == null) {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            PlayerSaveData.Load();
+            SaveSystem.Load();
         } else {
             Destroy(gameObject);
         }
@@ -40,7 +40,7 @@ public class InventoryManager : MonoBehaviour {
         }
     }
 
-    public void LoadData(InventoryData data) {
+    public void LoadData(PlayerData data) {
         Data = data;
     }
 }

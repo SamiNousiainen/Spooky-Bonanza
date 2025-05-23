@@ -153,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
             // Tarkistetaan, onko p‰‰ osunut kattoon
             if (Physics.SphereCast(transform.position, characterController.radius, Vector3.up, out hit, 0.3f, LayerMask.GetMask("Walkable Surface")))
             {
-                velocity.y = 0f;
+                velocity.y = -0.5f;
             }
         }
     }

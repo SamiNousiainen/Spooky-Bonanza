@@ -1,7 +1,8 @@
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public static class PlayerSaveData {
+public static class SaveSystem {
     private static string SavePath => Application.persistentDataPath + "/save.json";
 
     public static void Save() {
@@ -13,9 +14,15 @@ public static class PlayerSaveData {
     public static void Load() {
         if (File.Exists(SavePath)) {
             var json = File.ReadAllText(SavePath);
-            var loadedData = JsonUtility.FromJson<InventoryData>(json);
+            var loadedData = JsonUtility.FromJson<PlayerData>(json);
             InventoryManager.instance.LoadData(loadedData);
             Debug.Log("inventory data loaded");
+
+            //if (!string.IsNullOrEmpty(loadedData.sceneName)) {
+            //    SceneManager.LoadSceneAsync(loadedData.sceneName).completed += (op) => {
+            //        //After scene is loaded, player will be repositioned automatically
+            //    };
+            //}
         }
     }
 

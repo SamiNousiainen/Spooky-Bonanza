@@ -19,4 +19,15 @@ public class CheckpointManager : MonoBehaviour {
         LastCheckpoint = checkpointBehaviour;
         //GameUIManager.instance.ShowCheckpointReachedText();
     }
+
+    public void RestoreCheckpointByID(string id) {
+        CheckpointBehaviour[] allCheckpoints = FindObjectsByType<CheckpointBehaviour>(FindObjectsSortMode.None);
+        foreach (var checkpoint in allCheckpoints) {
+            if (checkpoint.checkpointID == id) {
+                LastCheckpoint = checkpoint;
+                break;
+            }
+        }
+    }
+
 }

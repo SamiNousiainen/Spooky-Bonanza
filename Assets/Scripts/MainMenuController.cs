@@ -35,6 +35,7 @@ public class MainMenuController : MonoBehaviour {
         backgroundDim.DOFade(1f, 1f).onComplete += () => {
             mainMenuPanel.SetActive(false);
             LoadGameScene();
+            //SaveSystem.Load();
         };
     }
 }

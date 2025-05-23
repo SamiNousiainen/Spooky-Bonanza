@@ -23,11 +23,12 @@ public class CheckpointBehaviour : MonoBehaviour {
         if (other.CompareTag("Player") && checkPointReached == false) {
             CheckpointManager.instance.ActivateCheckpoint(this);
             checkPointReached = true;
+            other.GetComponent<PlayerHealth>().ResetHP();
 
             InventoryManager.instance.Data.sceneName = SceneManager.GetActiveScene().name;
             InventoryManager.instance.Data.checkpointID = checkpointID;
 
-            PlayerSaveData.Save();
+            SaveSystem.Save();
             //var color = Color.green;
             //color.a = 0.1f;
             //material.DOColor(color, 0.5f);
