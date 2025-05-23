@@ -18,11 +18,9 @@ public static class SaveSystem {
             InventoryManager.instance.LoadData(loadedData);
             Debug.Log("inventory data loaded");
 
-            //if (!string.IsNullOrEmpty(loadedData.sceneName)) {
-            //    SceneManager.LoadSceneAsync(loadedData.sceneName).completed += (op) => {
-            //        //After scene is loaded, player will be repositioned automatically
-            //    };
-            //}
+            if (!string.IsNullOrEmpty(loadedData.sceneName)) {
+                SceneManager.LoadSceneAsync(loadedData.sceneName);
+            }
         }
     }
 

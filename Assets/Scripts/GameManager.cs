@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour {
     private void Start() {
         //soundBuilder = SoundManager.Instance.CreateSoundBuilder();
         //soundBuilder.Play(ambientSound);
-
     }
 
     private void Update() {

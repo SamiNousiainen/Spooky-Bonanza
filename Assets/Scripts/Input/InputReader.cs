@@ -52,7 +52,9 @@ public class InputReader : ScriptableObject, PlayerInput.IPlayerActions
     {
         if (context.performed)
         {
+            if (PlayerCombat.instance != null) {
             PlayerCombat.instance.Attack();
+            }
         }
     }
 

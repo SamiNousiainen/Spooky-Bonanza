@@ -12224,6 +12224,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1559173271062614056, guid: 2cbcc42bd478d354d9bc06edde032006, type: 3}
+      propertyPath: checkpointID
+      value: 2-1
+      objectReference: {fileID: 0}
     - target: {fileID: 2249245453937939150, guid: 2cbcc42bd478d354d9bc06edde032006, type: 3}
       propertyPath: m_Name
       value: Checkpoint
@@ -13327,6 +13331,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1559173271062614056, guid: 2cbcc42bd478d354d9bc06edde032006, type: 3}
+      propertyPath: checkpointID
+      value: 2-2
+      objectReference: {fileID: 0}
     - target: {fileID: 2249245453937939150, guid: 2cbcc42bd478d354d9bc06edde032006, type: 3}
       propertyPath: m_Name
       value: Checkpoint (1)

@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -17,7 +18,8 @@ public class MainMenuController : MonoBehaviour {
 
     private void Awake() {
         // start game on any button press
-        InputSystem.onAnyButtonPress.CallOnce(ctx => StartGame());
+        //InputSystem.onAnyButtonPress.CallOnce(ctx => LoadAndStartGame());
+        //InputSystem.onAnyButtonPress.CallOnce(ctx => StartNewGame());
     }
 
     /// <summary>
@@ -25,17 +27,40 @@ public class MainMenuController : MonoBehaviour {
     /// </summary>
     public void LoadGameScene() {
         SceneManager.LoadSceneAsync(gameScene);
+    }
 
+    public void StartNewGame() {
+        backgroundDim.DOFade(1f, 1f).onComplete += () => {
+            mainMenuPanel.SetActive(false);
+
+            string savePath = Application.persistentDataPath + "/save.json";
+
+            if (File.Exists(savePath)) {
+                //if player has any saved progress
+                SaveSystem.DeleteSave();
+                LoadGameScene();
+            } else {
+                LoadGameScene();
+            }
+        };
     }
 
     /// <summary>
     /// fade screen and load level asynchronously
     /// </summary>
-    public void StartGame() {
+    public void LoadAndStartGame() {
         backgroundDim.DOFade(1f, 1f).onComplete += () => {
             mainMenuPanel.SetActive(false);
-            LoadGameScene();
-            //SaveSystem.Load();
+
+            string savePath = Application.persistentDataPath + "/save.json";
+
+            if (File.Exists(savePath)) {
+                //if player has any saved progress
+                SaveSystem.Load();
+            } else {
+                LoadGameScene();
+            }    
         };
     }
+
 }

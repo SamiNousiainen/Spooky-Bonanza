@@ -15,6 +15,19 @@ public class CheckpointManager : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+    private void Start() {
+        var data = InventoryManager.instance.Data;
+
+        if (!string.IsNullOrEmpty(data.checkpointID)) {
+            RestoreCheckpointByID(data.checkpointID);
+
+            var player = Player.instance;
+            if (LastCheckpoint != null) {
+                player.transform.position = LastCheckpoint.transform.position;
+            }
+        }
+    }
     public void ActivateCheckpoint(CheckpointBehaviour checkpointBehaviour) {
         LastCheckpoint = checkpointBehaviour;
         //GameUIManager.instance.ShowCheckpointReachedText();
