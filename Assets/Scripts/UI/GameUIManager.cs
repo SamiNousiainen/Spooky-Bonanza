@@ -1,6 +1,10 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
+using UnityEditorInternal;
+using UnityEngine.SceneManagement;
 /// <summary>
 /// TODO, kaikki lev‰ll‰‰n
 /// </summary>
@@ -8,23 +12,27 @@ public class GameUIManager : MonoBehaviour {
 
     public static GameUIManager instance;
 
+    [Header("HUD")]
+
     [SerializeField] private TMP_Text candyAmountText;
     [SerializeField] private TMP_Text pumpkinAmountText;
     [SerializeField] private TMP_Text currentHealthText;
     private PlayerHealth playerHp;
-    //[Header("Pause Menu")]
+
+    [Header("Pause Menu")]
+
     //[SerializeField] private AudioMixer m_audioMixer;
     //[SerializeField] private VolumeProfile m_globalVolumeProfile;
     //[SerializeField] private GameObject m_settingsPanel;
-    //[SerializeField] private GameObject m_pausePanel;
-    //[SerializeField] private GameObject m_pauseMenu;
-    //[SerializeField] private Image m_backgroundDim;
+    [SerializeField] private GameObject pausePanel;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private Image backgroundDim;
     //[SerializeField] private Toggle m_sprintToggle;
     //[SerializeField] private Toggle m_sneakToggle;
     //[SerializeField] private Toggle m_cameraDampingToggle;
     //[SerializeField] private InputReader m_inputReader;
     //[SerializeField] private CinemachineCamera m_cinemachineCamera;
-    //private CinemachineRotationComposer m_rotationComposer;
+    private PlayerInput playerInput;
     //private LiftGammaGain m_liftGammaGain;
 
     //[Space(5), Header("Level End")]
@@ -45,11 +53,16 @@ public class GameUIManager : MonoBehaviour {
     }
 
     private void OnEnable() {
-        //InitializeSettings();
+        if (playerInput == null) playerInput = new PlayerInput();
+
+        playerInput.Enable();
+        playerInput.UI.Pause.performed += context => SetPauseGame(true);
     }
 
     private void OnDisable() {
-
+        if (playerInput == null) { playerInput = new PlayerInput(); }
+        playerInput.Disable();
+        playerInput.UI.Pause.performed -= context => SetPauseGame(true);
     }
 
     private void Start() {
@@ -86,14 +99,15 @@ public class GameUIManager : MonoBehaviour {
 
     #region UI Callbacks
 
-    //public void ExitGame() {
-    //    var fade = m_backgroundDim.DOFade(1f, 1f);
-    //    fade.SetUpdate(true);
-    //    fade.onComplete += () => {
-    //        Time.timeScale = 1f;
-    //        SceneManager.LoadSceneAsync(0);
-    //    };
-    //}
+    public void ExitGame() {
+        var fade = backgroundDim.DOFade(1f, 1f);
+        fade.SetUpdate(true);
+        fade.onComplete += () => {
+            Time.timeScale = 1f;
+            SceneManager.LoadSceneAsync("MainMenuScene");
+            backgroundDim.DOFade(0f, 1f);
+        };
+    }
 
     //public void ToggleSettings(bool value) {
     //    m_pausePanel.SetActive(!value);
@@ -131,12 +145,12 @@ public class GameUIManager : MonoBehaviour {
     /// Show/hide pause menu
     /// </summary>
     /// <param name="value"></param>
-    //public void SetPauseGame(bool value) {
-    //    m_pauseMenu.SetActive(value);
-    //    Time.timeScale = value ? 0f : 1f;
-    //    Cursor.visible = value;
-    //    Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
-    //}
+    public void SetPauseGame(bool value) {
+        pauseMenu.SetActive(value);
+        Time.timeScale = value ? 0f : 1f;
+        //Cursor.visible = value;
+        //Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
+    }
 
     /// <summary>
     /// Show checkpoint reached text
