@@ -12,6 +12,5 @@ public class PlayerData {
     public string checkpointID;
     public string sceneName;
 
-    //TODO
     public int maxHealth;
 }

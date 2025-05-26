@@ -16,15 +16,19 @@ public static class SaveSystem {
             var json = File.ReadAllText(SavePath);
             var loadedData = JsonUtility.FromJson<PlayerData>(json);
             InventoryManager.instance.LoadData(loadedData);
-            Debug.Log("inventory data loaded");
+            Debug.Log("save data loaded");
 
             if (!string.IsNullOrEmpty(loadedData.sceneName)) {
                 SceneManager.LoadSceneAsync(loadedData.sceneName);
+                Debug.Log(loadedData.sceneName);
             }
         }
     }
 
     public static void DeleteSave() {
-        if (File.Exists(SavePath)) File.Delete(SavePath);
+        if (File.Exists(SavePath)) {
+            File.Delete(SavePath);
+            Debug.Log("data deleted");
+        }
     }
 }

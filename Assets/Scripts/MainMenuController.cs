@@ -17,18 +17,12 @@ public class MainMenuController : MonoBehaviour {
 
 
     private void Awake() {
-        // start game on any button press
-        //InputSystem.onAnyButtonPress.CallOnce(ctx => LoadAndStartGame());
-        //InputSystem.onAnyButtonPress.CallOnce(ctx => StartNewGame());
+        
     }
 
     /// <summary>
-    /// Load the game scene
+    /// Delete save data and start a new game
     /// </summary>
-    public void LoadGameScene() {
-        SceneManager.LoadSceneAsync(gameScene);
-    }
-
     public void StartNewGame() {
         backgroundDim.DOFade(1f, 1f).onComplete += () => {
             mainMenuPanel.SetActive(false);
@@ -37,16 +31,15 @@ public class MainMenuController : MonoBehaviour {
 
             if (File.Exists(savePath)) {
                 //if player has any saved progress
-                SaveSystem.DeleteSave();
-                LoadGameScene();
-            } else {
-                LoadGameScene();
+                SaveSystem.DeleteSave();               
             }
+            InventoryManager.instance.ResetData();
+            SceneManager.LoadSceneAsync(gameScene);
         };
     }
 
     /// <summary>
-    /// fade screen and load level asynchronously
+    /// Load saved data and start game
     /// </summary>
     public void LoadAndStartGame() {
         backgroundDim.DOFade(1f, 1f).onComplete += () => {
@@ -58,7 +51,7 @@ public class MainMenuController : MonoBehaviour {
                 //if player has any saved progress
                 SaveSystem.Load();
             } else {
-                LoadGameScene();
+                SceneManager.LoadSceneAsync(gameScene);
             }    
         };
     }

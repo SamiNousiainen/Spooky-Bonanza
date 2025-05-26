@@ -17,7 +17,6 @@ public class GameUIManager : MonoBehaviour {
     [SerializeField] private TMP_Text candyAmountText;
     [SerializeField] private TMP_Text pumpkinAmountText;
     [SerializeField] private TMP_Text currentHealthText;
-    private PlayerHealth playerHp;
 
     [Header("Pause Menu")]
 
@@ -46,7 +45,6 @@ public class GameUIManager : MonoBehaviour {
     private void Awake() {
         if (instance == null) {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         } else {
             Destroy(gameObject);
         }
@@ -75,6 +73,7 @@ public class GameUIManager : MonoBehaviour {
     }
 
     public void UpdatePlayerHp() {
+        if (Player.instance != null)
         currentHealthText.text = Player.instance.GetComponent<PlayerHealth>().currentHealth.ToString();
     }
 
@@ -104,6 +103,7 @@ public class GameUIManager : MonoBehaviour {
         fade.SetUpdate(true);
         fade.onComplete += () => {
             Time.timeScale = 1f;
+            SaveSystem.Save();
             SceneManager.LoadSceneAsync("MainMenuScene");
             backgroundDim.DOFade(0f, 1f);
         };
