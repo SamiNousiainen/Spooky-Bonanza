@@ -12,6 +12,6 @@ public class PlayerProperties : ScriptableObject {
     public float gravityModifier = -9.81f;
 
     [Header("Combat")]
-    public float hitPoints;
+    //public float hitPoints;
     public float damage;
 }

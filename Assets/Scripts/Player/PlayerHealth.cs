@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private float maxHealth = 3f;
+    private float maxHealth;
     public float currentHealth { get; private set; }
 
     void Awake()
     {
-        currentHealth = maxHealth;
+        
     } // Awake
+
+    private void Start() {
+        SetMaxHealth(InventoryManager.instance.Data.maxHealth);
+        GameUIManager.instance.UpdatePlayerHp();
+    }
 
     public void TakeDamage(float damage)
     {
@@ -24,6 +29,12 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void SetMaxHealth(int newMax) {
+        maxHealth = newMax;
+        currentHealth = maxHealth;
+        GameUIManager.instance.UpdatePlayerHp();
     }
 
     public void ResetHP() {
