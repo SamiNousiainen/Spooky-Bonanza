@@ -23,8 +23,8 @@ public class CheckpointBehaviour : MonoBehaviour {
         if (other.CompareTag("Player") && checkPointReached == false) {
             CheckpointManager.instance.ActivateCheckpoint(this);
             checkPointReached = true;
-            other.GetComponent<PlayerHealth>().ResetHP();
 
+            InventoryManager.instance.SetMaxHP();
             InventoryManager.instance.Data.sceneName = SceneManager.GetActiveScene().name;
             InventoryManager.instance.Data.checkpointID = checkpointID;
 
