@@ -30,7 +30,7 @@ public class PumpkinCollectible : MonoBehaviour {
 
     private void CollectPumpkin() {
         InventoryManager.instance.AddPumpkin(pumpkinID);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     private void OnDrawGizmos() {

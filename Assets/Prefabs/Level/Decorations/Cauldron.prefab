@@ -9712,7 +9712,7 @@ Transform:
   m_GameObject: {fileID: 3707955183871955335}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.07075557, z: -0, w: 0.9974937}
-  m_LocalPosition: {x: 0, y: 2.8, z: 0}
+  m_LocalPosition: {x: 0, y: 3.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

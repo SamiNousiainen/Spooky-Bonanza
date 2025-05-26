@@ -7,6 +7,8 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
     [SerializeField] private float maxHealth = 3f;
     [SerializeField] private float currentHealth;
 
+    [SerializeField] private GameObject poof;
+
     [Header("Candy drop settings")]
     [SerializeField] private GameObject candyPrefab;
     [SerializeField] private int candyDropAmount = 3;
@@ -27,15 +29,16 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
             //vois olla omassa funktiossa
             DropCandy();
             gameObject.SetActive(false);
+            if (poof != null) {
+            Instantiate(poof, transform.position, Quaternion.identity);
+            }
             //death anim + particle effect
         }
     }
 
     private void DropCandy() {
-        //if (candyPrefabs.Length == 0) return;
 
         for (int i = 0; i < candyDropAmount; i++) {
-            //GameObject prefab = candyPrefabs[Random.Range(0, candyPrefabs.Length)];
 
             Vector3 offset = Random.insideUnitSphere * spawnRadius;
             offset.y = Mathf.Abs(offset.y); // make sure it's above ground
