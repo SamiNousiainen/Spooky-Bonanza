@@ -126,7 +126,7 @@ MonoBehaviour:
     Enabled: 1
     ObstacleLayers:
       serializedVersion: 2
-      m_Bits: 1
+      m_Bits: 65
     UseFollowTarget:
       Enabled: 0
       YOffset: 0
