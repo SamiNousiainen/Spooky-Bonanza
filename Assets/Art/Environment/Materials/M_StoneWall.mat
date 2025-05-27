@@ -40,6 +40,7 @@ Material:
     RenderType: Opaque
   disabledShaderPasses:
   - MOTIONVECTORS
+  - SRPDEFAULTUNLIT
   m_LockedProperties: _2nd_ShadeColor _2nd_ShadeMap
   m_SavedProperties:
     serializedVersion: 3
@@ -141,7 +142,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 895722df1ddf14841bc14f85e8380856, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -251,8 +252,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _1st2nd_Shades_Feather: 0.0001
-    - _1st_ShadeColor_Feather: 0.4
-    - _1st_ShadeColor_Step: 0.7
+    - _1st_ShadeColor_Feather: 0.5
+    - _1st_ShadeColor_Step: 0.8
     - _2nd_ShadeColor_Feather: 0.0001
     - _2nd_ShadeColor_Step: 0
     - _AORemapMax: 1
@@ -284,8 +285,8 @@ Material:
     - _AutoRenderQueue: 1
     - _BaseColorOverridden: 0
     - _BaseColorVisible: 1
-    - _BaseColor_Step: 0.7
-    - _BaseShade_Feather: 0.4
+    - _BaseColor_Step: 0.8
+    - _BaseShade_Feather: 0.5
     - _Base_Speed: 0
     - _Blend: 0
     - _BlendMode: 0
@@ -382,14 +383,14 @@ Material:
     - _Is_Filter_HiCutPointLightColor: 1
     - _Is_Filter_LightColor: 1
     - _Is_LightColor_1st_Shade: 1
-    - _Is_LightColor_2nd_Shade: 1
+    - _Is_LightColor_2nd_Shade: 0
     - _Is_LightColor_AR: 1
-    - _Is_LightColor_Ap_RimLight: 1
+    - _Is_LightColor_Ap_RimLight: 0
     - _Is_LightColor_Base: 1
-    - _Is_LightColor_HighColor: 1
-    - _Is_LightColor_MatCap: 1
-    - _Is_LightColor_Outline: 1
-    - _Is_LightColor_RimLight: 1
+    - _Is_LightColor_HighColor: 0
+    - _Is_LightColor_MatCap: 0
+    - _Is_LightColor_Outline: 0
+    - _Is_LightColor_RimLight: 0
     - _Is_NormalMapForMatCap: 0
     - _Is_NormalMapToBase: 0
     - _Is_NormalMapToHighColor: 0
@@ -508,7 +509,7 @@ Material:
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
     - _Use_1stAs2nd: 0
-    - _Use_BaseAs1st: 0
+    - _Use_BaseAs1st: 1
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZOverDrawMode: 0
@@ -525,15 +526,15 @@ Material:
     - _utsVersionY: 11
     - _utsVersionZ: 0
     m_Colors:
-    - _1st_ShadeColor: {r: 0.23923102, g: 0.20469919, b: 0.3773585, a: 1}
-    - _2nd_ShadeColor: {r: 0.22464216, g: 0.2, b: 0.30980393, a: 1}
+    - _1st_ShadeColor: {r: 0.36049464, g: 0.31238878, b: 0.5660378, a: 1}
+    - _2nd_ShadeColor: {r: 1, g: 1, b: 1, a: 1}
     - _AngelRingMaskColor: {r: 0, g: 1, b: 0, a: 1}
     - _AngelRing_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BaseColor: {r: 0.43465292, g: 0.3448291, b: 0.5943396, a: 1}
+    - _BaseColor: {r: 0.5929601, g: 0.49261302, b: 0.7735849, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColorMaskColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.4346529, g: 0.34482908, b: 0.5943396, a: 1}
+    - _Color: {r: 0.5929601, g: 0.49261302, b: 0.7735849, a: 1}
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}

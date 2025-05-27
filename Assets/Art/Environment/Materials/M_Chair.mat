@@ -27,6 +27,7 @@ Material:
     RenderType: Opaque
   disabledShaderPasses:
   - MOTIONVECTORS
+  - SRPDEFAULTUNLIT
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -238,8 +239,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _1st2nd_Shades_Feather: 0.0001
-    - _1st_ShadeColor_Feather: 0.3
-    - _1st_ShadeColor_Step: 0.6
+    - _1st_ShadeColor_Feather: 0.5
+    - _1st_ShadeColor_Step: 0.8
     - _2nd_ShadeColor_Feather: 0.0001
     - _2nd_ShadeColor_Step: 0
     - _AORemapMax: 1
@@ -271,8 +272,8 @@ Material:
     - _AutoRenderQueue: 1
     - _BaseColorOverridden: 0
     - _BaseColorVisible: 1
-    - _BaseColor_Step: 0.6
-    - _BaseShade_Feather: 0.3
+    - _BaseColor_Step: 0.8
+    - _BaseShade_Feather: 0.5
     - _Base_Speed: 0
     - _Blend: 0
     - _BlendMode: 0
@@ -369,14 +370,14 @@ Material:
     - _Is_Filter_HiCutPointLightColor: 1
     - _Is_Filter_LightColor: 1
     - _Is_LightColor_1st_Shade: 1
-    - _Is_LightColor_2nd_Shade: 1
+    - _Is_LightColor_2nd_Shade: 0
     - _Is_LightColor_AR: 1
-    - _Is_LightColor_Ap_RimLight: 1
+    - _Is_LightColor_Ap_RimLight: 0
     - _Is_LightColor_Base: 1
-    - _Is_LightColor_HighColor: 1
-    - _Is_LightColor_MatCap: 1
+    - _Is_LightColor_HighColor: 0
+    - _Is_LightColor_MatCap: 0
     - _Is_LightColor_Outline: 0
-    - _Is_LightColor_RimLight: 1
+    - _Is_LightColor_RimLight: 0
     - _Is_NormalMapForMatCap: 0
     - _Is_NormalMapToBase: 0
     - _Is_NormalMapToHighColor: 0
@@ -512,7 +513,7 @@ Material:
     - _utsVersionY: 11
     - _utsVersionZ: 0
     m_Colors:
-    - _1st_ShadeColor: {r: 0.24500386, g: 0.16189036, b: 0.3207547, a: 0.4392157}
+    - _1st_ShadeColor: {r: 0.43374088, g: 0.38127446, b: 0.5283019, a: 0.4392157}
     - _2nd_ShadeColor: {r: 1, g: 1, b: 1, a: 1}
     - _AngelRingMaskColor: {r: 0, g: 1, b: 0, a: 1}
     - _AngelRing_Color: {r: 1, g: 1, b: 1, a: 1}

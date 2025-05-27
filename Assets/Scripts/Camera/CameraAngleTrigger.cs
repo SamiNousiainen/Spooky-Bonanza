@@ -9,22 +9,26 @@ public class CameraAngleTrigger : MonoBehaviour {
     [SerializeField] private Vector3 targetRotation = new Vector3(60f, 0f, 0f);
     [SerializeField] private float transitionDuration = 1f;
 
-    //[Header("Optional: Tracked Offset")]
-    //[SerializeField] private Vector3 targetOffset = Vector3.zero;
-    //[SerializeField] private bool useOffset = false;
+    [Header("Camera Clamp Settings")]
+    [SerializeField] private bool overrideClampX = false;
+    [SerializeField] private float newMinX = -10f;
+    [SerializeField] private float newMaxX = 10f;
 
     private CinemachineCamera cinemachineCamera;
     private CinemachinePositionComposer positionComposer;
+    private CameraPositionController cameraPositionController;
 
     private float originalDistance;
     private Quaternion originalRotation;
-    //private Vector3 originalOffset;
+    private float originalMinX;
+    private float originalMaxX;
 
     private Coroutine transitionCoroutine;
 
     private void Start() {
         cinemachineCamera = FindAnyObjectByType<CinemachineCamera>();
         positionComposer = cinemachineCamera?.GetComponent<CinemachinePositionComposer>();
+        cameraPositionController = cinemachineCamera?.GetComponent<CameraPositionController>();
 
         if (cinemachineCamera != null) {
             originalRotation = cinemachineCamera.transform.rotation;
@@ -32,7 +36,11 @@ public class CameraAngleTrigger : MonoBehaviour {
 
         if (positionComposer != null) {
             originalDistance = positionComposer.CameraDistance;
-            //originalOffset = positionComposer.TargetOffset;
+        }
+
+        if (cameraPositionController != null) {
+            originalMinX = cameraPositionController.MinX;
+            originalMaxX = cameraPositionController.MaxX;
         }
     }
 
@@ -43,8 +51,11 @@ public class CameraAngleTrigger : MonoBehaviour {
         transitionCoroutine = StartCoroutine(SmoothTransition(
             targetDistance,
             Quaternion.Euler(targetRotation)
-        //useOffset ? targetOffset : positionComposer.TargetOffset
         ));
+
+        if (overrideClampX && cameraPositionController != null) {
+            cameraPositionController.SetXBounds(newMinX, newMaxX);
+        }
     }
 
     private void OnTriggerExit(Collider other) {
@@ -54,37 +65,29 @@ public class CameraAngleTrigger : MonoBehaviour {
         transitionCoroutine = StartCoroutine(SmoothTransition(
             originalDistance,
             originalRotation
-        //originalOffset
         ));
+
+        if (overrideClampX && cameraPositionController != null) {
+            cameraPositionController.SetXBounds(originalMinX, originalMaxX);
+        }
     }
 
-    private IEnumerator SmoothTransition(float distance, Quaternion rotation/*, Vector3 offset*/) {
+    private IEnumerator SmoothTransition(float distance, Quaternion rotation) {
         float t = 0f;
-
         float startDistance = positionComposer.CameraDistance;
         Quaternion startRotation = cinemachineCamera.transform.rotation;
-        //Vector3 startOffset = positionComposer.TargetOffset;
 
         while (t < transitionDuration) {
             t += Time.deltaTime;
             float progress = t / transitionDuration;
 
-            //Lerp distance
             positionComposer.CameraDistance = Mathf.Lerp(startDistance, distance, progress);
-
-            //Lerp camera rotation
             cinemachineCamera.transform.rotation = Quaternion.Slerp(startRotation, rotation, progress);
-
-            //Lerp tracked object offset
-            //if (useOffset) {
-            //    positionComposer.TargetOffset = Vector3.Lerp(startOffset, offset, progress);
-            //}
 
             yield return null;
         }
 
         positionComposer.CameraDistance = distance;
         cinemachineCamera.transform.rotation = rotation;
-        //if (useOffset) positionComposer.TargetOffset = offset;
     }
 }

@@ -40,9 +40,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1691205121085849649}
     m_Modifications:
+    - target: {fileID: 2286845387429540036, guid: 9c3665c66867582468b6623005a2d13c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3574013548772118495, guid: 9c3665c66867582468b6623005a2d13c, type: 3}
       propertyPath: m_Name
       value: Candelabra
+      objectReference: {fileID: 0}
+    - target: {fileID: 3574013548772118495, guid: 9c3665c66867582468b6623005a2d13c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5113889474447514931, guid: 9c3665c66867582468b6623005a2d13c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -82,6 +90,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5113889474447514931, guid: 9c3665c66867582468b6623005a2d13c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691811497307963471, guid: 9c3665c66867582468b6623005a2d13c, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
