@@ -420,7 +420,7 @@ MonoBehaviour:
   OnSceneChange:
     m_PersistentCalls:
       m_Calls: []
-  dim: {fileID: 0}
+  dim: {fileID: 1710700823}
 --- !u!4 &35739607
 Transform:
   m_ObjectHideFlags: 0
@@ -13918,6 +13918,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+--- !u!114 &1710700823 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6006794556479840836, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+  m_PrefabInstance: {fileID: 1710700822}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1714110597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17797,6 +17808,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 35739607}
   - {fileID: 475637138}
+  - {fileID: 1710700822}
   - {fileID: 1957646099}
   - {fileID: 1527462004}
   - {fileID: 1556503334}
@@ -17813,4 +17825,3 @@ SceneRoots:
   - {fileID: 1585177915}
   - {fileID: 1607555559}
   - {fileID: 5347622165568834263}
-  - {fileID: 1710700822}

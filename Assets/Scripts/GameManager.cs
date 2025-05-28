@@ -79,15 +79,12 @@ public class GameManager : MonoBehaviour {
 
     public void SceneChange(string sceneName) {
         Time.timeScale = 0f;
-
         var tween = dim.DOFade(1f, 1f);
         tween.SetUpdate(true);
         tween.OnComplete(() => {
 
             OnSceneChange.Invoke();
-
             SceneManager.LoadScene(sceneName);
-            //dim.color = new Color(0f, 0f, 0f, 0f);
             dim.DOFade(0f, 2f);
             Time.timeScale = 1f;
 
