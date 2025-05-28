@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// TODO, kaikki lev‰ll‰‰n
 /// </summary>
-public class GameUIManager : MonoBehaviour {
+public class GameUIManager : MonoBehaviour
+{
 
     public static GameUIManager instance;
 
@@ -32,6 +33,7 @@ public class GameUIManager : MonoBehaviour {
     //[SerializeField] private InputReader m_inputReader;
     //[SerializeField] private CinemachineCamera m_cinemachineCamera;
     private PlayerInput playerInput;
+    public static bool alwaysMaxJump = false;
     //private LiftGammaGain m_liftGammaGain;
 
     //[Space(5), Header("Level End")]
@@ -42,42 +44,52 @@ public class GameUIManager : MonoBehaviour {
 
 
 
-    private void Awake() {
-        if (instance == null) {
+    private void Awake()
+    {
+        if (instance == null)
+        {
             instance = this;
-        } else {
+        }
+        else
+        {
             Destroy(gameObject);
         }
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         if (playerInput == null) playerInput = new PlayerInput();
 
         playerInput.Enable();
         playerInput.UI.Pause.performed += context => SetPauseGame(true);
     }
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         if (playerInput == null) { playerInput = new PlayerInput(); }
         playerInput.Disable();
         playerInput.UI.Pause.performed -= context => SetPauseGame(true);
     }
 
-    private void Start() {
+    private void Start()
+    {
         UpdatePumpkinAmount();
         UpdateCandyAmount();
         UpdatePlayerHp();
     }
 
-    private void Update() {
+    private void Update()
+    {
     }
 
-    public void UpdatePlayerHp() {
+    public void UpdatePlayerHp()
+    {
         if (Player.instance != null)
-        currentHealthText.text = Player.instance.GetComponent<PlayerHealth>().currentHealth.ToString();
+            currentHealthText.text = Player.instance.GetComponent<PlayerHealth>().currentHealth.ToString();
     }
 
-    public void UpdatePumpkinAmount() {
+    public void UpdatePumpkinAmount()
+    {
         //pumpkinAmountText.DOFade(1f, 0f);
         pumpkinAmountText.text = InventoryManager.instance.Data.collectedPumpkins.Count.ToString();
         //purkkaratkasu
@@ -85,12 +97,14 @@ public class GameUIManager : MonoBehaviour {
 
     }
 
-    public void UpdateCandyAmount() {
+    public void UpdateCandyAmount()
+    {
         candyAmountText.text = InventoryManager.instance.Data.candyCount.ToString();
 
     }
 
-    private IEnumerator FadeUI() {
+    private IEnumerator FadeUI()
+    {
         //TODO
         yield return new WaitForSeconds(2f);
 
@@ -98,7 +112,8 @@ public class GameUIManager : MonoBehaviour {
 
     #region UI Callbacks
 
-    public void ExitGame() {
+    public void ExitGame()
+    {
         var fade = backgroundDim.DOFade(1f, 1f);
         fade.SetUpdate(true);
         fade.onComplete += () => {
@@ -109,9 +124,21 @@ public class GameUIManager : MonoBehaviour {
         };
     }
 
-    public void ToggleSettings(bool value) {
+    public void ToggleSettings(bool value)
+    {
         pausePanel.SetActive(!value);
         m_settingsPanel.SetActive(value);
+    }
+
+    public void ToggleBack(bool backButton)
+    {
+        m_settingsPanel.SetActive(false);
+        pausePanel.SetActive(true);
+    }
+
+    public void onToggleMaxJump(bool jumpValue)
+    {
+        alwaysMaxJump = jumpValue;
     }
 
     //public void OnMasterVolumeChanged(float value) {
@@ -145,7 +172,8 @@ public class GameUIManager : MonoBehaviour {
     /// Show/hide pause menu
     /// </summary>
     /// <param name="value"></param>
-    public void SetPauseGame(bool value) {
+    public void SetPauseGame(bool value)
+    {
         pauseMenu.SetActive(value);
         Time.timeScale = value ? 0f : 1f;
         //Cursor.visible = value;
@@ -155,7 +183,8 @@ public class GameUIManager : MonoBehaviour {
     /// <summary>
     /// Show checkpoint reached text
     /// </summary>
-    public void ShowCheckpointReachedText() {
+    public void ShowCheckpointReachedText()
+    {
         //m_checkpointText.color = Color.white;
         //m_checkpointText.DOFade(0f, 2f);
     }
@@ -190,3 +219,4 @@ public class GameUIManager : MonoBehaviour {
     //    return string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
     //}
 }
+
