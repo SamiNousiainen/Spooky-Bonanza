@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
     } // Awake
 
     private void Start() {
-        SetMaxHealth(InventoryManager.instance.Data.maxHealth);
+        InventoryManager.instance.SetMaxHP();
         GameUIManager.instance.UpdatePlayerHp();
     }
 

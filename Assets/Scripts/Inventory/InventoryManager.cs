@@ -30,7 +30,7 @@ public class InventoryManager : MonoBehaviour {
     public void SetMaxHP() {
         int newMaxHP = Mathf.Clamp(StartingMaxHP + (Data.candyCount / CandyPerHP), StartingMaxHP, CappedMaxHP);
         Data.maxHealth = newMaxHP;
-        Debug.Log(Data.maxHealth);
+        //Debug.Log(Data.maxHealth);
         if (Player.instance != null) {
             Player.instance.GetComponent<PlayerHealth>().SetMaxHealth(newMaxHP);
         }

@@ -4,90 +4,115 @@ using UnityEngine;
 
 public class CameraAngleTrigger : MonoBehaviour {
 
-    [Header("Target Camera Settings")]
-    [SerializeField] private float targetDistance = 10f;
-    [SerializeField] private Vector3 targetRotation = new Vector3(60f, 0f, 0f);
+    [System.Serializable]
+    private class CameraSettings {
+        public float targetDistance = 10f;
+        public Vector3 targetRotation = new Vector3(60f, 0f, 0f);
+        public float minX = 1f;
+        public float maxX = 5f;
+        public float minY = 1f;
+        public float maxY = 6f;
+    }
+
     [SerializeField] private float transitionDuration = 1f;
 
-    [Header("Camera Clamp Settings")]
-    [SerializeField] private bool overrideClampX = false;
-    [SerializeField] private float newMinX = -10f;
-    [SerializeField] private float newMaxX = 10f;
+    [Header("Camera Settings")]
+    [SerializeField] private CameraSettings frontEntrySettings;
+    [SerializeField] private CameraSettings backEntrySettings;
 
     private CinemachineCamera cinemachineCamera;
     private CinemachinePositionComposer positionComposer;
     private CameraPositionController cameraPositionController;
 
-    private float originalDistance;
-    private Quaternion originalRotation;
-    private float originalMinX;
-    private float originalMaxX;
-
+    private CameraSettings currentSettings = null;
     private Coroutine transitionCoroutine;
+
+    private enum EntryDirection { None, Front, Back }
+    private EntryDirection lastEntryDirection = EntryDirection.None;
 
     private void Start() {
         cinemachineCamera = FindAnyObjectByType<CinemachineCamera>();
         positionComposer = cinemachineCamera?.GetComponent<CinemachinePositionComposer>();
         cameraPositionController = cinemachineCamera?.GetComponent<CameraPositionController>();
-
-        if (cinemachineCamera != null) {
-            originalRotation = cinemachineCamera.transform.rotation;
-        }
-
-        if (positionComposer != null) {
-            originalDistance = positionComposer.CameraDistance;
-        }
-
-        if (cameraPositionController != null) {
-            originalMinX = cameraPositionController.MinX;
-            originalMaxX = cameraPositionController.MaxX;
-        }
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (!other.CompareTag("Player") || cinemachineCamera == null) return;
+        if (!other.CompareTag("Player")) return;
 
-        if (transitionCoroutine != null) StopCoroutine(transitionCoroutine);
-        transitionCoroutine = StartCoroutine(SmoothTransition(
-            targetDistance,
-            Quaternion.Euler(targetRotation)
-        ));
+        Vector3 toPlayer = other.transform.position - transform.position;
+        float dot = Vector3.Dot(transform.forward, toPlayer.normalized);
 
-        if (overrideClampX && cameraPositionController != null) {
-            cameraPositionController.SetXBounds(newMinX, newMaxX);
+        CameraSettings settings;
+        if (dot > 0f) {
+            settings = frontEntrySettings;
+            lastEntryDirection = EntryDirection.Front;
+        } else {
+            settings = backEntrySettings;
+            lastEntryDirection = EntryDirection.Back;
         }
+
+        if (currentSettings == settings)
+            return;
+
+        ApplySettings(settings);
     }
 
     private void OnTriggerExit(Collider other) {
-        if (!other.CompareTag("Player") || cinemachineCamera == null) return;
+        if (!other.CompareTag("Player")) return;
 
-        if (transitionCoroutine != null) StopCoroutine(transitionCoroutine);
-        transitionCoroutine = StartCoroutine(SmoothTransition(
-            originalDistance,
-            originalRotation
-        ));
+        Vector3 toPlayer = other.transform.position - transform.position;
+        float dot = Vector3.Dot(transform.forward, toPlayer.normalized);
 
-        if (overrideClampX && cameraPositionController != null) {
-            cameraPositionController.SetXBounds(originalMinX, originalMaxX);
+        EntryDirection exitDirection = dot > 0f ? EntryDirection.Front : EntryDirection.Back;
+
+        //Only revert if player exits in the same direction they entered
+        if (exitDirection == lastEntryDirection) {
+            CameraSettings revertSettings = currentSettings == frontEntrySettings
+                ? backEntrySettings
+                : frontEntrySettings;
+
+            ApplySettings(revertSettings);
+
+            lastEntryDirection = EntryDirection.None;
         }
     }
 
-    private IEnumerator SmoothTransition(float distance, Quaternion rotation) {
+    private void ApplySettings(CameraSettings settings) {
+        currentSettings = settings;
+
+        if (transitionCoroutine != null)
+            StopCoroutine(transitionCoroutine);
+
+        transitionCoroutine = StartCoroutine(SmoothTransition(
+            settings.targetDistance,
+            Quaternion.Euler(settings.targetRotation)
+        ));
+
+        if (cameraPositionController != null) {
+            cameraPositionController.SetXBounds(settings.minX, settings.maxX);
+            cameraPositionController.SetYBounds(settings.minY, settings.maxY);
+        }
+    }
+
+    private IEnumerator SmoothTransition(float targetDistance, Quaternion targetRotation) {
         float t = 0f;
+
         float startDistance = positionComposer.CameraDistance;
         Quaternion startRotation = cinemachineCamera.transform.rotation;
 
         while (t < transitionDuration) {
             t += Time.deltaTime;
-            float progress = t / transitionDuration;
+            float progress = Mathf.Clamp01(t / transitionDuration);
 
-            positionComposer.CameraDistance = Mathf.Lerp(startDistance, distance, progress);
-            cinemachineCamera.transform.rotation = Quaternion.Slerp(startRotation, rotation, progress);
+            positionComposer.CameraDistance = Mathf.Lerp(startDistance, targetDistance, progress);
+            cinemachineCamera.transform.rotation = Quaternion.Slerp(startRotation, targetRotation, progress);
 
             yield return null;
         }
 
-        positionComposer.CameraDistance = distance;
-        cinemachineCamera.transform.rotation = rotation;
+        positionComposer.CameraDistance = targetDistance;
+        cinemachineCamera.transform.rotation = targetRotation;
+
+        transitionCoroutine = null;
     }
 }

@@ -22,7 +22,7 @@ public class GameUIManager : MonoBehaviour {
 
     //[SerializeField] private AudioMixer m_audioMixer;
     //[SerializeField] private VolumeProfile m_globalVolumeProfile;
-    //[SerializeField] private GameObject m_settingsPanel;
+    [SerializeField] private GameObject m_settingsPanel;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private Image backgroundDim;

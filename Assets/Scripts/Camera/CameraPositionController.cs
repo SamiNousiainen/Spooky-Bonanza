@@ -21,10 +21,12 @@ public class CameraPositionController : MonoBehaviour {
 
     [SerializeField] private float lerpSpeed = 3f;
 
-    [Header("Follow Proxy")]
-    [SerializeField] private Transform followProxy; 
-    [SerializeField] private float minX = -10f;              //Left bound
-    [SerializeField] private float maxX = 10f;               //Right bound
+    [Header("Clamp Settings")]
+    [SerializeField] private Transform followProxy;
+    [SerializeField] private float minX = 1f;       // Left
+    [SerializeField] private float maxX = 5f;       // Right
+    [SerializeField] private float minY = 1f;       // Bottom
+    [SerializeField] private float maxY = 6f;       // Top
 
     public float MinX => minX;
     public float MaxX => maxX;
@@ -68,11 +70,12 @@ public class CameraPositionController : MonoBehaviour {
         if (positionComposer == null || characterController == null || player == null || followProxy == null)
             return;
 
-        //Clamp X and follow Y/Z
+        //clamp X and Y
         float clampedX = Mathf.Clamp(player.position.x, minX, maxX);
-        followProxy.position = new Vector3(clampedX, player.position.y, player.position.z);
+        float clampedY = Mathf.Clamp(player.position.y, minY, maxY);
+        followProxy.position = new Vector3(clampedX, clampedY, player.position.z);
 
-        //Adjust vertical camera behavior based on falling
+        //adjust vertical camera behavior based on falling
         float targetOffset = characterController.velocity.y <= -3f ? fallOffsetY : defaultOffsetY;
         float targetDamping = characterController.velocity.y <= -3f ? fallDampingY : defaultDampingY;
         float targetScreenPos = characterController.velocity.y <= -3f ? fallScreenPosY : defaultScreenPosY;
@@ -94,4 +97,10 @@ public class CameraPositionController : MonoBehaviour {
         minX = newMinX;
         maxX = newMaxX;
     }
+
+    public void SetYBounds(float newMinY, float newMaxY) {
+        minY = newMinY;
+        maxY = newMaxY;
+    }
+
 }
