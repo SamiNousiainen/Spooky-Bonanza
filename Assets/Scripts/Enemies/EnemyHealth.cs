@@ -37,19 +37,19 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
     }
 
     private void DropCandy() {
-
         for (int i = 0; i < candyDropAmount; i++) {
-
             Vector3 offset = Random.insideUnitSphere * spawnRadius;
             offset.y = Mathf.Abs(offset.y); // make sure it's above ground
 
             GameObject candy = Instantiate(candyPrefab, transform.position + offset, Quaternion.identity);
 
-            Rigidbody rb = candy.GetComponent<Rigidbody>();
-            if (rb != null) {
+            // Add popout movement
+            CandyPopout popout = candy.GetComponent<CandyPopout>();
+            if (popout != null) {
                 Vector3 direction = (offset + Vector3.up).normalized;
-                rb.AddForce(direction * spawnForce, ForceMode.Impulse);
+                popout.Initialize(direction, spawnForce);
             }
         }
     }
+
 }

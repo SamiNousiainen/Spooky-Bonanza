@@ -158,3 +158,8 @@ MonoBehaviour:
   defaultScreenPosY: 0.18
   fallScreenPosY: 0
   lerpSpeed: 2
+  followProxy: {fileID: 0}
+  minX: 1
+  maxX: 5
+  minY: -10
+  maxY: 20

@@ -15,7 +15,6 @@ public class Candy : MonoBehaviour {
 
     [Header("Visual randomization")]
     [SerializeField] private Mesh[] possibleMeshes;
-    [SerializeField] private Material[] possibleMaterials;
 
     private Transform player;
 
@@ -26,12 +25,6 @@ public class Candy : MonoBehaviour {
         MeshFilter meshFilter = GetComponent<MeshFilter>();
         if (possibleMeshes.Length > 0 && meshFilter != null) {
             meshFilter.mesh = possibleMeshes[Random.Range(0, possibleMeshes.Length)];
-        }
-
-        //pick a random material?
-        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-        if (possibleMaterials.Length > 0 && meshRenderer != null) {
-            meshRenderer.material = possibleMaterials[Random.Range(0, possibleMaterials.Length)];
         }
     }
 

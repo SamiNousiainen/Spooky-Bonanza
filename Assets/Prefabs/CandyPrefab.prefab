@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 3858632089721928815}
   - component: {fileID: 4999019723526195246}
   - component: {fileID: 920179034977671943}
-  - component: {fileID: 159761743252064402}
+  - component: {fileID: 6616498665401384538}
   - component: {fileID: -1917990243443760163}
+  - component: {fileID: 8993493700327605069}
   m_Layer: 8
   m_Name: CandyPrefab
   m_TagString: Untagged
@@ -43,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3407659217935857711}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -6090847441327968624, guid: e88b77644b1a4754a9c266104a2c2628, type: 3}
 --- !u!23 &4999019723526195246
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -67,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b24cc2bb33e293c43b8918188797eff6, type: 2}
+  - {fileID: 2100000, guid: 26235a59579492147bad288d2b29ba1e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -101,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6affe80931e09644bfdd65119891907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attractionRange: 1
+  attractionRange: 1.5
   attractionSpeed: 5
   snapDistance: 0.5
   possibleMeshes:
@@ -109,11 +110,40 @@ MonoBehaviour:
   - {fileID: -6090847441327968624, guid: e88b77644b1a4754a9c266104a2c2628, type: 3}
   - {fileID: 1616691108262468743, guid: ba61db7bf680f1d45ae03c86fbcb90be, type: 3}
   - {fileID: -1255220166165468868, guid: 41828554fcf88c04cb0bb4deaa9a6d95, type: 3}
-  possibleMaterials:
-  - {fileID: 2100000, guid: c6d99efa422323348b2ff7ea38f25e43, type: 2}
-  - {fileID: 2100000, guid: d60af3ac0ed160f4ab63c215129782d0, type: 2}
-  - {fileID: 2100000, guid: 39281fa077e7d9d42802ea3832b8960d, type: 2}
---- !u!54 &159761743252064402
+--- !u!114 &6616498665401384538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407659217935857711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877e8df421bbd90428952e235ca4c5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &-1917990243443760163
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407659217935857711}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &8993493700327605069
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,29 +165,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
---- !u!65 &-1917990243443760163
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3407659217935857711}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Constraints: 112
+  m_CollisionDetection: 0
