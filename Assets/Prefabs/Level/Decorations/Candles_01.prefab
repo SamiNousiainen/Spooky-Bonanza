@@ -206,7 +206,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: cd36ce4b67f30af41acff3726e135c77, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 524b6b1a106ece447be789f87fee63ac, type: 2}
+      objectReference: {fileID: 2100000, guid: e94dc630c23d96f419ba5cee097e46e0, type: 2}
     - target: {fileID: 919132149155446097, guid: cd36ce4b67f30af41acff3726e135c77, type: 3}
       propertyPath: m_Name
       value: SM_Candle_02
@@ -305,7 +305,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 2d7288c3d0296b941896614e6524c023, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 524b6b1a106ece447be789f87fee63ac, type: 2}
+      objectReference: {fileID: 2100000, guid: e94dc630c23d96f419ba5cee097e46e0, type: 2}
     - target: {fileID: 919132149155446097, guid: 2d7288c3d0296b941896614e6524c023, type: 3}
       propertyPath: m_Name
       value: SM_Candle_01
