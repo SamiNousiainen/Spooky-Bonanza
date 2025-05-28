@@ -16,10 +16,12 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private GameObject shield;
 
     [SerializeField] private Transform attackPoint;
-    [SerializeField] private Vector3 halfExtents = new Vector3(0.5f, 0.5f, 0.5f);
 
     private bool isGliding;
     private bool isBlocking;
+
+    private bool canAttack = true;
+    public float attackCooldown = 5.0f;
 
     public static PlayerCombat instance;
     private List<IDamageable> damagedEnemies = new List<IDamageable>();
@@ -65,11 +67,15 @@ public class PlayerCombat : MonoBehaviour
 
     public void Attack()
     {
-        StartCoroutine(DealDamage());
+        if (canAttack) { 
+            StartCoroutine(DealDamage());
+        }
     }
 
     private IEnumerator DealDamage()
     {
+        canAttack = false;
+
         Debug.Log("Attack!");
 
         float attackRange = 0.5f;
@@ -92,6 +98,9 @@ public class PlayerCombat : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         attackPoint.gameObject.SetActive(false);
         ReturnEnemiesToDamageable();
+
+        yield return new WaitForSeconds(attackCooldown); 
+        canAttack = true;
     }
 
     private void ReturnEnemiesToDamageable() {
