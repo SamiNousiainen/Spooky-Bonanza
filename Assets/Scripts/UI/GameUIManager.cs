@@ -109,10 +109,10 @@ public class GameUIManager : MonoBehaviour {
         };
     }
 
-    //public void ToggleSettings(bool value) {
-    //    m_pausePanel.SetActive(!value);
-    //    m_settingsPanel.SetActive(value);
-    //}
+    public void ToggleSettings(bool value) {
+        pausePanel.SetActive(!value);
+        m_settingsPanel.SetActive(value);
+    }
 
     //public void OnMasterVolumeChanged(float value) {
     //    m_audioMixer.SetFloat("MasterVolume", ToLogarithmicVolume(value));
