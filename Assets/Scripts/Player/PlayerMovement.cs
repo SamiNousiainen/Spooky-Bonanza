@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private float maxJumpHeight = 4.0f;
     private float maxJumpTime = 1.2f;
     private float timeToApex;
-    
+
 
     [SerializeField] private float coyoteTime = 0.2f;
     [SerializeField] private float coyoteTimeCounter;
@@ -61,11 +61,11 @@ public class PlayerMovement : MonoBehaviour
 
         CheckGround();
 
-        
-            if (isGrounded && velocity.y <= 0f)
-                coyoteTimeCounter = coyoteTime;
-            else
-                coyoteTimeCounter -= Time.deltaTime;
+
+        if (isGrounded && velocity.y <= 0f)
+            coyoteTimeCounter = coyoteTime;
+        else
+            coyoteTimeCounter -= Time.deltaTime;
 
 
         if (jumpInput)
@@ -192,14 +192,16 @@ public class PlayerMovement : MonoBehaviour
         characterController.Move(new Vector3(0f, velocity.y + externalVelocity.y, 0f) * Time.deltaTime);
     } //HandleGravity
 
-    void HandleJump() {
+    void HandleJump()
+    {
         if (!canMove)
             return;
 
         bool bufferedJump = jumpBufferCounter > 0f;
 
-        if (bufferedJump && (isGrounded || coyoteTimeCounter > 0f)) {
-            velocity.y = initialJumpVelocity * 0.5f;
+        if (bufferedJump && (isGrounded || coyoteTimeCounter > 0f))
+        {
+            velocity.y = initialJumpVelocity * (GameUIManager.alwaysMaxJump ? 0.75f : 0.5f);
             jumpBufferCounter = 0f;
             coyoteTimeCounter = 0f;
         }
@@ -218,6 +220,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 }
+
 
 /*void OnMovementInput(InputAction.CallbackContext context)
 {
