@@ -83,7 +83,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 3e813801f6c91434eb42a15d7e5eb0df, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 123d0fa58e297d842bd5c4100d72cc83, type: 2}
+      objectReference: {fileID: 2100000, guid: 98f18de7f382a2444ae09dde22540604, type: 2}
     - target: {fileID: 919132149155446097, guid: 3e813801f6c91434eb42a15d7e5eb0df, type: 3}
       propertyPath: m_Name
       value: SM_Pole
