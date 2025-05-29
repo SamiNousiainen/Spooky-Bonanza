@@ -83,36 +83,52 @@ public class CameraAngleTrigger : MonoBehaviour {
         if (transitionCoroutine != null)
             StopCoroutine(transitionCoroutine);
 
-        transitionCoroutine = StartCoroutine(SmoothTransition(
-            settings.targetDistance,
-            Quaternion.Euler(settings.targetRotation)
-        ));
+        transitionCoroutine = StartCoroutine(SmoothTransition(settings));
 
         if (cameraPositionController != null) {
+            cameraPositionController.SetCameraMaxDistance(settings.targetDistance);
             cameraPositionController.SetXBounds(settings.minX, settings.maxX);
             cameraPositionController.SetYBounds(settings.minY, settings.maxY);
         }
     }
 
-    private IEnumerator SmoothTransition(float targetDistance, Quaternion targetRotation) {
+    private IEnumerator SmoothTransition(CameraSettings settings) {
         float t = 0f;
 
         float startDistance = positionComposer.CameraDistance;
         Quaternion startRotation = cinemachineCamera.transform.rotation;
 
+        float startMinX = cameraPositionController.MinX;
+        float startMaxX = cameraPositionController.MaxX;
+        float startMinY = cameraPositionController.MinY;
+        float startMaxY = cameraPositionController.MaxY;
+
+        Quaternion targetRotation = Quaternion.Euler(settings.targetRotation);
+        float targetDistance = settings.targetDistance;
+
         while (t < transitionDuration) {
             t += Time.deltaTime;
             float progress = Mathf.Clamp01(t / transitionDuration);
 
+            //lerp camera distance and rotation
             positionComposer.CameraDistance = Mathf.Lerp(startDistance, targetDistance, progress);
             cinemachineCamera.transform.rotation = Quaternion.Slerp(startRotation, targetRotation, progress);
+
+            //lerp bounds
+            cameraPositionController.SetXBounds(
+                Mathf.Lerp(startMinX, settings.minX, progress),
+                Mathf.Lerp(startMaxX, settings.maxX, progress)
+            );
+            cameraPositionController.SetYBounds(
+                Mathf.Lerp(startMinY, settings.minY, progress),
+                Mathf.Lerp(startMaxY, settings.maxY, progress)
+            );
 
             yield return null;
         }
 
-        positionComposer.CameraDistance = targetDistance;
-        cinemachineCamera.transform.rotation = targetRotation;
-
         transitionCoroutine = null;
     }
+
+
 }

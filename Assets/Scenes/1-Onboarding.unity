@@ -1481,6 +1481,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 397479293}
     m_Modifications:
+    - target: {fileID: 2492593661710767970, guid: 33cf87c3d13c87d448c2e4a4d20fc1c5, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5662688826209884044, guid: 33cf87c3d13c87d448c2e4a4d20fc1c5, type: 3}
       propertyPath: m_Name
       value: WallWide (1)
@@ -7134,6 +7138,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 397479293}
     m_Modifications:
+    - target: {fileID: 2492593661710767970, guid: 33cf87c3d13c87d448c2e4a4d20fc1c5, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5662688826209884044, guid: 33cf87c3d13c87d448c2e4a4d20fc1c5, type: 3}
       propertyPath: m_Name
       value: WallWide
@@ -14135,7 +14143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8374611293998836147, guid: a9cc9e4ef18ae054abd588f5ea755d6f, type: 3}
       propertyPath: frontEntrySettings.targetRotation.x
-      value: 10
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14755,7 +14763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8374611293998836147, guid: a9cc9e4ef18ae054abd588f5ea755d6f, type: 3}
       propertyPath: backEntrySettings.targetDistance
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8374611293998836147, guid: a9cc9e4ef18ae054abd588f5ea755d6f, type: 3}
       propertyPath: frontEntrySettings.targetDistance
