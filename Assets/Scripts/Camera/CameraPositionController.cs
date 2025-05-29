@@ -28,13 +28,18 @@ public class CameraPositionController : MonoBehaviour {
     [SerializeField] private float minY = 1f;       // Bottom
     [SerializeField] private float maxY = 6f;       // Top
 
+    private float currentMaxDistance;
+
     public float MinX => minX;
     public float MaxX => maxX;
+    public float MinY => minY;
+    public float MaxY => maxY;
 
     private Transform player;
 
     private void Start() {
         positionComposer = GetComponent<CinemachinePositionComposer>();
+        currentMaxDistance = positionComposer.CameraDistance;
 
         player = Player.instance != null ? Player.instance.transform : FindAnyObjectByType<Player>()?.transform;
         if (player != null) {
@@ -91,6 +96,22 @@ public class CameraPositionController : MonoBehaviour {
         positionComposer.TargetOffset = currentOffset;
         positionComposer.Damping.y = currentDamping;
         positionComposer.Composition.ScreenPosition.y = currentScreenPos;
+
+        //prevent camera from going through walls that would get between the player and the camera
+        if (followProxy != null) {
+            RaycastHit hit;
+            Debug.DrawLine(followProxy.transform.position, transform.position, Color.rebeccaPurple);
+
+            Vector3 direction = (transform.position - followProxy.transform.position).normalized;
+            float distance = currentMaxDistance;
+
+            if (Physics.Raycast(followProxy.transform.position, direction, out hit, distance, LayerMask.GetMask("Wall"))) {
+                Debug.Log(hit.distance);
+                positionComposer.CameraDistance = hit.distance;
+            } else {
+                positionComposer.CameraDistance = Mathf.Lerp(positionComposer.CameraDistance, currentMaxDistance, Time.deltaTime * lerpSpeed);
+            }
+        }
     }
 
     public void SetXBounds(float newMinX, float newMaxX) {
@@ -101,6 +122,10 @@ public class CameraPositionController : MonoBehaviour {
     public void SetYBounds(float newMinY, float newMaxY) {
         minY = newMinY;
         maxY = newMaxY;
+    }
+
+    public void SetCameraMaxDistance(float newDistance) {
+        currentMaxDistance = newDistance;
     }
 
 }
