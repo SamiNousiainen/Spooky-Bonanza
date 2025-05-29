@@ -4050,6 +4050,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7326396322975255956, guid: 61756628179a67841b3410503bac1cc4, type: 3}
+      propertyPath: door1TargetRotation.w
+      value: 0.6087614
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326396322975255956, guid: 61756628179a67841b3410503bac1cc4, type: 3}
+      propertyPath: door1TargetRotation.y
+      value: 0.7933533
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326396322975255956, guid: 61756628179a67841b3410503bac1cc4, type: 3}
+      propertyPath: door2TargetRotation.w
+      value: 0.6087614
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326396322975255956, guid: 61756628179a67841b3410503bac1cc4, type: 3}
+      propertyPath: door2TargetRotation.y
+      value: -0.7933533
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015705371687615370, guid: 61756628179a67841b3410503bac1cc4, type: 3}
+      propertyPath: m_Size.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015705371687615370, guid: 61756628179a67841b3410503bac1cc4, type: 3}
+      propertyPath: m_Center.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8878682238819616424, guid: 61756628179a67841b3410503bac1cc4, type: 3}
       propertyPath: m_Name
       value: WallDoor
