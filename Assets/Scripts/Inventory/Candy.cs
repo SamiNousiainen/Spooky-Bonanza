@@ -1,8 +1,7 @@
+using System.Collections;
+using KBCore.Refs;
 using UnityEngine;
 
-/// <summary>
-/// 
-/// </summary>
 public class Candy : MonoBehaviour {
 
     //[Tooltip("How much score is this candy worth?")]
@@ -15,17 +14,23 @@ public class Candy : MonoBehaviour {
 
     [Header("Visual randomization")]
     [SerializeField] private Mesh[] possibleMeshes;
+    [HideInInspector, SerializeField, Self] private Rigidbody rb;
 
     private Transform player;
+
+    private void OnValidate() {
+       this.ValidateRefs();
+    }
 
     void Start() {
         player = Player.instance.transform;
 
         //pick a random mesh
-        MeshFilter meshFilter = GetComponent<MeshFilter>();
+        MeshFilter meshFilter = GetComponentInChildren<MeshFilter>();
         if (possibleMeshes.Length > 0 && meshFilter != null) {
             meshFilter.mesh = possibleMeshes[Random.Range(0, possibleMeshes.Length)];
         }
+        StartCoroutine(SetToKinematic());
     }
 
     void Update() {
@@ -47,6 +52,14 @@ public class Candy : MonoBehaviour {
     private void CollectCandy() {
         InventoryManager.instance.AddCandy();
         Destroy(gameObject);
+    }
+
+    private IEnumerator SetToKinematic() {
+        yield return new WaitForSeconds(1);
+
+        if (rb.isKinematic == false) {
+            rb.isKinematic = true;
+        }
     }
 
 }

@@ -8,15 +8,15 @@ using UnityEngine.SceneManagement;
 /// Checkpoint component
 /// </summary>
 [RequireComponent(typeof(Collider))]
-//[RequireComponent(typeof(Renderer))]
 public class CheckpointBehaviour : MonoBehaviour {
+
+    [SerializeField] private GameObject activationVFX;
 
     public string checkpointID;
     private bool checkPointReached;
-    //private Material material;
 
     private void Awake() {
-        //material = GetComponent<Renderer>().material;
+        
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -24,16 +24,13 @@ public class CheckpointBehaviour : MonoBehaviour {
             CheckpointManager.instance.ActivateCheckpoint(this);
             checkPointReached = true;
 
+            activationVFX.SetActive(true);
+
             InventoryManager.instance.SetMaxHP();
             InventoryManager.instance.Data.sceneName = SceneManager.GetActiveScene().name;
             InventoryManager.instance.Data.checkpointID = checkpointID;
 
             SaveSystem.Save();
-            //var color = Color.green;
-            //color.a = 0.1f;
-            //material.DOColor(color, 0.5f);
-            //TODO checkpoint reached fx
-            Debug.Log(checkPointReached);
         }
     }
 }

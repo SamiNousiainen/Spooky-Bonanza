@@ -46,6 +46,12 @@ public class GameManager : MonoBehaviour {
     /// </summary>
     public void PlayerDeath() {
         Time.timeScale = 0f;
+        
+        //purkka, korjaa koko flow
+        if (dim == null) {
+            GameObject newDim = GameObject.Find("Dim");
+            dim = newDim.GetComponent<Image>();
+        }
 
         var tween = dim.DOFade(1f, 1f);
         tween.SetUpdate(true); //independent from timescale
@@ -79,6 +85,12 @@ public class GameManager : MonoBehaviour {
 
     public void SceneChange(string sceneName) {
         Time.timeScale = 0f;
+
+        //purkka, korjaa koko flow
+        if (dim == null) {
+            GameObject newDim = GameObject.Find("Dim");
+            dim = newDim.GetComponent<Image>();
+        }
         var tween = dim.DOFade(1f, 1f);
         tween.SetUpdate(true);
         tween.OnComplete(() => {

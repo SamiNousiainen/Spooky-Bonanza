@@ -106,7 +106,6 @@ public class CameraPositionController : MonoBehaviour {
             float distance = currentMaxDistance;
 
             if (Physics.Raycast(followProxy.transform.position, direction, out hit, distance, LayerMask.GetMask("Wall"))) {
-                Debug.Log(hit.distance);
                 positionComposer.CameraDistance = hit.distance;
             } else {
                 positionComposer.CameraDistance = Mathf.Lerp(positionComposer.CameraDistance, currentMaxDistance, Time.deltaTime * lerpSpeed);

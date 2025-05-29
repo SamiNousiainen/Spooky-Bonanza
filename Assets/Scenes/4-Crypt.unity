@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -849,6 +853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -976,6 +984,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1100,6 +1112,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2358,6 +2374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2423,6 +2443,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4905,6 +4929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4970,6 +4998,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5981,6 +6013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6802,6 +6838,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7539,6 +7579,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7600,6 +7644,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9230,6 +9278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9974,6 +10026,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11624,6 +11680,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11772,6 +11832,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11958,6 +12022,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12310,6 +12378,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12781,6 +12853,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13623,6 +13699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13896,6 +13976,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14147,6 +14231,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14869,6 +14957,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15652,6 +15744,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15973,6 +16069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16249,6 +16349,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17501,6 +17605,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19726,6 +19834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19791,6 +19903,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19976,6 +20092,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20318,6 +20438,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20680,6 +20804,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21307,6 +21435,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22976,6 +23108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24005,6 +24141,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24180,6 +24320,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24879,6 +25023,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
