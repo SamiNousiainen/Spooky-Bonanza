@@ -34,6 +34,7 @@ public class GameUIManager : MonoBehaviour
     //[SerializeField] private CinemachineCamera m_cinemachineCamera;
     private PlayerInput playerInput;
     public static bool alwaysMaxJump = false;
+    public static bool infiniteLives = false;
     //private LiftGammaGain m_liftGammaGain;
 
     //[Space(5), Header("Level End")]
@@ -139,6 +140,11 @@ public class GameUIManager : MonoBehaviour
     public void onToggleMaxJump(bool jumpValue)
     {
         alwaysMaxJump = jumpValue;
+    }
+
+    public void OnToggleInfiniteLives(bool lives)
+    {
+        infiniteLives = lives;
     }
 
     //public void OnMasterVolumeChanged(float value) {

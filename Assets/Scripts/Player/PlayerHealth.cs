@@ -17,6 +17,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (GameUIManager.infiniteLives) return;
+
         currentHealth -= damage;
         GameUIManager.instance.UpdatePlayerHp();
 
