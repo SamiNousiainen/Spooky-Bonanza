@@ -14,6 +14,7 @@ public class Candy : MonoBehaviour {
 
     [Header("Visual randomization")]
     [SerializeField] private Mesh[] possibleMeshes;
+    [SerializeField] private GameObject collectVFX;
     [HideInInspector, SerializeField, Self] private Rigidbody rb;
 
     private Transform player;
@@ -51,11 +52,13 @@ public class Candy : MonoBehaviour {
 
     private void CollectCandy() {
         InventoryManager.instance.AddCandy();
+        Instantiate(collectVFX, transform.position, Quaternion.identity);
         Destroy(gameObject);
+
     }
 
     private IEnumerator SetToKinematic() {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
         if (rb.isKinematic == false) {
             rb.isKinematic = true;

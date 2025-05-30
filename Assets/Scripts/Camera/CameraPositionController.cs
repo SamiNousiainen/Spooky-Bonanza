@@ -3,7 +3,7 @@ using Unity.Cinemachine;
 
 /// <summary>
 /// Controls CinemachinePositionComposer values based on player vertical movement,
-/// and clamps the camera's X follow position.
+/// and clamps the camera's X and Y follow positions
 /// </summary>
 public class CameraPositionController : MonoBehaviour {
 

@@ -12,6 +12,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
     [SerializeField] private GhostProperties ghostProperties;
     [SerializeField] private Transform fleeTarget;
     [SerializeField] private int stealAmount;
+    [SerializeField] private GameObject candyStealVFX;
 
     private EnemyState currentState = EnemyState.Default;
     private GhostPatrolRoute ghostPatrolRoute;
@@ -85,6 +86,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
             Debug.Log("no candy found, escape!");
         } else {
             InventoryManager.instance.RemoveCandy(stealAmount);
+            candyStealVFX.SetActive(true);
             Debug.Log("yoink! Hit the bricks!!");
             currentState = EnemyState.Flee;
         }

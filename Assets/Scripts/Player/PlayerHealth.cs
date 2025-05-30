@@ -5,6 +5,9 @@ public class PlayerHealth : MonoBehaviour
     private float maxHealth;
     public float currentHealth { get; private set; }
 
+    private float damageCooldown = 0.5f;
+    private float damageCooldownTimer;
+
     void Awake()
     {
         
@@ -19,7 +22,10 @@ public class PlayerHealth : MonoBehaviour
     {
         if (GameUIManager.infiniteLives) return;
 
-        currentHealth -= damage;
+        if (damageCooldownTimer <= 0) {
+            currentHealth -= damage;
+            damageCooldownTimer = damageCooldown;
+        }
         GameUIManager.instance.UpdatePlayerHp();
 
         if (currentHealth <= 0)

@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 public class CheckpointBehaviour : MonoBehaviour {
 
     [SerializeField] private GameObject activationVFX;
+    [SerializeField] private GameObject highlightVFX;
 
     public string checkpointID;
     private bool checkPointReached;
@@ -25,6 +26,8 @@ public class CheckpointBehaviour : MonoBehaviour {
             checkPointReached = true;
 
             activationVFX.SetActive(true);
+            highlightVFX.SetActive(false);
+
 
             InventoryManager.instance.SetMaxHP();
             InventoryManager.instance.Data.sceneName = SceneManager.GetActiveScene().name;

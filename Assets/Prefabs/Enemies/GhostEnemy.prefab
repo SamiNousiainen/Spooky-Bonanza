@@ -201,6 +201,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9011537317271864416}
     m_Modifications:
+    - target: {fileID: 334543486103856272, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+      propertyPath: stopAction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5043444085235648661, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -257,6 +261,11 @@ PrefabInstance:
 --- !u!4 &893805429193166747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5043444085235648661, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+  m_PrefabInstance: {fileID: 5303699816274708238}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1513708325913305800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6673001293080356294, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
   m_PrefabInstance: {fileID: 5303699816274708238}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6212055172486466486
@@ -339,6 +348,10 @@ PrefabInstance:
       propertyPath: stealAmount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5165426774182224874, guid: d23e28d12534bd545a376b0633221726, type: 3}
+      propertyPath: candyStealVFX
+      value: 
+      objectReference: {fileID: 1513708325913305800}
     - target: {fileID: 6042634728308067935, guid: d23e28d12534bd545a376b0633221726, type: 3}
       propertyPath: candyPrefab
       value: 

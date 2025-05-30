@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activationVFX: {fileID: 1395569478542573182}
+  highlightVFX: {fileID: 6383159207291919310}
   checkpointID: 
 --- !u!1 &2249245453937939150
 GameObject:
@@ -206,6 +207,11 @@ PrefabInstance:
 --- !u!4 &2176039103344284327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3274537321185497283, guid: 96f2aea7d6d187d42b3d23517ced4856, type: 3}
+  m_PrefabInstance: {fileID: 3693978986820878948}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6383159207291919310 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7770450072601450922, guid: 96f2aea7d6d187d42b3d23517ced4856, type: 3}
   m_PrefabInstance: {fileID: 3693978986820878948}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7261489036251346938

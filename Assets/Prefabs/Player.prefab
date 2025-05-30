@@ -96,9 +96,6 @@ MonoBehaviour:
   characterController: {fileID: 132657836499834516}
   cameraTransform: {fileID: 0}
   playerProperties: {fileID: 11400000, guid: 8479f8b7a1d2a1f458ad1f299abefa9a, type: 2}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
   velocity: {x: 0, y: 0, z: 0}
   canMove: 1
   isGrounded: 0
@@ -126,7 +123,7 @@ MonoBehaviour:
   umbrella: {fileID: 7742728934802204253}
   shield: {fileID: 8841090092602519750}
   attackPoint: {fileID: 8672080079408147885}
-  halfExtents: {x: 0.5, y: 0.5, z: 0.5}
+  attackCooldown: 0.3
   glideGravity: 2
 --- !u!114 &4539712018291856462
 MonoBehaviour:
@@ -153,7 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e772559193407468d3e4a02c889a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
 --- !u!1 &3840864495053151594
 GameObject:
   m_ObjectHideFlags: 0

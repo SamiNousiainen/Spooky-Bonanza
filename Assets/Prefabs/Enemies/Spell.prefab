@@ -19380,6 +19380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wizardProperties: {fileID: 11400000, guid: cdcae1440659fa94db8691023b471359, type: 2}
+  hitVFX: {fileID: 961611784602541406, guid: 2f0e09bd54ea9e04fadcac0af6bfbe4a, type: 3}
 --- !u!135 &6820297333749495000
 SphereCollider:
   m_ObjectHideFlags: 0
