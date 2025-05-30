@@ -21,7 +21,9 @@ public class PlayerCombat : MonoBehaviour
     private bool isBlocking;
 
     private bool canAttack = true;
-    public float attackCooldown = 0.1f;
+    public float attackCooldown = 0f;
+
+    private bool isAttacking = false;
 
     public static PlayerCombat instance;
     private List<IDamageable> damagedEnemies = new List<IDamageable>();
@@ -69,7 +71,8 @@ public class PlayerCombat : MonoBehaviour
     {
         if (!GameUIManager.IsGameplayInputAllowed()) return;
 
-        if (canAttack) { 
+        if (canAttack && !isAttacking && !isBlocking)
+        {
             StartCoroutine(DealDamage());
         }
     }
@@ -77,6 +80,7 @@ public class PlayerCombat : MonoBehaviour
     private IEnumerator DealDamage()
     {
         canAttack = false;
+        isAttacking = true;
 
         Debug.Log("Attack!");
 
@@ -101,12 +105,16 @@ public class PlayerCombat : MonoBehaviour
         attackPoint.gameObject.SetActive(false);
         ReturnEnemiesToDamageable();
 
+        isAttacking = false;
+
         yield return new WaitForSeconds(attackCooldown); 
         canAttack = true;
     }
 
-    private void ReturnEnemiesToDamageable() {
-        foreach (IDamageable damagedEnemy in damagedEnemies) {
+    private void ReturnEnemiesToDamageable()
+    {
+        foreach (IDamageable damagedEnemy in damagedEnemies)
+        {
             damagedEnemy.HasTakenDamage = false;
         }
         damagedEnemies.Clear();
@@ -124,7 +132,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void HandleBlock()
     {
-        if (!GameUIManager.IsGameplayInputAllowed())
+        if (!GameUIManager.IsGameplayInputAllowed() || isAttacking)
         {
             playerMovement.canMove = true;
             shield.SetActive(false);
