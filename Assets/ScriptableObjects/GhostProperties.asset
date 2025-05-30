@@ -15,5 +15,5 @@ MonoBehaviour:
   partolMoveSpeed: 1
   fleeMoveSpeed: 2
   chaseMoveSpeed: 3
-  attackRange: 2.5
-  detectionRange: 4
+  attackRange: 2.8
+  detectionRange: 5

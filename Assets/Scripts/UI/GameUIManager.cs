@@ -3,7 +3,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
-using UnityEditorInternal;
 using UnityEngine.SceneManagement;
 /// <summary>
 /// TODO, kaikki lev‰ll‰‰n
