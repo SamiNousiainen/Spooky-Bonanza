@@ -15,11 +15,24 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
     [SerializeField] private float spawnForce = 2f;
     [SerializeField] private float spawnRadius = 2f;
 
+    [SerializeField] private float knockbackForce;
+
     public bool HasTakenDamage { get; set; }
 
 
     void Awake() {
         currentHealth = maxHealth;
+    }
+
+    void Update() {
+
+        //Vector3 playerPos = Player.instance.transform.position;
+        //float distanceToPlayer = Vector3.Distance(transform.position, playerPos);
+
+        //if (distanceToPlayer < 1f) {
+        //    Vector3 direction = (transform.position - Player.instance.transform.position).normalized + Vector3.up;
+        //    Player.instance.GetComponent<PlayerMovement>().LaunchPlayer(-direction * 3f);
+        //}
     }
 
     public void TakeDamage(float damage) {
@@ -52,4 +65,6 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
             }
         }
     }
+
+
 }

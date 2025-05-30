@@ -31,13 +31,14 @@ public class WizardBehaviour : MonoBehaviour {
             case EnemyState.Default:
                 if (distanceToPlayer <= wizardProperties.detectionRange) {
                     currentState = EnemyState.Attack;
+                    attackTimer = wizardProperties.attackRate;
                 }
                 break;
 
             case EnemyState.Attack:
 
                 float rotationSpeed = 8f;
-                Vector3 direction = (player.position - transform.position).normalized;
+                Vector3 direction = (player.position - transform.position).normalized;            
 
                 Quaternion targetRotation = Quaternion.LookRotation(direction);
 
@@ -60,10 +61,9 @@ public class WizardBehaviour : MonoBehaviour {
     private void Attack() {
 
         //use animation trigger when anims are done
-        Debug.Log("projectile shot!");
         Vector3 direction = (player.position - castPoint.position).normalized;
 
-        GameObject spell = Instantiate(spellPrefab, castPoint.position, Quaternion.identity);
+        GameObject spell = Instantiate(spellPrefab, castPoint.position, Quaternion.LookRotation(castPoint.position - player.position));
         Rigidbody spellRb = spell.GetComponent<Rigidbody>();
 
         spellRb.linearVelocity = direction * wizardProperties.projectileSpeed;

@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partolMoveSpeed: 1
   fleeMoveSpeed: 2
-  chaseMoveSpeed: 2
-  attackRange: 1
-  detectionRange: 3
-  hitPoints: 1
+  chaseMoveSpeed: 3
+  attackRange: 2.5
+  detectionRange: 4

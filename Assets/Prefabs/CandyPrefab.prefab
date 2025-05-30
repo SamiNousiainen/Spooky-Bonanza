@@ -161,6 +161,7 @@ MonoBehaviour:
   - {fileID: -6090847441327968624, guid: e88b77644b1a4754a9c266104a2c2628, type: 3}
   - {fileID: 1616691108262468743, guid: ba61db7bf680f1d45ae03c86fbcb90be, type: 3}
   - {fileID: -1255220166165468868, guid: 41828554fcf88c04cb0bb4deaa9a6d95, type: 3}
+  collectVFX: {fileID: 7770450072601450922, guid: e89188ecab72c8547b6c16ce79b52549, type: 3}
   rb: {fileID: 8993493700327605069}
 --- !u!65 &-1917990243443760163
 BoxCollider:

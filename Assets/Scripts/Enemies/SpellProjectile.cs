@@ -6,6 +6,7 @@ using UnityEngine;
 public class SpellProjectile : MonoBehaviour {
 
     [SerializeField] private WizardProperties wizardProperties;
+    [SerializeField] private GameObject hitVFX;
 
     private void Update() {
         //purkkaratkasu
@@ -14,6 +15,7 @@ public class SpellProjectile : MonoBehaviour {
     private void OnCollisionEnter(Collision collision) {
         //TODO
         //spawn particles 
+        Instantiate(hitVFX, transform.position, Quaternion.LookRotation(transform.position - collision.transform.position));
         PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
         if (playerHealth != null && GameUIManager.infiniteLives == false) {
             playerHealth.TakeDamage(wizardProperties.damage);
