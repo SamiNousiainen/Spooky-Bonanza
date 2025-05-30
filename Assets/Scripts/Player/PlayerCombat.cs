@@ -21,7 +21,7 @@ public class PlayerCombat : MonoBehaviour
     private bool isBlocking;
 
     private bool canAttack = true;
-    public float attackCooldown = 2.0f;
+    public float attackCooldown = 1.0f;
 
     public static PlayerCombat instance;
     private List<IDamageable> damagedEnemies = new List<IDamageable>();

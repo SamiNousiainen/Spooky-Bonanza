@@ -14,7 +14,12 @@ public class DeathZone : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
-            playerHealth.TakeDamage(damage);
+
+            if (!GameUIManager.infiniteLives)
+            {
+                playerHealth.TakeDamage(damage);
+            }
+
             if (playerHealth.currentHealth > 0) {
                 StartCoroutine(TeleportPlayer());
             }
