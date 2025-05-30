@@ -23,9 +23,9 @@ public class GameUIManager : MonoBehaviour
 
     //[SerializeField] private AudioMixer m_audioMixer;
     //[SerializeField] private VolumeProfile m_globalVolumeProfile;
-    [SerializeField] private GameObject m_settingsPanel;
-    [SerializeField] private GameObject pausePanel;
-    [SerializeField] private GameObject pauseMenu;
+    public GameObject m_settingsPanel;
+    public GameObject pausePanel;
+    public GameObject pauseMenu;
     [SerializeField] private Image backgroundDim;
     //[SerializeField] private Toggle m_sprintToggle;
     //[SerializeField] private Toggle m_sneakToggle;
@@ -145,6 +145,11 @@ public class GameUIManager : MonoBehaviour
     public void OnToggleInfiniteLives(bool lives)
     {
         infiniteLives = lives;
+    }
+
+    public static bool IsGameplayInputAllowed()
+    {
+        return !(instance.pauseMenu.activeSelf || instance.m_settingsPanel.activeSelf);
     }
 
     //public void OnMasterVolumeChanged(float value) {

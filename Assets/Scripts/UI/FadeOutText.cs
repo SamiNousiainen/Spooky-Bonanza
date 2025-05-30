@@ -80,7 +80,7 @@ public class FadeOutText : MonoBehaviour
 
     public void FadeIn()
     {
-        Debug.Log("FadeIn method called");
+        //Debug.Log("FadeIn method called");
         fadingIn = true;
         isDelaying = false;
         gameObject.SetActive(true);
@@ -88,7 +88,7 @@ public class FadeOutText : MonoBehaviour
 
     public void FadeOut()
     {
-        Debug.Log("FadeOut method called");
+        //Debug.Log("FadeOut method called");
         fadingIn = false;
         isDelaying = false;
     }
