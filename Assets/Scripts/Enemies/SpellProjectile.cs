@@ -15,7 +15,7 @@ public class SpellProjectile : MonoBehaviour {
         //TODO
         //spawn particles 
         PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-        if (playerHealth != null) {
+        if (playerHealth != null && GameUIManager.infiniteLives == false) {
             playerHealth.TakeDamage(wizardProperties.damage);
         }
 

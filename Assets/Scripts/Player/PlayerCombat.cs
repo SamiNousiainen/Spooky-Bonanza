@@ -21,7 +21,7 @@ public class PlayerCombat : MonoBehaviour
     private bool isBlocking;
 
     private bool canAttack = true;
-    public float attackCooldown = 5.0f;
+    public float attackCooldown = 0.3f;
 
     public static PlayerCombat instance;
     private List<IDamageable> damagedEnemies = new List<IDamageable>();
@@ -67,6 +67,8 @@ public class PlayerCombat : MonoBehaviour
 
     public void Attack()
     {
+        if (!GameUIManager.IsGameplayInputAllowed()) return;
+
         if (canAttack) { 
             StartCoroutine(DealDamage());
         }
@@ -122,6 +124,13 @@ public class PlayerCombat : MonoBehaviour
 
     private void HandleBlock()
     {
+        if (!GameUIManager.IsGameplayInputAllowed())
+        {
+            playerMovement.canMove = true;
+            shield.SetActive(false);
+            return;
+        }
+
         if (isBlocking)
         {
             Debug.Log("Block");
