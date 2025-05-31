@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pumpkinID: 1
+  collectVFX: {fileID: 7770450072601450922, guid: 4317469e005114f489cc956a05293345, type: 3}
 --- !u!1001 &713538486163431532
 PrefabInstance:
   m_ObjectHideFlags: 0

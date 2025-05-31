@@ -85,9 +85,8 @@ public class PlayerCombat : MonoBehaviour
         Debug.Log("Attack!");
 
         float attackRange = 0.5f;
-        LayerMask enemyMask = LayerMask.GetMask("Enemy");
 
-        Collider[] hits = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
+        Collider[] hits = Physics.OverlapSphere(attackPoint.position, attackRange);
         attackPoint.gameObject.SetActive(true);
 
         foreach (Collider hit in hits)

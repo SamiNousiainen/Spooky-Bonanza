@@ -3,6 +3,7 @@ using UnityEngine;
 public class PumpkinCollectible : MonoBehaviour {
     [Tooltip("Unique ID for each collectible pumpkin")]
     [SerializeField] private string pumpkinID;
+    [SerializeField] private GameObject collectVFX;
 
     private float collectionRadius = 1.5f;
     private Transform player;
@@ -31,6 +32,7 @@ public class PumpkinCollectible : MonoBehaviour {
     private void CollectPumpkin() {
         InventoryManager.instance.AddPumpkin(pumpkinID);
         gameObject.SetActive(false);
+        Instantiate(collectVFX, transform.position, Quaternion.identity);
     }
 
     private void OnDrawGizmos() {
