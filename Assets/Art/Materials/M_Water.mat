@@ -119,9 +119,9 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RefractionScale: 1.2
-    - _RefractionSpeed: 0.02
-    - _RefractionStrength: 2
+    - _RefractionScale: 0.4
+    - _RefractionSpeed: 0.015
+    - _RefractionStrength: 1.8
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -135,9 +135,9 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DeepWater: {r: 0.10746708, g: 0.23791821, b: 0.3301887, a: 0.5254902}
+    - _DeepWater: {r: 0.084104665, g: 0.20275518, b: 0.2830189, a: 0.5254902}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShallowWater: {r: 0.13710395, g: 0.3131535, b: 0.3679245, a: 0.40392157}
+    - _ShallowWater: {r: 0.11694552, g: 0.28678396, b: 0.33962262, a: 0.40392157}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
