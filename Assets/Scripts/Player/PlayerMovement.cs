@@ -204,6 +204,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = initialJumpVelocity * (GameUIManager.alwaysMaxJump ? 0.75f : 0.5f);
             jumpBufferCounter = 0f;
             coyoteTimeCounter = 0f;
+            SoundManager.instance.PlaySFX(SFXType.PlayerJump, transform, 1f);
         }
     }
 
