@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 374257138193211574}
   - component: {fileID: -8277710826377856109}
   - component: {fileID: 4420561545857832831}
-  - component: {fileID: 98955073847825874}
   - component: {fileID: 130258184884130437}
   - component: {fileID: 266046506145143392}
   m_Layer: 3
@@ -141,14 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e772559193407468d3e4a02c889a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!81 &98955073847825874
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1690678845129632132}
-  m_Enabled: 1
 --- !u!108 &130258184884130437
 Light:
   m_ObjectHideFlags: 0

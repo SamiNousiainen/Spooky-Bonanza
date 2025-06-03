@@ -23,7 +23,7 @@ public class PumpkinCollectible : MonoBehaviour {
     }
 
     private void CollectPumpkin() {
-        SoundManager.instance.PlaySFX(SFXType.PumpkinCollected, transform, 0.8f);
+        SoundManager.instance.Play2DSFX(SFXType.PumpkinCollected, 0.8f);
         InventoryManager.instance.AddPumpkin(pumpkinID);
         gameObject.SetActive(false);
         Instantiate(collectVFX, transform.position, Quaternion.identity);
