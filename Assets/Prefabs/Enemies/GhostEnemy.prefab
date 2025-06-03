@@ -205,6 +205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_Munch
       objectReference: {fileID: 0}
+    - target: {fileID: 2278155962917609175, guid: 80a8fb1e46b22cc48b290921d4fb2c93, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6110740006751919388, guid: 80a8fb1e46b22cc48b290921d4fb2c93, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -401,6 +405,10 @@ PrefabInstance:
     - target: {fileID: 3223837242706620888, guid: d23e28d12534bd545a376b0633221726, type: 3}
       propertyPath: m_Name
       value: GhostPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449098524522731799, guid: d23e28d12534bd545a376b0633221726, type: 3}
+      propertyPath: SuckingCandy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5165426774182224874, guid: d23e28d12534bd545a376b0633221726, type: 3}
       propertyPath: fleeTarget

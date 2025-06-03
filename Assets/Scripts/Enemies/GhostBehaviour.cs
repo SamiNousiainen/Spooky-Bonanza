@@ -41,6 +41,12 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
         Quaternion targetRotation = Quaternion.LookRotation(direction);
 
+        if (distanceToPlayer <= ghostProperties.attackRange) {
+            GetComponentInChildren<SuckCandy>().SuckingCandy = true;
+        } else {
+            GetComponentInChildren<SuckCandy>().SuckingCandy = false;
+        }
+
         switch (currentState) {
 
             case EnemyState.Default:
@@ -63,7 +69,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
                 agent.SetDestination(playerPos);
 
                 if (distanceToPlayer > ghostProperties.detectionRange) {
-                    currentState = EnemyState.Default;
+                    currentState = EnemyState.Default;               
                 } else if (distanceToPlayer <= ghostProperties.attackRange) {
                     Attack();
                 }
@@ -71,7 +77,6 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
             case EnemyState.Flee:
                 agent.speed = ghostProperties.fleeMoveSpeed;
-
                 if (fleeTarget != null) {
                     agent.SetDestination(fleeTarget.position);
                     if (agent.remainingDistance <= agent.stoppingDistance) {

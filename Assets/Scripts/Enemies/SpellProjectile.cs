@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// TODO
+/// Class containing Wizard enemy spell functionality
 /// </summary>
 public class SpellProjectile : MonoBehaviour {
 
@@ -18,6 +18,13 @@ public class SpellProjectile : MonoBehaviour {
         if (playerHealth != null && GameUIManager.infiniteLives == false) {
             playerHealth.TakeDamage(wizardProperties.damage);
             SoundManager.instance.PlaySFX(SFXType.PlayerTakeDamage, Player.instance.transform, 0.8f);
+        }
+
+        //Vase breaking (adjust collision layers for friendly fire)
+        IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
+
+        if (damageable != null) {
+            damageable.TakeDamage(wizardProperties.damage);
         }
 
         Destroy(gameObject);
