@@ -36,7 +36,10 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-
+        if (damageCooldownTimer > 0f)
+        {
+            damageCooldownTimer -= Time.deltaTime;
+        }
     }
 
     public void SetMaxHealth(int newMax) {

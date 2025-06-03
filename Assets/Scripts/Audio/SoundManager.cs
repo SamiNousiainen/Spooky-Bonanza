@@ -16,34 +16,8 @@ public class SoundManager : MonoBehaviour {
     }
 
     public void PlaySFX(SFXType sfxType, Transform transform, float volume = 1f) {
+
         AudioClip clip = GetSFXClip(sfxType);
-        if (clip == null) {
-            Debug.LogWarning($"SFXType {sfxType} not found in AudioLibrary!");
-            return;
-        }
-
-        AudioSource audioSource = Instantiate(sfxObject, transform.position, Quaternion.identity);
-        audioSource.clip = clip;
-        audioSource.volume = volume;
-        audioSource.Play();
-
-        Destroy(audioSource.gameObject, clip.length);
-    }
-
-    public void PlayRandomSFX(SFXType[] sfxTypes, Transform transform, float volume = 1f) {
-        if (sfxTypes == null || sfxTypes.Length == 0) {
-            Debug.LogWarning("No SFXTypes provided to PlayRandomSFX.");
-            return;
-        }
-
-        int randomIndex = Random.Range(0, sfxTypes.Length);
-        SFXType chosenType = sfxTypes[randomIndex];
-
-        AudioClip clip = GetSFXClip(chosenType);
-        if (clip == null) {
-            Debug.LogWarning($"SFXType {chosenType} not found in AudioLibrary!");
-            return;
-        }
 
         AudioSource audioSource = Instantiate(sfxObject, transform.position, Quaternion.identity);
         audioSource.clip = clip;

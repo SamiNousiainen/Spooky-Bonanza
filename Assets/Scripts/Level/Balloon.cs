@@ -9,6 +9,7 @@ public class Balloon : MonoBehaviour {
         if (other.CompareTag("Player")) {
             balloon.SetActive(false);
             popVFX.SetActive(true);
+            SoundManager.instance.PlaySFX(SFXType.Balloon, transform, 0.8f);
             other.GetComponent<PlayerMovement>().LaunchPlayer(Vector3.up * 5f);
         }
     }

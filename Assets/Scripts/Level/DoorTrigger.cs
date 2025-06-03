@@ -20,6 +20,7 @@ public class DoorTrigger : MonoBehaviour {
     }
 
     private IEnumerator OpenDoors() {
+        SoundManager.instance.PlaySFX(SFXType.DoorOpen, transform, 0.8f);
         float duration = 0.5f;
         float elapsed = 0f;
         Quaternion door1Start = door1.rotation;

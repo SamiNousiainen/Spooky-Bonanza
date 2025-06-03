@@ -35,7 +35,7 @@ public class DestroyableObject : MonoBehaviour, IDamageable {
 
     private IEnumerator Explode() {
         hasExploded = true;
-
+        SoundManager.instance.PlaySFX(SFXType.VaseBreak, transform, 0.8f);
         Collider collider = GetComponent<Collider>();
 
         collider.enabled = false;   
