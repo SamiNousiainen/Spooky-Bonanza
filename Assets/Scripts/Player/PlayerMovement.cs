@@ -165,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleGravity()
     {
-        bool isFalling = velocity.y <= 0.0f || !isJumpPressed;
+        bool isFalling = velocity.y <= 0.0f || (!isJumpPressed && !GameUIManager.alwaysMaxJump);
         float fallMultiplier = 2.0f;
 
         if (isGrounded == true && velocity.y < 0f)
