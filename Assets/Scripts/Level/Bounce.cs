@@ -24,6 +24,7 @@ public class Bounce : MonoBehaviour {
             if (player != null) {
                 Vector3 launchVelocity = transform.up * launchForce;
                 player.LaunchPlayer(launchVelocity);
+                SoundManager.instance.PlaySFX(SFXType.Bounce, transform, 0.8f);
                 StartCoroutine(BounceAnimation());
             }
         }

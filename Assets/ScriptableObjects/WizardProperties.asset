@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 6
   damage: 1
-  attackRate: 3
+  attackRate: 2
   projectileSpeed: 5

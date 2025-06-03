@@ -7,5 +7,6 @@ public enum EnemyState {
     Default,
     Attack,
     Chase,
-    Flee
+    Flee,
+    Eating
 }

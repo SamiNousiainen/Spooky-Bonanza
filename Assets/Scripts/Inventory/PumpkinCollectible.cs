@@ -14,13 +14,6 @@ public class PumpkinCollectible : MonoBehaviour {
         }
     }
 
-    //private void OnTriggerEnter(Collider other) {
-    //    if (other.CompareTag("Player")) {
-    //        InventoryManager.instance.AddPumpkin(pumpkinID);
-    //        Destroy(gameObject);
-    //    }
-    //}
-
     private void Update() {
         float distance = Vector3.Distance(transform.position, player.position);
 
@@ -30,6 +23,7 @@ public class PumpkinCollectible : MonoBehaviour {
     }
 
     private void CollectPumpkin() {
+        SoundManager.instance.PlaySFX(SFXType.PumpkinCollected, transform, 0.8f);
         InventoryManager.instance.AddPumpkin(pumpkinID);
         gameObject.SetActive(false);
         Instantiate(collectVFX, transform.position, Quaternion.identity);

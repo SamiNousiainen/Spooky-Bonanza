@@ -51,6 +51,7 @@ public class Candy : MonoBehaviour {
     }
 
     private void CollectCandy() {
+        SoundManager.instance.PlaySFX(SFXType.CandyCollected, transform, 0.8f);
         InventoryManager.instance.AddCandy();
         Instantiate(collectVFX, transform.position, Quaternion.identity);
         Destroy(gameObject);

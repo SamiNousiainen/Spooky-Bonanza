@@ -1,4 +1,5 @@
 using KBCore.Refs;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -34,6 +35,11 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
         Vector3 playerPos = Player.instance.transform.position;
         float distanceToPlayer = Vector3.Distance(transform.position, playerPos);
 
+        float rotationSpeed = 8f;
+        Vector3 direction = (playerPos - transform.position).normalized;
+
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+
         switch (currentState) {
 
             case EnemyState.Default:
@@ -68,7 +74,8 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
                 if (fleeTarget != null) {
                     agent.SetDestination(fleeTarget.position);
                     if (agent.remainingDistance <= agent.stoppingDistance) {
-                        gameObject.SetActive(false);
+                        currentState = EnemyState.Eating;
+                        SoundManager.instance.PlaySFX(SFXType.GhostMunch, transform, 0.5f);
                     }
                 } else {
                     Debug.Log("Flee target not assigned!");
@@ -76,6 +83,10 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
                 }
                 break;
 
+            case EnemyState.Eating:
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+                StartCoroutine(Vanish());
+                break;
         }
     }
 
@@ -86,11 +97,17 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
             Debug.Log("no candy found, escape!");
         } else {
             InventoryManager.instance.RemoveCandy(stealAmount);
+            SoundManager.instance.PlaySFX(SFXType.GhostAttack, transform, 0.8f);
             candyStealVFX.SetActive(true);
             Debug.Log("yoink! Hit the bricks!!");
             currentState = EnemyState.Flee;
         }
         candyStolen = true;
+    }
+
+    private IEnumerator Vanish() {
+        yield return new WaitForSeconds(3f);
+        gameObject.SetActive(false);
     }
 
     private void OnDrawGizmos() {
