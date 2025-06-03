@@ -30,7 +30,7 @@ public class CheckpointManager : MonoBehaviour {
     }
     public void ActivateCheckpoint(CheckpointBehaviour checkpointBehaviour) {
         LastCheckpoint = checkpointBehaviour;
-        //GameUIManager.instance.ShowCheckpointReachedText();
+        GameUIManager.instance.ShowCheckpointReachedText();
     }
 
     public void RestoreCheckpointByID(string id) {

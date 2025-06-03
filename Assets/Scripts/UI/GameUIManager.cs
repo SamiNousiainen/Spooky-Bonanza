@@ -14,6 +14,7 @@ public class GameUIManager : MonoBehaviour
 
     [Header("HUD")]
 
+    [SerializeField] private TMP_Text checkpointText;
     [SerializeField] private TMP_Text candyAmountText;
     [SerializeField] private TMP_Text pumpkinAmountText;
     [SerializeField] private TMP_Text currentHealthText;
@@ -26,11 +27,8 @@ public class GameUIManager : MonoBehaviour
     public GameObject pausePanel;
     public GameObject pauseMenu;
     [SerializeField] private Image backgroundDim;
-    //[SerializeField] private Toggle m_sprintToggle;
-    //[SerializeField] private Toggle m_sneakToggle;
-    //[SerializeField] private Toggle m_cameraDampingToggle;
+    
     //[SerializeField] private InputReader m_inputReader;
-    //[SerializeField] private CinemachineCamera m_cinemachineCamera;
     private PlayerInput playerInput;
     public static bool alwaysMaxJump = false;
     public static bool infiniteLives = false;
@@ -100,13 +98,6 @@ public class GameUIManager : MonoBehaviour
     public void UpdateCandyAmount()
     {
         candyAmountText.text = InventoryManager.instance.Data.candyCount.ToString();
-
-    }
-
-    private IEnumerator FadeUI()
-    {
-        //TODO
-        yield return new WaitForSeconds(2f);
 
     }
 
@@ -186,8 +177,8 @@ public class GameUIManager : MonoBehaviour
     {
         pauseMenu.SetActive(value);
         Time.timeScale = value ? 0f : 1f;
-        //Cursor.visible = value;
-        //Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = value;
+        Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
     }
 
     /// <summary>
@@ -195,8 +186,8 @@ public class GameUIManager : MonoBehaviour
     /// </summary>
     public void ShowCheckpointReachedText()
     {
-        //m_checkpointText.color = Color.white;
-        //m_checkpointText.DOFade(0f, 2f);
+        checkpointText.color = Color.white;
+        checkpointText.DOFade(0f, 2f);
     }
 
     /// <summary>
