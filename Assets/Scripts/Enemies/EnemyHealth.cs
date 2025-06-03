@@ -26,26 +26,22 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
 
     void Update() {
 
-        //Vector3 playerPos = Player.instance.transform.position;
-        //float distanceToPlayer = Vector3.Distance(transform.position, playerPos);
-
-        //if (distanceToPlayer < 1f) {
-        //    Vector3 direction = (transform.position - Player.instance.transform.position).normalized + Vector3.up;
-        //    Player.instance.GetComponent<PlayerMovement>().LaunchPlayer(-direction * 3f);
-        //}
     }
 
     public void TakeDamage(float damage) {
-        currentHealth -= damage;
         HasTakenDamage = true;
+
+        currentHealth -= damage;
+        PlayDamageSound();
+
         if (currentHealth <= 0) {
-            //vois olla omassa funktiossa
+
             DropCandy();
             gameObject.SetActive(false);
+
             if (poof != null) {
                 Instantiate(poof, transform.position, Quaternion.identity);
             }
-            //death anim + particle effect
         }
     }
 
@@ -54,7 +50,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
         for (int i = 0; i < candyDropAmount; i++) {
 
             Vector3 offset = Random.insideUnitSphere * spawnRadius;
-            offset.y = Mathf.Abs(offset.y); // make sure it's above ground
+            offset.y = Mathf.Abs(offset.y);
 
             GameObject candy = Instantiate(candyPrefab, transform.position + offset, Quaternion.identity);
 
@@ -67,4 +63,13 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
     }
 
 
+    private void PlayDamageSound() {
+        if (TryGetComponent(out GhostBehaviour ghost)) {
+            SoundManager.instance.PlaySFX(SFXType.GhostDeath, transform, 0.8f);
+        } 
+
+        if (TryGetComponent(out WizardBehaviour wizard)) {
+            SoundManager.instance.PlaySFX(SFXType.WizardTakeDamage, transform, 0.8f);
+        }
+    }
 }

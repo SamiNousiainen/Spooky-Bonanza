@@ -18,8 +18,7 @@ public class GameManager : MonoBehaviour {
             return dim;
         }
     }
-    //private SoundBuilder soundBuilder;
-    //[SerializeField] private SoundData ambientSound;
+
     public float GameTime { get; private set; }
 
     public void Awake() {
@@ -33,8 +32,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Start() {
-        //soundBuilder = SoundManager.Instance.CreateSoundBuilder();
-        //soundBuilder.Play(ambientSound);
+
     }
 
     private void Update() {
@@ -60,6 +58,7 @@ public class GameManager : MonoBehaviour {
             OnDeath.Invoke();
 
             if (CheckpointManager.instance.LastCheckpoint != null) {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 Player.instance.transform.position = CheckpointManager.instance.LastCheckpoint.transform.position;
                 Physics.SyncTransforms();//sync transforms to hopefully avoid CharacterController.Move having incorrect position data after last line
 

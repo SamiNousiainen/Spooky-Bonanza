@@ -28,7 +28,7 @@ public class DeathZone : MonoBehaviour {
     }
 
     private IEnumerator TeleportPlayer() {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.8f);
         Player.instance.transform.position = respawnPoint.position;
         Physics.SyncTransforms();
     }

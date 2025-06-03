@@ -14,6 +14,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
     [SerializeField] private Transform fleeTarget;
     [SerializeField] private int stealAmount;
     [SerializeField] private GameObject candyStealVFX;
+    [SerializeField] private GameObject poof;
 
     private EnemyState currentState = EnemyState.Default;
     private GhostPatrolRoute ghostPatrolRoute;
@@ -76,6 +77,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
                     if (agent.remainingDistance <= agent.stoppingDistance) {
                         currentState = EnemyState.Eating;
                         SoundManager.instance.PlaySFX(SFXType.GhostMunch, transform, 0.5f);
+                        StartCoroutine(Vanish());
                     }
                 } else {
                     Debug.Log("Flee target not assigned!");
@@ -85,7 +87,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
             case EnemyState.Eating:
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-                StartCoroutine(Vanish());
+                
                 break;
         }
     }
@@ -107,6 +109,8 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
     private IEnumerator Vanish() {
         yield return new WaitForSeconds(3f);
+        SoundManager.instance.PlaySFX(SFXType.Poof, transform, 0.8f);
+        Instantiate(poof, transform.position, Quaternion.identity);
         gameObject.SetActive(false);
     }
 

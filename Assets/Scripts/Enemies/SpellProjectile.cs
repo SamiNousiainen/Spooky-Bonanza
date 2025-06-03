@@ -13,6 +13,7 @@ public class SpellProjectile : MonoBehaviour {
     }
     private void OnCollisionEnter(Collision collision) {
         Instantiate(hitVFX, transform.position, Quaternion.LookRotation(transform.position - collision.transform.position));
+        SoundManager.instance.PlaySFX(SFXType.WizardAttackHit, transform, 0.8f);
         PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
         if (playerHealth != null && GameUIManager.infiniteLives == false) {
             playerHealth.TakeDamage(wizardProperties.damage);

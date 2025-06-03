@@ -100,8 +100,8 @@ public class PlayerCombat : MonoBehaviour
             if (damageable != null && damageable.HasTakenDamage == false)
             {
                 damageable.TakeDamage(playerProperties.damage);
+                SoundManager.instance.PlaySFX(SFXType.PlayerAttackHit, hit.transform, 0.8f);
                 damagedEnemies.Add(damageable);
-                Debug.Log($"Damaged: {hit.name}");
             }
         }
 

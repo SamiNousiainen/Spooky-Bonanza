@@ -62,7 +62,7 @@ public class WizardBehaviour : MonoBehaviour {
 
         //use animation trigger when anims are done
         Vector3 direction = (player.position - castPoint.position).normalized;
-
+        SoundManager.instance.PlaySFX(SFXType.WizardAttack, transform, 0.8f);
         GameObject spell = Instantiate(spellPrefab, castPoint.position, Quaternion.LookRotation(castPoint.position - player.position));
         Rigidbody spellRb = spell.GetComponent<Rigidbody>();
 
