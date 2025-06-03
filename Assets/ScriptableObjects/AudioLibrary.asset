@@ -15,17 +15,18 @@ MonoBehaviour:
   sfxClips:
   - type: 0
     clips:
-    - {fileID: 8300000, guid: b9531fb5640c4084d88fceb646f93628, type: 3}
+    - {fileID: 8300000, guid: 530beee189c56a744bc636f4de6c450b, type: 3}
+    - {fileID: 8300000, guid: 8ccb8b1c72f25a74bb61cc365655b713, type: 3}
   - type: 1
     clips:
-    - {fileID: 8300000, guid: 8ec5032a81164404ab1c3c6fb20c1f32, type: 3}
+    - {fileID: 8300000, guid: 67fb3d60d9b32294a8d314aabd6d8e72, type: 3}
   - type: 2
     clips:
     - {fileID: 8300000, guid: 045e0a369dd168241a498722bacfc979, type: 3}
     - {fileID: 8300000, guid: b500add30d9ddd54f8bde59589508b4e, type: 3}
   - type: 3
     clips:
-    - {fileID: 8300000, guid: c6558f942ae69844b85cf302f21ef7af, type: 3}
+    - {fileID: 8300000, guid: 32924d3865ed4d24fad6f859124c25de, type: 3}
   - type: 4
     clips:
     - {fileID: 8300000, guid: f900c87a5c6aec343ae35b778744b9f1, type: 3}
@@ -99,27 +100,26 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 8ec5032a81164404ab1c3c6fb20c1f32, type: 3}
   - type: 26
     clips:
-    - {fileID: 8300000, guid: 5d100733b76a1ad4ab691bb1d22e6b33, type: 3}
+    - {fileID: 8300000, guid: 869aa6202e2394a4f80ad79f6f66cad6, type: 3}
   - type: 27
     clips:
-    - {fileID: 8300000, guid: bb729c88a79041f499438918d9e43477, type: 3}
+    - {fileID: 8300000, guid: c6558f942ae69844b85cf302f21ef7af, type: 3}
   - type: 28
     clips:
-    - {fileID: 8300000, guid: 0ee0ef729082f784d880abf0e48d1dc8, type: 3}
+    - {fileID: 8300000, guid: 4d83d6657374ad448a2c9a0eaf7888a6, type: 3}
   - type: 29
     clips:
-    - {fileID: 8300000, guid: 901f73f3fb28b234ba6930a7b9414c9b, type: 3}
+    - {fileID: 8300000, guid: efdebf8c68ed85946aa87ad38a01c75f, type: 3}
   - type: 30
     clips:
-    - {fileID: 8300000, guid: ed7c782e1fec8784eb55860c55b1f577, type: 3}
+    - {fileID: 8300000, guid: 72c44b1252c99484eac8a3e79f7e9d33, type: 3}
   - type: 31
     clips:
-    - {fileID: 8300000, guid: d298272ea37924645be2fdf5d16503ab, type: 3}
+    - {fileID: 8300000, guid: 349a546b358ba654b9b259814eb33a78, type: 3}
   - type: 32
-    clips:
-    - {fileID: 8300000, guid: db28a64380ef4914bb620e187e8e9e69, type: 3}
+    clips: []
   - type: 33
     clips:
-    - {fileID: 8300000, guid: c203c70e4dab79f4892a60d512a4e477, type: 3}
-    - {fileID: 8300000, guid: f89f5266c41ec0447a801d24ba100249, type: 3}
+    - {fileID: 8300000, guid: 22a2474b4fbe52c42a3df0335c4cf9d5, type: 3}
+    - {fileID: 8300000, guid: cfd6f816701a0094093a4e2eeaf5f477, type: 3}
   musicClips: []
