@@ -137,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void ApplyGlide(float glideFallSpeed)
     {
-        if (isGrounded == false && velocity.y < 0f)
+        if (isGrounded == false && velocity.y < 0f && !PlayerCombat.instance.isAttacking)
         {
             velocity.y = Mathf.Max(velocity.y, -glideFallSpeed);
         }
@@ -201,7 +201,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (bufferedJump && (isGrounded || coyoteTimeCounter > 0f))
         {
-            velocity.y = initialJumpVelocity * (GameUIManager.alwaysMaxJump ? 0.75f : 0.5f);
+            velocity.y = initialJumpVelocity * (GameUIManager.alwaysMaxJump ? 0.5f : 0.5f);
             jumpBufferCounter = 0f;
             coyoteTimeCounter = 0f;
             SoundManager.instance.PlaySFX(SFXType.PlayerJump, transform, 1f);

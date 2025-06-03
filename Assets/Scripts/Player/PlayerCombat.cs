@@ -23,7 +23,7 @@ public class PlayerCombat : MonoBehaviour
     private bool canAttack = true;
     public float attackCooldown = 0f;
 
-    private bool isAttacking = false;
+    public bool isAttacking = false;
 
     public static PlayerCombat instance;
     private List<IDamageable> damagedEnemies = new List<IDamageable>();
@@ -54,9 +54,8 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
-        isGliding = inputReader.IsGlidePressed;
-        isBlocking = inputReader.IsBlockPressed;
 
+        HandleGlideAndBlockInput();
         HandleBlock();
         HandleGlide();
 
@@ -73,6 +72,12 @@ public class PlayerCombat : MonoBehaviour
 
         if (canAttack && !isAttacking && !isBlocking)
         {
+            if (isGliding)
+            {
+                isGliding = false;
+                Debug.Log("Glide cancelled");
+            }
+
             StartCoroutine(DealDamage());
         }
     }
@@ -106,7 +111,7 @@ public class PlayerCombat : MonoBehaviour
 
         isAttacking = false;
 
-        yield return new WaitForSeconds(attackCooldown); 
+        yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
     }
 
@@ -162,9 +167,32 @@ public class PlayerCombat : MonoBehaviour
             playerMovement.ApplyGlide(glideGravity);
         }
 
-        umbrella.SetActive(isGliding && playerMovement.isGrounded == false);
+        umbrella.SetActive(isGliding && playerMovement.isGrounded == false && !isAttacking);
 
     } // HandleGlide
+
+    private void HandleGlideAndBlockInput()
+    {
+        bool buttonPressed = inputReader.GlidePressed;
+
+        if (buttonPressed && !playerMovement.isGrounded && playerMovement.velocity.y < 0f)
+        {
+            isGliding = true;
+            isBlocking = false;
+        }
+
+        else if (buttonPressed && playerMovement.isGrounded)
+        {
+            isBlocking = true;
+            isGliding = false;
+        }
+
+        else
+        {
+            isGliding = false;
+            isBlocking = false;
+        }
+    }
 
     /*public void EnableWeaponCollider()
     {

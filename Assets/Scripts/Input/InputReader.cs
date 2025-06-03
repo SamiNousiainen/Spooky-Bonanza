@@ -18,9 +18,9 @@ public class InputReader : ScriptableObject, PlayerInput.IPlayerActions
 
     public bool IsJumpPressed => playerInput.Player.Jump.ReadValue<float>() > 0;
 
-    public bool IsGlidePressed => playerInput.Player.Glide.ReadValue<float>() > 0;
+    //public bool IsGlidePressed => playerInput.Player.Glide.ReadValue<float>() > 0;
 
-    public bool IsBlockPressed => playerInput.Player.Block.ReadValue<float>() > 0;
+    //public bool IsBlockPressed => playerInput.Player.Block.ReadValue<float>() > 0;
 
     private void OnEnable()
     {
@@ -52,24 +52,36 @@ public class InputReader : ScriptableObject, PlayerInput.IPlayerActions
     {
         if (context.performed)
         {
-            if (PlayerCombat.instance != null) {
-            PlayerCombat.instance.Attack();
+            if (PlayerCombat.instance != null)
+            {
+                PlayerCombat.instance.Attack();
             }
         }
     }
 
     public void OnGlide(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.started)
         {
             GlidePressed = true;
+        }
+        else if (context.canceled)
+        {
+            GlidePressed = false;
         }
 
     }
 
     public void OnBlock(InputAction.CallbackContext context)
     {
-
+        if (context.started)
+        {
+            BlockPressed = true;
+        }
+        else if (context.canceled)
+        {
+            BlockPressed = false;
+        }
     }
 
     public bool ConsumeJumpInput()
