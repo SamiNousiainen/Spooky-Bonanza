@@ -9,7 +9,7 @@ public class EnemyHurtBox : MonoBehaviour {
         if (other.CompareTag("Player")) {
             Vector3 knockbackDirection = other.transform.position - transform.position;
             other.gameObject.GetComponent<PlayerMovement>().Knockback(new Vector3(knockbackDirection.x, 1f, knockbackDirection.z) * knockbackForce);
-            //other.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
+            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
         }
     }
 }

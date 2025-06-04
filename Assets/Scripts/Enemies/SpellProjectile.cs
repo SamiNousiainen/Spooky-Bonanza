@@ -12,7 +12,7 @@ public class SpellProjectile : MonoBehaviour {
         Destroy(gameObject, 5f);
     }
     private void OnCollisionEnter(Collision collision) {
-        Instantiate(hitVFX, transform.position, Quaternion.LookRotation(transform.position - collision.transform.position));
+        
         SoundManager.instance.PlaySFX(SFXType.WizardAttackHit, transform, 0.8f);
         PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
         if (playerHealth != null && GameUIManager.infiniteLives == false) {
@@ -27,6 +27,23 @@ public class SpellProjectile : MonoBehaviour {
             damageable.TakeDamage(wizardProperties.damage);
         }
 
-        Destroy(gameObject);
+        //Bounce if the projectile hits umbrella
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Block")) {
+
+            Rigidbody rb = GetComponent<Rigidbody>();
+            Vector3 velocity = rb.linearVelocity;
+            Vector3 normal = collision.GetContact(0).normal;
+
+            //Sateenvarjon pinnan mukaan
+            //rb.linearVelocity = Vector3.Reflect(velocity, normal).normalized * wizardProperties.projectileSpeed;
+
+            //Pelaajan rotaation mukaan
+            rb.linearVelocity = Player.instance.transform.forward * wizardProperties.projectileSpeed;
+
+        } else {
+            //Destroy projectile and spawn vfx
+            Instantiate(hitVFX, transform.position, Quaternion.LookRotation(transform.position - collision.transform.position));
+            Destroy(gameObject);
+        }
     }
 }

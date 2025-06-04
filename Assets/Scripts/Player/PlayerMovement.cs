@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using KBCore.Refs;
+using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -89,8 +90,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleMovement()
     {
-        if (!canMove)
-            return;
+        
 
         Vector2 input = inputReader.MoveInput;
 
@@ -109,10 +109,13 @@ public class PlayerMovement : MonoBehaviour
         horizontalVelocity += new Vector3(externalVelocity.x, 0f, externalVelocity.z);
 
         //Apply horizontal movement only
-        characterController.Move(horizontalVelocity * Time.deltaTime);
 
-        if (direction.sqrMagnitude > 0f)
-        {
+        if (canMove) {
+            characterController.Move(horizontalVelocity * Time.deltaTime);
+        }
+        
+
+        if (direction.sqrMagnitude > 0f) {
             Quaternion targetRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
         }
@@ -120,6 +123,7 @@ public class PlayerMovement : MonoBehaviour
         //decrease external velocity to 0 over time
         externalVelocity = Vector3.Lerp(externalVelocity, Vector3.zero, 2f * Time.deltaTime);
     } // HandleMovement
+
 
     /// <summary>
     /// Launches the player when hitting a bounce mushroom
