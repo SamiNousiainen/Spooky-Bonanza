@@ -31,13 +31,13 @@ public class SoundManager : MonoBehaviour {
         Destroy(audioSource.gameObject, clip.length);
     }
 
-    public void Play2DSFX(SFXType sfxType, float volume) {
+    public void Play2DSFX(SFXType sfxType/*, float volume*/) {
 
         AudioClip clip = GetSFXClip(sfxType);
 
         AudioSource audioSource = Instantiate(sfxObject2D);
         audioSource.clip = clip;
-        audioSource.volume = volume;
+        //audioSource.volume = volume;
         audioSource.Play();
 
         Destroy(audioSource.gameObject, clip.length);

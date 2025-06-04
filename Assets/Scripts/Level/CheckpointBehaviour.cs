@@ -28,7 +28,7 @@ public class CheckpointBehaviour : MonoBehaviour {
             activationVFX.SetActive(true);
             highlightVFX.SetActive(false);
 
-            SoundManager.instance.Play2DSFX(SFXType.Checkpoint, 0.8f);
+            SoundManager.instance.Play2DSFX(SFXType.Checkpoint/*, 0.8f*/);
 
             InventoryManager.instance.SetMaxHP();
             InventoryManager.instance.Data.sceneName = SceneManager.GetActiveScene().name;
