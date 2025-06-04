@@ -1,16 +1,15 @@
 using UnityEngine;
 
-public class EnemyHurtBox : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+public class EnemyHurtBox : MonoBehaviour {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    [SerializeField] private float knockbackForce = 10f;
+    [SerializeField] private float damage = 1f;
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("Player")) {
+            Vector3 knockbackDirection = other.transform.position - transform.position;
+            other.gameObject.GetComponent<PlayerMovement>().Knockback(new Vector3(knockbackDirection.x, 1f, knockbackDirection.z) * knockbackForce);
+            //other.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
+        }
     }
 }

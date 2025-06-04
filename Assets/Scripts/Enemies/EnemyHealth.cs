@@ -15,8 +15,6 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
     [SerializeField] private float spawnForce = 2f;
     [SerializeField] private float spawnRadius = 2f;
 
-    [SerializeField] private float knockbackForce;
-
     public bool HasTakenDamage { get; set; }
 
 
@@ -33,6 +31,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
 
         currentHealth -= damage;
         PlayDamageSound();
+        Knockback();
 
         if (currentHealth <= 0) {
 
@@ -70,6 +69,14 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
 
         if (TryGetComponent(out WizardBehaviour wizard)) {
             SoundManager.instance.PlaySFX(SFXType.WizardTakeDamage, transform, 0.8f);
+        }
+    }
+
+    private void Knockback() {
+        Vector3 knockbackDirection = transform.position - Player.instance.transform.position;
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null) {
+            rb.AddForce(knockbackDirection * 3f, ForceMode.Impulse);
         }
     }
 }

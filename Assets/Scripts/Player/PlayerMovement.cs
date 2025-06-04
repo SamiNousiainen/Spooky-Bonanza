@@ -132,7 +132,13 @@ public class PlayerMovement : MonoBehaviour
         //add this on top of movement to avoid input overriding launch direction on the next frame
         externalVelocity = new Vector3(launchDirection.x, 0f, launchDirection.z);
 
-        //Debug.Log(launchDirection);
+    }
+
+    public void Knockback(Vector3 knockbackDirection) {
+
+        velocity.y = 0f;
+
+        externalVelocity = knockbackDirection;
     }
 
     public void ApplyGlide(float glideFallSpeed)

@@ -2,7 +2,6 @@ using KBCore.Refs;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
 [SelectionBase]
 public class WizardBehaviour : MonoBehaviour {
 
