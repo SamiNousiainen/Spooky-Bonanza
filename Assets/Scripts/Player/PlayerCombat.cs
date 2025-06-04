@@ -10,6 +10,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField, Self] private PlayerMovement playerMovement;
     [SerializeField] private PlayerProperties playerProperties;
     [SerializeField, Self] private CharacterController characterController;
+    [SerializeField, Child] private Animator animator;
 
     [SerializeField] private Collider weaponCollider;
     [SerializeField] private GameObject umbrella;
@@ -77,7 +78,7 @@ public class PlayerCombat : MonoBehaviour
                 isGliding = false;
                 Debug.Log("Glide cancelled");
             }
-
+            animator.Play("Armature|Attack 0");
             StartCoroutine(DealDamage());
         }
     }
@@ -87,12 +88,12 @@ public class PlayerCombat : MonoBehaviour
         canAttack = false;
         isAttacking = true;
 
-        Debug.Log("Attack!");
+        
 
         float attackRange = 0.5f;
 
         Collider[] hits = Physics.OverlapSphere(attackPoint.position, attackRange);
-        attackPoint.gameObject.SetActive(true);
+        //attackPoint.gameObject.SetActive(true);
 
         foreach (Collider hit in hits)
         {
@@ -106,7 +107,7 @@ public class PlayerCombat : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.1f);
-        attackPoint.gameObject.SetActive(false);
+        //attackPoint.gameObject.SetActive(false);
         ReturnEnemiesToDamageable();
 
         isAttacking = false;
