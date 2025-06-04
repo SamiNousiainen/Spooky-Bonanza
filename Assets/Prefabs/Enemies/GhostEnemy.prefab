@@ -254,6 +254,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80a8fb1e46b22cc48b290921d4fb2c93, type: 3}
+--- !u!1 &4152344302280341063 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2278155962917609175, guid: 80a8fb1e46b22cc48b290921d4fb2c93, type: 3}
+  m_PrefabInstance: {fileID: 2755558536303683728}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8282120038385350028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6110740006751919388, guid: 80a8fb1e46b22cc48b290921d4fb2c93, type: 3}
@@ -411,6 +416,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5165426774182224874, guid: d23e28d12534bd545a376b0633221726, type: 3}
+      propertyPath: munchVFX
+      value: 
+      objectReference: {fileID: 4152344302280341063}
+    - target: {fileID: 5165426774182224874, guid: d23e28d12534bd545a376b0633221726, type: 3}
       propertyPath: fleeTarget
       value: 
       objectReference: {fileID: 6038385747326620688}
@@ -428,7 +437,7 @@ PrefabInstance:
       objectReference: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
     - target: {fileID: 6042634728308067935, guid: d23e28d12534bd545a376b0633221726, type: 3}
       propertyPath: candyDropAmount
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6042634728308067935, guid: d23e28d12534bd545a376b0633221726, type: 3}
       propertyPath: candyPrefabs.Array.size

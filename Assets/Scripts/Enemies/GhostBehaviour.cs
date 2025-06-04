@@ -2,6 +2,7 @@ using KBCore.Refs;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 
 /// <summary>
 /// Ghost enemy AI
@@ -10,10 +11,12 @@ using UnityEngine.AI;
 [SelectionBase]
 public class GhostBehaviour : ValidatedMonoBehaviour {
 
+    [Tooltip("How many candies does this ghost steal?")]
+    [SerializeField] private int StealAmount;
     [SerializeField] private GhostProperties ghostProperties;
     [SerializeField] private Transform fleeTarget;
-    [SerializeField] private int stealAmount;
     [SerializeField] private GameObject candyStealVFX;
+    [SerializeField] private GameObject munchVFX;
     [SerializeField] private GameObject poof;
 
     private EnemyState currentState = EnemyState.Default;
@@ -21,10 +24,8 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
     //components
     [HideInInspector, SerializeField, Self] private NavMeshAgent agent;
-
-    [Tooltip("How many candies does this ghost steal?")]
-
-    private bool candyStolen = false;
+    
+    [HideInInspector] public bool CandyStolen { get; private set; } = false;
 
     private void Awake() {
         agent.isStopped = true;
@@ -35,17 +36,6 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
         Vector3 playerPos = Player.instance.transform.position;
         float distanceToPlayer = Vector3.Distance(transform.position, playerPos);
-
-        float rotationSpeed = 8f;
-        Vector3 direction = (playerPos - transform.position).normalized;
-
-        Quaternion targetRotation = Quaternion.LookRotation(direction);
-
-        if (distanceToPlayer <= ghostProperties.attackRange) {
-            GetComponentInChildren<SuckCandy>().SuckingCandy = true;
-        } else {
-            GetComponentInChildren<SuckCandy>().SuckingCandy = false;
-        }
 
         switch (currentState) {
 
@@ -58,7 +48,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
                     agent.isStopped = false;
                 }
 
-                if (distanceToPlayer <= ghostProperties.detectionRange && candyStolen == false) {
+                if (distanceToPlayer <= ghostProperties.detectionRange && CandyStolen == false) {
                     currentState = EnemyState.Chase;
                     Debug.Log("player detected");
                 }
@@ -78,41 +68,65 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
             case EnemyState.Flee:
                 agent.speed = ghostProperties.fleeMoveSpeed;
                 if (fleeTarget != null) {
+
                     agent.SetDestination(fleeTarget.position);
+                    GetComponentInChildren<SuckCandy>().SuckingCandy = true;
+                    StartCoroutine(StopAttack());
+
                     if (agent.remainingDistance <= agent.stoppingDistance) {
                         currentState = EnemyState.Eating;
                         SoundManager.instance.PlaySFX(SFXType.GhostMunch, transform, 0.5f);
                         StartCoroutine(Vanish());
                     }
+
                 } else {
                     Debug.Log("Flee target not assigned!");
                     currentState = EnemyState.Default;
                 }
+
                 break;
 
             case EnemyState.Eating:
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-                
+                //Menacingly stare at the player while eating
+                Look();               
                 break;
         }
     }
 
+    private void Look() {
+
+        Vector3 playerPos = Player.instance.transform.position;
+        float rotationSpeed = 8f;
+        Vector3 direction = (playerPos - transform.position).normalized;
+
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+    }
+
 
     private void Attack() {
-        if (InventoryManager.instance.Data.candyCount < stealAmount) {
+        if (InventoryManager.instance.Data.candyCount < StealAmount) {
             currentState = EnemyState.Flee;
             Debug.Log("no candy found, escape!");
         } else {
-            InventoryManager.instance.RemoveCandy(stealAmount);
+            InventoryManager.instance.RemoveCandy(StealAmount);
             SoundManager.instance.PlaySFX(SFXType.GhostAttack, transform, 0.8f);
             candyStealVFX.SetActive(true);
             Debug.Log("yoink! Hit the bricks!!");
             currentState = EnemyState.Flee;
         }
-        candyStolen = true;
+
+        CandyStolen = true;
+    }
+
+    private IEnumerator StopAttack() {
+
+        yield return new WaitForSeconds(1f);
+        GetComponentInChildren<SuckCandy>().SuckingCandy = false;
     }
 
     private IEnumerator Vanish() {
+        munchVFX.SetActive(true);
         yield return new WaitForSeconds(3f);
         SoundManager.instance.PlaySFX(SFXType.Poof, transform, 0.8f);
         Instantiate(poof, transform.position, Quaternion.identity);

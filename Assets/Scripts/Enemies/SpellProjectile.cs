@@ -31,10 +31,12 @@ public class SpellProjectile : MonoBehaviour {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Block")) {
 
             Rigidbody rb = GetComponent<Rigidbody>();
-            Vector3 velocity = rb.linearVelocity;
-            Vector3 normal = collision.GetContact(0).normal;
+
+            //Block sfx
 
             //Sateenvarjon pinnan mukaan
+            //Vector3 velocity = rb.linearVelocity;
+            //Vector3 normal = collision.GetContact(0).normal;
             //rb.linearVelocity = Vector3.Reflect(velocity, normal).normalized * wizardProperties.projectileSpeed;
 
             //Pelaajan rotaation mukaan

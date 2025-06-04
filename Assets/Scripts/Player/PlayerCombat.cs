@@ -88,12 +88,11 @@ public class PlayerCombat : MonoBehaviour
         canAttack = false;
         isAttacking = true;
 
-        
 
         float attackRange = 0.5f;
 
         Collider[] hits = Physics.OverlapSphere(attackPoint.position, attackRange);
-        //attackPoint.gameObject.SetActive(true);
+        attackPoint.gameObject.SetActive(true);
 
         foreach (Collider hit in hits)
         {
@@ -107,7 +106,7 @@ public class PlayerCombat : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.1f);
-        //attackPoint.gameObject.SetActive(false);
+        attackPoint.gameObject.SetActive(false);
         ReturnEnemiesToDamageable();
 
         isAttacking = false;

@@ -81,7 +81,6 @@ MonoBehaviour:
   candyDropAmount: 3
   spawnForce: 2
   spawnRadius: 2
-  knockbackForce: 0
 --- !u!114 &5165426774182224874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,10 +93,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c96cde9de5b1f49a300382f096028d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StealAmount: 3
   ghostProperties: {fileID: 11400000, guid: 8802595f139835a45b54aef6632cb0d9, type: 2}
   fleeTarget: {fileID: 0}
-  stealAmount: 2
   candyStealVFX: {fileID: 0}
+  munchVFX: {fileID: 0}
   poof: {fileID: 1361273709133992529, guid: 05ab4d098b0d4d74bacbd524322f148b, type: 3}
   agent: {fileID: 7125191807010703543}
 --- !u!114 &1853302484587588244
@@ -318,6 +318,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3115028823016837078}
     m_Modifications:
+    - target: {fileID: 276470113946902641, guid: ff239dd7a2488034aa0fad2d710df085, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 276470113946902641, guid: ff239dd7a2488034aa0fad2d710df085, type: 3}
       propertyPath: m_Name
       value: VFX_SuckCandyRanged
