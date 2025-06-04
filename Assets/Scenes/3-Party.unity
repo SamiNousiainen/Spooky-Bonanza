@@ -279,6 +279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -593,6 +597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -783,9 +791,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4c0388048e5ac774eb481b6cc5b3736a, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -863,6 +879,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -1785,6 +1805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -1899,6 +1923,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -1968,6 +1996,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -2374,6 +2406,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingDummyGhost (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2526,6 +2566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -2642,6 +2686,10 @@ PrefabInstance:
     - target: {fileID: 4643022548940439197, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510675419770213346, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7432479503298337010, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_Name
@@ -2949,6 +2997,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -3327,6 +3379,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -3746,9 +3802,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4c0388048e5ac774eb481b6cc5b3736a, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4138,6 +4202,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -5067,6 +5135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -5285,6 +5357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -5345,6 +5421,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -5871,6 +5951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -5998,6 +6082,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -6179,6 +6267,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingDummyGhost
       objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6354,9 +6450,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 94a0ee26990176d4fbf4b94a2926946f, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6570,9 +6674,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 94a0ee26990176d4fbf4b94a2926946f, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6837,6 +6949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -6989,7 +7105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8000002
+      value: -1.844
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7001,23 +7117,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.56098557
+      value: 0.5213339
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.4304593
+      value: 0.4777144
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.56098557
+      value: 0.5213339
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4304593
+      value: -0.4777144
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 75
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -7155,6 +7271,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 805836289447402716, guid: 1def645d403d74a43b699821b995f422, type: 3}
   m_PrefabInstance: {fileID: 245225462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &245943943
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 277616213}
+    m_Modifications:
+    - target: {fileID: 391296786786036871, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_Name
+      value: BounceMushroom (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.8000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.4000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 49.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7372774
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.67559016
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+--- !u!4 &245943944 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+  m_PrefabInstance: {fileID: 245943943}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &246557478
 PrefabInstance:
@@ -7654,6 +7832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -8088,6 +8270,8 @@ Transform:
   - {fileID: 701384492}
   - {fileID: 1484108987}
   - {fileID: 1425733062}
+  - {fileID: 245943944}
+  - {fileID: 2127016999}
   - {fileID: 1630705744}
   - {fileID: 333213463}
   - {fileID: 1134124135}
@@ -8336,6 +8520,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -8642,7 +8830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.6
+      value: 12.656
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8654,23 +8842,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.56098557
+      value: 0.5213339
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.4304593
+      value: 0.4777144
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.56098557
+      value: -0.5213339
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.4304593
+      value: 0.4777144
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 75
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -8758,6 +8946,10 @@ PrefabInstance:
     - target: {fileID: 4643022548940439197, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510675419770213346, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7432479503298337010, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_Name
@@ -8985,9 +9177,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 94a0ee26990176d4fbf4b94a2926946f, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9061,9 +9261,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4c0388048e5ac774eb481b6cc5b3736a, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9767,9 +9975,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4c0388048e5ac774eb481b6cc5b3736a, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9930,6 +10146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -10064,9 +10284,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10311,6 +10539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -10375,6 +10607,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -10627,6 +10863,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -10915,6 +11155,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingDummyGhost (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11099,6 +11347,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -11190,6 +11442,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5510675419770213346, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7432479503298337010, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_Name
       value: Wizard
@@ -11221,7 +11477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 72.200005
+      value: 72.271
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11233,15 +11489,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7933534
+      value: 0.7372774
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.60876137
+      value: -0.67559016
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 75
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -11804,6 +12060,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingDummyGhost (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12182,9 +12446,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4c0388048e5ac774eb481b6cc5b3736a, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12390,6 +12662,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -12749,6 +13025,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingDummyGhost
       objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12877,6 +13161,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -13173,6 +13461,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -13840,6 +14132,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingDummyGhost (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14087,6 +14387,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -14410,6 +14714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -14467,9 +14775,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14498,7 +14814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 72.209
+      value: 72.261
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14510,15 +14826,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7933534
+      value: 0.7372774
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.60876137
+      value: -0.67559016
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 75
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -14986,9 +15302,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15496,6 +15820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -15680,6 +16008,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -15917,6 +16249,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 94a0ee26990176d4fbf4b94a2926946f, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4058706365503893536, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -15928,6 +16264,10 @@ PrefabInstance:
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15985,6 +16325,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -16166,9 +16510,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 94a0ee26990176d4fbf4b94a2926946f, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16290,9 +16642,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16459,7 +16819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.6
+      value: -10.676
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16471,23 +16831,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.56098557
+      value: 0.5213339
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.4304593
+      value: 0.4777144
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.56098557
+      value: 0.5213339
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4304593
+      value: -0.4777144
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 75
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -18217,6 +18577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -18522,6 +18886,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5510675419770213346, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7432479503298337010, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_Name
       value: Wizard (1)
@@ -18561,13 +18929,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: GhostEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1746772549220761074, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3431238771736581340, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6038385747326620688, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.406729
+      value: 7.4067297
       objectReference: {fileID: 0}
     - target: {fileID: 6038385747326620688, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.769836
+      value: -5.1698456
       objectReference: {fileID: 0}
     - target: {fileID: 8569473288924902827, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19272,6 +19648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -19337,6 +19717,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -19436,9 +19820,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4c0388048e5ac774eb481b6cc5b3736a, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19469,7 +19861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.6
+      value: -10.694
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19481,23 +19873,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.56098557
+      value: 0.5213339
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.4304593
+      value: 0.4777144
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.56098557
+      value: 0.5213339
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4304593
+      value: -0.4777144
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 75
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -20375,9 +20767,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 94a0ee26990176d4fbf4b94a2926946f, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20689,9 +21089,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 94a0ee26990176d4fbf4b94a2926946f, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21325,6 +21733,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -21395,6 +21807,14 @@ PrefabInstance:
     - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
       propertyPath: m_Name
       value: TrainingDummyGhost (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22266,9 +22686,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 94a0ee26990176d4fbf4b94a2926946f, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22390,9 +22818,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22455,6 +22891,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -23088,6 +23528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -23215,6 +23659,14 @@ PrefabInstance:
     - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
       propertyPath: m_Name
       value: TrainingDummyGhost (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23496,6 +23948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -23553,6 +24009,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5510675419770213346, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7432479503298337010, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_Name
       value: Wizard
@@ -23594,15 +24054,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26
+      value: 25.934
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7933534
+      value: 0.7372774
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.60876137
+      value: 0.67559016
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.y
@@ -23614,7 +24074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 75
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -24166,9 +24626,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 94a0ee26990176d4fbf4b94a2926946f, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24335,23 +24803,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.79335415
+      value: 0.7372774
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.6087605
+      value: 0.67559016
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 75
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -24417,6 +24885,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -25018,6 +25490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -25083,6 +25559,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -25352,6 +25832,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -25871,6 +26355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -26383,6 +26871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -26607,6 +27099,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -27180,6 +27676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -27298,6 +27798,10 @@ PrefabInstance:
     - target: {fileID: 4643022548940439197, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510675419770213346, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7432479503298337010, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_Name
@@ -27946,6 +28450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -28122,9 +28630,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28190,6 +28706,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -28396,6 +28916,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -28650,6 +29174,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -29121,6 +29649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -29181,6 +29713,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -29372,6 +29908,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -29494,6 +30034,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -30360,6 +30904,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -30420,6 +30968,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -30628,6 +31180,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -30885,27 +31441,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 57.999992
+      value: 57.932
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.79335415
+      value: 0.7372774
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.6087605
+      value: 0.67559016
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 75
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -31184,6 +31740,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -31413,6 +31973,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingDummyGhost (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31477,6 +32045,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -31610,6 +32182,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -32590,27 +33166,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1304368915035840746, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.357881
+      value: 9.15788
       objectReference: {fileID: 0}
     - target: {fileID: 1304368915035840746, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.80000305
+      value: -0.40000916
       objectReference: {fileID: 0}
     - target: {fileID: 1746772549220761074, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_Name
       value: GhostEnemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1746772549220761074, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3431238771736581340, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6038385747326620688, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7999997
+      value: -11.4
       objectReference: {fileID: 0}
     - target: {fileID: 6038385747326620688, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.8
+      value: -0.6000004
       objectReference: {fileID: 0}
     - target: {fileID: 6038385747326620688, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.400009
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 8569473288924902827, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33550,6 +34134,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingDummyGhost (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33641,6 +34233,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -33803,6 +34399,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -34639,6 +35239,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -34704,6 +35308,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -35105,6 +35713,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -35512,6 +36124,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -36205,6 +36821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -36803,6 +37423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -37045,6 +37669,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -37260,6 +37888,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -37500,6 +38132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -37711,6 +38347,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -37776,6 +38416,14 @@ PrefabInstance:
     - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
       propertyPath: m_Name
       value: TrainingDummyGhost
+      objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38139,6 +38787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -38380,6 +39032,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -38819,6 +39475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -39005,6 +39665,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -39597,6 +40261,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -40122,6 +40790,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -40250,6 +40922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -40350,9 +41026,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -40473,6 +41157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -40535,9 +41223,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -40789,6 +41485,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -41422,6 +42122,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -41925,6 +42629,10 @@ PrefabInstance:
     - target: {fileID: 4643022548940439197, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510675419770213346, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7432479503298337010, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_Name
@@ -42552,6 +43260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -42777,6 +43489,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -43336,6 +44052,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingDummyGhost (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43360,7 +44084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.6
+      value: 16.663
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalPosition.y
@@ -43372,23 +44096,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.56098557
+      value: 0.5213339
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.4304593
+      value: 0.4777144
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.56098557
+      value: -0.5213339
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.4304593
+      value: 0.4777144
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 75
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -43826,6 +44550,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -44212,6 +44940,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -44670,6 +45402,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4058706365503893536, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -44681,6 +45417,10 @@ PrefabInstance:
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45913,6 +46653,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5510675419770213346, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7432479503298337010, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_Name
       value: Wizard
@@ -46226,6 +46970,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -46496,6 +47244,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5510675419770213346, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7432479503298337010, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_Name
       value: Wizard
@@ -46631,6 +47383,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.6421199
       objectReference: {fileID: 0}
+    - target: {fileID: 211465135101999261, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7999878
+      objectReference: {fileID: 0}
     - target: {fileID: 1304368915035840746, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.75788
@@ -46639,13 +47395,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: GhostEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1746772549220761074, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3431238771736581340, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6038385747326620688, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.4
+      value: -7.6
       objectReference: {fileID: 0}
     - target: {fileID: 6038385747326620688, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.400009
+      value: 2.2000122
       objectReference: {fileID: 0}
     - target: {fileID: 8569473288924902827, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46944,6 +47708,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -47184,9 +47952,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3431238771736581340, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6038385747326620688, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.400111
+      value: 9.4001
       objectReference: {fileID: 0}
     - target: {fileID: 6038385747326620688, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.y
@@ -47194,7 +47966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6038385747326620688, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.799944
+      value: 16.999945
       objectReference: {fileID: 0}
     - target: {fileID: 8569473288924902827, guid: adaad6dffaf7f5044a0252ffe29b4d55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -48838,6 +49610,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingDummyGhost (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -49022,9 +49802,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4c0388048e5ac774eb481b6cc5b3736a, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -49223,6 +50011,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -49284,9 +50076,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4c0388048e5ac774eb481b6cc5b3736a, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -49473,6 +50273,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -50467,6 +51271,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -50532,6 +51340,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -50656,6 +51468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -50717,6 +51533,10 @@ PrefabInstance:
     - target: {fileID: 4643022548940439197, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510675419770213346, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7432479503298337010, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_Name
@@ -50844,6 +51664,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -51263,9 +52087,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4c0388048e5ac774eb481b6cc5b3736a, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -51517,6 +52349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -51583,9 +52419,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4c0388048e5ac774eb481b6cc5b3736a, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -51939,6 +52783,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingDummyGhost
       objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -52054,9 +52906,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -52243,6 +53103,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -52500,9 +53364,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -52700,6 +53572,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingDummyGhost (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -52876,6 +53756,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -53138,6 +54022,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -53423,6 +54311,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -53489,9 +54381,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 94a0ee26990176d4fbf4b94a2926946f, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -53550,9 +54450,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 94a0ee26990176d4fbf4b94a2926946f, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -53615,6 +54523,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -53735,9 +54647,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -53803,6 +54723,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -53932,6 +54856,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingDummyGhost (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -53994,9 +54926,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4c0388048e5ac774eb481b6cc5b3736a, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -55412,6 +56352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -55596,6 +56540,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -56442,6 +57390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -56970,6 +57922,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -57513,6 +58469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -57834,6 +58794,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingDummyGhost (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2313445969385350331, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526404463786732650, guid: 9f0837d7b30174e4a991160a0bb70e20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -58022,6 +58990,10 @@ PrefabInstance:
     - target: {fileID: 4643022548940439197, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510675419770213346, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7432479503298337010, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_Name
@@ -58228,6 +59200,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -58423,6 +59399,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -58583,6 +59563,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -58749,6 +59733,10 @@ PrefabInstance:
     - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_Name
       value: CandyPrefab (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8993493700327605069, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
       propertyPath: m_IsKinematic
@@ -59726,9 +60714,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 94a0ee26990176d4fbf4b94a2926946f, type: 2}
+    - target: {fileID: 3681898595600673434, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
       propertyPath: m_Name
       value: Balloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128314047078948295, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -59927,6 +60923,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5510675419770213346, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7432479503298337010, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_Name
       value: Wizard (1)
@@ -60121,6 +61121,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1691205121085849649, guid: e622f9b1f09b7164582940e087bb4533, type: 3}
   m_PrefabInstance: {fileID: 2124278570}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2127016998
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 277616213}
+    m_Modifications:
+    - target: {fileID: 391296786786036871, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_Name
+      value: BounceMushroom (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.8000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.4000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 56.081
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7372774
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.67559016
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+--- !u!4 &2127016999 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8858625832110785260, guid: 6e24727de9faf374191cd9b22382fb62, type: 3}
+  m_PrefabInstance: {fileID: 2127016998}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2127689625
 PrefabInstance:
