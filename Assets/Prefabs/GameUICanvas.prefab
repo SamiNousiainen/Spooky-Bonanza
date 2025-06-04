@@ -1124,13 +1124,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1100715046725489584}
   m_HandleRect: {fileID: 7824337171747367299}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2709169158295907558}
+        m_TargetAssemblyTypeName: GameUIManager, Assembly-CSharp
+        m_MethodName: OnMusicVolumeChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1828917001428676097
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,13 +2087,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 6481396918043054382}
   m_HandleRect: {fileID: 2324509428749392768}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2709169158295907558}
+        m_TargetAssemblyTypeName: GameUIManager, Assembly-CSharp
+        m_MethodName: OnMasterVolumeChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2853214133253456600
 GameObject:
   m_ObjectHideFlags: 0
@@ -4995,6 +5019,7 @@ MonoBehaviour:
   candyAmountText: {fileID: 271344279965808854}
   pumpkinAmountText: {fileID: 1941704998130341123}
   currentHealthText: {fileID: 5911592270703167595}
+  audioMixer: {fileID: 24100000, guid: d4b339bb57286e24aa8bcf8d2a8e9fcf, type: 2}
   m_settingsPanel: {fileID: 1828917001428676097}
   pausePanel: {fileID: 6067661301604003295}
   pauseMenu: {fileID: 5991377568169995468}
@@ -5157,13 +5182,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 5395654550731282945}
   m_HandleRect: {fileID: 6637007405720728365}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2709169158295907558}
+        m_TargetAssemblyTypeName: GameUIManager, Assembly-CSharp
+        m_MethodName: OnSFXVolumeChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7621222446972509827
 GameObject:
   m_ObjectHideFlags: 0

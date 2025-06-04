@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 /// <summary>
 /// TODO, kaikki lev‰ll‰‰n
 /// </summary>
@@ -21,19 +22,17 @@ public class GameUIManager : MonoBehaviour
 
     [Header("Pause Menu")]
 
-    //[SerializeField] private AudioMixer m_audioMixer;
-    //[SerializeField] private VolumeProfile m_globalVolumeProfile;
+    [SerializeField] private AudioMixer audioMixer;
     public GameObject m_settingsPanel;
     public GameObject pausePanel;
     public GameObject pauseMenu;
     [SerializeField] private Image backgroundDim;
     
-    //[SerializeField] private InputReader m_inputReader;
     private PlayerInput playerInput;
     public static bool alwaysMaxJump = false;
     public static bool infiniteLives = false;
-    //private LiftGammaGain m_liftGammaGain;
 
+    //[SerializeField] private InputReader m_inputReader;
     //[Space(5), Header("Level End")]
     //[SerializeField] private GameObject m_levelEndPanel;
     //[SerializeField] private TMP_Text m_levelEndTimerText;
@@ -88,17 +87,12 @@ public class GameUIManager : MonoBehaviour
 
     public void UpdatePumpkinAmount()
     {
-        //pumpkinAmountText.DOFade(1f, 0f);
         pumpkinAmountText.text = InventoryManager.instance.Data.collectedPumpkins.Count.ToString();
-        //purkkaratkasu
-        //pumpkinAmountText.DOFade(0f, 5f);
-
     }
 
     public void UpdateCandyAmount()
     {
         candyAmountText.text = InventoryManager.instance.Data.candyCount.ToString();
-
     }
 
     #region UI Callbacks
@@ -142,30 +136,17 @@ public class GameUIManager : MonoBehaviour
         return !(instance.pauseMenu.activeSelf || instance.m_settingsPanel.activeSelf);
     }
 
-    //public void OnMasterVolumeChanged(float value) {
-    //    m_audioMixer.SetFloat("MasterVolume", ToLogarithmicVolume(value));
-    //}
+    public void OnMasterVolumeChanged(float value) {
+        audioMixer.SetFloat("MasterVolume", Mathf.Log10(value) * 20f);
+    }
 
-    //public void OnAmbientVolumeChanged(float value) {
-    //    m_audioMixer.SetFloat("AmbientVolume", ToLogarithmicVolume(value));
-    //}
+    public void OnMusicVolumeChanged(float value) {
+        audioMixer.SetFloat("MusicVolume", Mathf.Log10(value) * 20f);
+    }
 
-    //public void OnSFXVolumeChanged(float value) {
-    //    m_audioMixer.SetFloat("SFXVolume", ToLogarithmicVolume(value));
-    //}
-
-    //public void OnGammaChanged(float value) {
-    //    m_liftGammaGain.gamma.Override(new Vector4(1f, 1f, 1f, value));
-    //}
-
-
-
-    //private void InitializeSettings() {
-
-    //}
-
-    //TODO
-    //bindings
+    public void OnSFXVolumeChanged(float value) {
+        audioMixer.SetFloat("SFXVolume", Mathf.Log10(value) * 20f);
+    }
 
     #endregion
 
