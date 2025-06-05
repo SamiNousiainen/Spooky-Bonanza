@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -25,6 +27,7 @@ public class SpellProjectile : MonoBehaviour {
 
         if (damageable != null) {
             damageable.TakeDamage(wizardProperties.damage);
+            damageable.HasTakenDamage = false;
         }
 
         //Bounce if the projectile hits umbrella

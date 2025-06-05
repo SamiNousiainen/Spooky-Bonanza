@@ -1526,6 +1526,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7101201593469750846, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 7432479503298337010, guid: 009d550bc76a5f94487dd63c02cc7998, type: 3}
       propertyPath: m_Name
       value: Wizard
