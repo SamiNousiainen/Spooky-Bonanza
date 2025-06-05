@@ -28,6 +28,14 @@ public class Bounce : MonoBehaviour {
                 StartCoroutine(BounceAnimation());
             }
         }
+
+        if (other.CompareTag("Enemy")) {
+            Rigidbody rb = other.GetComponent<Rigidbody>();
+            if (rb != null) {
+                Vector3 launchVelocity = transform.up * launchForce;
+                rb.AddForce(launchVelocity, ForceMode.Impulse);
+            }
+        }
     }
 
     private IEnumerator BounceAnimation() {
