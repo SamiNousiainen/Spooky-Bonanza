@@ -15,7 +15,7 @@ public class SpellProjectile : MonoBehaviour {
         Destroy(gameObject, 5f);
     }
     private void OnCollisionEnter(Collision collision) {
-        
+
         SoundManager.instance.PlaySFX(SFXType.WizardAttackHit, transform, 0.8f);
         PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
         if (playerHealth != null && GameUIManager.infiniteLives == false) {
@@ -36,27 +36,29 @@ public class SpellProjectile : MonoBehaviour {
 
             Rigidbody rb = GetComponent<Rigidbody>();
 
-            //Block sfx
+            SoundManager.instance.PlaySFX(SFXType.PlayerBlock, transform, 0.8f);
 
-            //Sateenvarjon pinnan mukaan
+            //Bounce based on umbrella collider normal
             //Vector3 velocity = rb.linearVelocity;
             //Vector3 normal = collision.GetContact(0).normal;
             //rb.linearVelocity = Vector3.Reflect(velocity, normal).normalized * wizardProperties.projectileSpeed;
 
-            //Pelaajan rotaation mukaan
-            Vector3 direction = Player.instance.transform.forward;
+            //Bounce based on player rotation
+            //Vector3 direction = Player.instance.transform.forward;
 
 
-            //Lähintä vihollista päin
+            //Bounce towards closest enemy
+            EnemyHealth closestEnemy = FindClosestEnemy(transform.position, 10f);
+            Vector3 direction = closestEnemy.transform.position - transform.position;
 
-            //TODO
-            //Collider[] enemies = Physics.OverlapSphere(transform.position, 10f);
+            //Slight offset to possibly make wizards spin when hit
+            Vector3 offset = new Vector3(Random.Range(0.1f, 0.3f), 0f, Random.Range(0.1f, 0.3f)).normalized;
+            direction += offset;
 
-            
             direction.Normalize();
 
             rb.linearVelocity = direction * wizardProperties.projectileSpeed;
-            Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.LookRotation(-direction);
 
         } else {
             //Destroy projectile and spawn vfx
@@ -65,7 +67,22 @@ public class SpellProjectile : MonoBehaviour {
         }
     }
 
-    //private Transform GetClosestEnemy(Transform[] enemies) {
-        
-    //}
+    public EnemyHealth FindClosestEnemy(Vector3 position, float radius) {
+        Collider[] enemies = Physics.OverlapSphere(position, radius);
+        EnemyHealth closestEnemy = null;
+        float shortestDistance = Mathf.Infinity;
+
+        foreach (Collider collider in enemies) {
+            EnemyHealth enemy = collider.GetComponent<EnemyHealth>();
+            if (enemy != null) {
+                float dist = Vector3.Distance(position, collider.transform.position);
+                if (dist < shortestDistance) {
+                    shortestDistance = dist;
+                    closestEnemy = enemy;
+                }
+            }
+        }
+
+        return closestEnemy;
+    }
 }
