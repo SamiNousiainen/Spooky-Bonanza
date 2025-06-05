@@ -52,7 +52,7 @@ public class SpellProjectile : MonoBehaviour {
             Vector3 direction = closestEnemy.transform.position - transform.position;
 
             //Slight offset to possibly make wizards spin when hit
-            Vector3 offset = new Vector3(Random.Range(0.1f, 0.3f), 0f, Random.Range(0.1f, 0.3f)).normalized;
+            Vector3 offset = new Vector3(Random.Range(0.1f, 0.3f), 0f, Random.Range(0.1f, 0.3f));
             direction += offset;
 
             direction.Normalize();
