@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using static Unity.Cinemachine.IInputAxisOwner.AxisDescriptor;
 
 /// <summary>
 /// Class containing Wizard enemy spell functionality
@@ -43,7 +44,19 @@ public class SpellProjectile : MonoBehaviour {
             //rb.linearVelocity = Vector3.Reflect(velocity, normal).normalized * wizardProperties.projectileSpeed;
 
             //Pelaajan rotaation mukaan
-            rb.linearVelocity = Player.instance.transform.forward * wizardProperties.projectileSpeed;
+            Vector3 direction = Player.instance.transform.forward;
+
+
+            //Lähintä vihollista päin
+
+            //TODO
+            //Collider[] enemies = Physics.OverlapSphere(transform.position, 10f);
+
+            
+            direction.Normalize();
+
+            rb.linearVelocity = direction * wizardProperties.projectileSpeed;
+            Quaternion.LookRotation(direction);
 
         } else {
             //Destroy projectile and spawn vfx
@@ -51,4 +64,8 @@ public class SpellProjectile : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+    //private Transform GetClosestEnemy(Transform[] enemies) {
+        
+    //}
 }

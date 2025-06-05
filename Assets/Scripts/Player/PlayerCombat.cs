@@ -80,6 +80,7 @@ public class PlayerCombat : MonoBehaviour
             }
             animator.Play("Armature|Attack 0");
             StartCoroutine(DealDamage());
+            SoundManager.instance.PlaySFX(SFXType.PlayerAttack, transform, 0.8f);
         }
     }
 
