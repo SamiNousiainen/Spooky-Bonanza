@@ -24,7 +24,6 @@ public class Bounce : MonoBehaviour {
             if (player != null) {
                 Vector3 launchVelocity = transform.up * launchForce;
                 player.LaunchPlayer(launchVelocity);
-                SoundManager.instance.PlaySFX(SFXType.Bounce, transform, 0.8f);
                 StartCoroutine(BounceAnimation());
             }
         }
@@ -34,11 +33,14 @@ public class Bounce : MonoBehaviour {
             if (rb != null) {
                 Vector3 launchVelocity = transform.up * launchForce;
                 rb.AddForce(launchVelocity, ForceMode.Impulse);
+                StartCoroutine(BounceAnimation());
             }
         }
     }
 
     private IEnumerator BounceAnimation() {
+
+        SoundManager.instance.PlaySFX(SFXType.Bounce, transform, 0.8f);
 
         Vector3 squishedScale = new Vector3(originalScale.x * 1.1f, originalScale.y * squishAmount, originalScale.z * 1.1f);
 
