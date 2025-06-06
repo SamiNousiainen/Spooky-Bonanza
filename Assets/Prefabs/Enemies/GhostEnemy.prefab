@@ -276,6 +276,50 @@ PrefabInstance:
       propertyPath: stopAction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 334543486103856272, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 599181619201699642, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485176032701016533, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485176032701016533, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+      propertyPath: EmissionModule.m_BurstCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485176032701016533, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485176032701016533, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485176032701016533, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378220154245652361, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394421192230902494, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+      propertyPath: m_Mesh1
+      value: 
+      objectReference: {fileID: 251014939817169093, guid: d514fdc8df731314fa4103e801032708, type: 3}
+    - target: {fileID: 4394421192230902494, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+      propertyPath: m_Mesh2
+      value: 
+      objectReference: {fileID: 1616691108262468743, guid: ba61db7bf680f1d45ae03c86fbcb90be, type: 3}
+    - target: {fileID: 4394421192230902494, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+      propertyPath: m_Mesh3
+      value: 
+      objectReference: {fileID: -1255220166165468868, guid: 41828554fcf88c04cb0bb4deaa9a6d95, type: 3}
     - target: {fileID: 5043444085235648661, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -325,7 +369,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3642829009689686111, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+    - {fileID: 8067418401203569165, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
+    - {fileID: 6534905074679580732, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9f6526f02e4c664d893cc6aaf30ed60, type: 3}
