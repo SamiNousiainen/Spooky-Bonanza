@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
-using static Unity.Cinemachine.IInputAxisOwner.AxisDescriptor;
+
 
 /// <summary>
 /// Class containing Wizard enemy spell functionality
@@ -10,6 +10,7 @@ public class SpellProjectile : MonoBehaviour {
 
     [SerializeField] private WizardProperties wizardProperties;
     [SerializeField] private GameObject hitVFX;
+    [SerializeField] private GameObject blockVFX;
 
     private void Update() {
         Destroy(gameObject, 5f);
@@ -37,6 +38,7 @@ public class SpellProjectile : MonoBehaviour {
             Rigidbody rb = GetComponent<Rigidbody>();
 
             SoundManager.instance.PlaySFX(SFXType.PlayerBlock, transform, 0.8f);
+            Instantiate(blockVFX, transform.position, Quaternion.LookRotation(transform.position - collision.transform.position));
 
             //Bounce based on umbrella collider normal
             //Vector3 velocity = rb.linearVelocity;

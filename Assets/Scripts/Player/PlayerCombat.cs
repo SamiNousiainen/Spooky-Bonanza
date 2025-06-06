@@ -17,6 +17,8 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private GameObject shield;
 
     [SerializeField] private Transform attackPoint;
+    [SerializeField] private float attackRange;
+    [SerializeField] private ParticleSystem attackVFX;
 
     private bool isGliding;
     private bool isBlocking;
@@ -89,11 +91,8 @@ public class PlayerCombat : MonoBehaviour
         canAttack = false;
         isAttacking = true;
 
-
-        float attackRange = 0.5f;
-
         Collider[] hits = Physics.OverlapSphere(attackPoint.position, attackRange);
-        attackPoint.gameObject.SetActive(true);
+        attackVFX.Play();
 
         foreach (Collider hit in hits)
         {
@@ -106,8 +105,8 @@ public class PlayerCombat : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(0.1f);
-        attackPoint.gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.2f);
+        attackVFX.Stop();
         ReturnEnemiesToDamageable();
 
         isAttacking = false;
@@ -208,7 +207,7 @@ public class PlayerCombat : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position, 0.5f);
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
 } // Class
