@@ -50,6 +50,12 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
 
     private void DropCandy() {
 
+        //T‰‰ on varmaa aika tyhm‰ ratkasu
+        TryGetComponent(out GhostBehaviour ghost);
+        if (ghost != null && ghost.CandyStolen == true) {
+            candyDropAmount += 3;
+        }
+
         for (int i = 0; i < candyDropAmount; i++) {
 
             Vector3 offset = Random.insideUnitSphere * spawnRadius;
@@ -68,7 +74,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
 
     private void PlayDamageSound() {
         if (TryGetComponent(out GhostBehaviour ghost)) {
-            SoundManager.instance.PlaySFX(SFXType.GhostDeath, transform, 0.8f);
+            SoundManager.instance.PlaySFX(SFXType.GhostDeath, transform, 0.8f);     
         } 
 
         if (TryGetComponent(out WizardBehaviour wizard)) {

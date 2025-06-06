@@ -1,7 +1,9 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// TODO
+/// </summary>
 public class EndScreenController : MonoBehaviour {
 
     [SerializeField] private Image image;

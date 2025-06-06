@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2569568572885496280}
   - component: {fileID: 8477620338193756178}
   - component: {fileID: 1940697632368478850}
-  - component: {fileID: 2329118343460908595}
   - component: {fileID: 7072198089021140909}
   - component: {fileID: 5815214491515432006}
   m_Layer: 0
@@ -62,7 +61,7 @@ MonoBehaviour:
   Lens:
     FieldOfView: 60
     OrthographicSize: 5
-    NearClipPlane: 0.01
+    NearClipPlane: 0.2
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
@@ -110,36 +109,6 @@ MonoBehaviour:
     Time: 0
     Smoothing: 0
     IgnoreY: 0
---- !u!114 &2329118343460908595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2417596664366745366}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7de3aefa901374ba29464584a3109a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CameraRadius: 0.3
-  Decollision:
-    Enabled: 1
-    ObstacleLayers:
-      serializedVersion: 2
-      m_Bits: 65
-    UseFollowTarget:
-      Enabled: 0
-      YOffset: 0
-    Damping: 0.1
-    SmoothingTime: 0.1
-  TerrainResolution:
-    Enabled: 0
-    TerrainLayers:
-      serializedVersion: 2
-      m_Bits: 1
-    MaximumRaycast: 10
-    Damping: 0.5
 --- !u!114 &7072198089021140909
 MonoBehaviour:
   m_ObjectHideFlags: 0

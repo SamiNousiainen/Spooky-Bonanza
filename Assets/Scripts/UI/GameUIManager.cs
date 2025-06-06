@@ -55,10 +55,6 @@ public class GameUIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        audioMixer.SetFloat("MasterVolume", Mathf.Log10(masterSlider.value) * 20f);
-        audioMixer.SetFloat("MusicVolume", Mathf.Log10(musicSlider.value) * 20f);
-        audioMixer.SetFloat("SFXVolume", Mathf.Log10(sfxSlider.value) * 20f);
     }
 
     private void OnEnable()
@@ -81,6 +77,10 @@ public class GameUIManager : MonoBehaviour
         UpdatePumpkinAmount();
         UpdateCandyAmount();
         UpdatePlayerHp();
+
+        audioMixer.SetFloat("MasterVolume", Mathf.Log10(masterSlider.value) * 20f);
+        audioMixer.SetFloat("MusicVolume", Mathf.Log10(musicSlider.value) * 20f);
+        audioMixer.SetFloat("SFXVolume", Mathf.Log10(sfxSlider.value) * 20f);
     }
 
     private void Update()
