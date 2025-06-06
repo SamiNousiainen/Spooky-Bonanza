@@ -1,7 +1,5 @@
 using System.Collections;
-using UnityEditor.Callbacks;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 [SelectionBase]
 public class DestroyableObject : MonoBehaviour, IDamageable {

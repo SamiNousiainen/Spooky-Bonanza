@@ -1,18 +1,33 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-/// <summary>
-/// TODO
-/// </summary>
+
+[System.Serializable]
+public class PumpkinDisplayEntry {
+    public string id;
+    public GameObject collectedPumpkin;
+    public GameObject missingPumpkin;
+}
+
 public class EndScreenController : MonoBehaviour {
 
-    [SerializeField] private Image image;
+    [Header("Pumpkin Displays")]
+    [SerializeField] private List<PumpkinDisplayEntry> pumpkinDisplays;
+
+    [Header("UI")]
     [SerializeField] private TMP_Text totalCandyText;
 
-    private void Update() {
-        //target
-        //start
-        totalCandyText.text = Mathf.Lerp(0f, 250f, Time.deltaTime * 2f).ToString();
+    private void Start() {
+        totalCandyText.text = "Total candy collected: " + InventoryManager.instance.Data.candyCount.ToString();
 
+        List<string> collectedPumpkins = InventoryManager.instance.Data.collectedPumpkins;
+
+        //Loop through each display entry and enable if collected
+        foreach (var entry in pumpkinDisplays) {
+            bool isCollected = collectedPumpkins.Contains(entry.id);
+            entry.collectedPumpkin.SetActive(isCollected);
+            entry.missingPumpkin.SetActive(!isCollected);
+        }
     }
 }
