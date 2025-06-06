@@ -20,6 +20,9 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+
+        SoundManager.instance.PlaySFX(SFXType.PlayerTakeDamage, transform, 0.8f);
+
         if (GameUIManager.infiniteLives) return;
 
         if (damageCooldownTimer <= 0) {
