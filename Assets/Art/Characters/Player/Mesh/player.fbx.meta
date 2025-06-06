@@ -3,7 +3,42 @@ guid: d855a2ac537b2184c9647bf0db4b4bdc
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boots
+    second: {fileID: 2100000, guid: 17b3ce2967130b64bba17c661ec1920c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_eyes
+    second: {fileID: 2100000, guid: 17b3ce2967130b64bba17c661ec1920c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_fur
+    second: {fileID: 2100000, guid: 17b3ce2967130b64bba17c661ec1920c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: costume
+    second: {fileID: 2100000, guid: 17b3ce2967130b64bba17c661ec1920c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hat_belt
+    second: {fileID: 2100000, guid: 17b3ce2967130b64bba17c661ec1920c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hat_material
+    second: {fileID: 2100000, guid: 17b3ce2967130b64bba17c661ec1920c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hat_metal
+    second: {fileID: 2100000, guid: 17b3ce2967130b64bba17c661ec1920c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
