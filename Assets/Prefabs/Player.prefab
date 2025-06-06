@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: b5e2bb3137fd7ce47b1526416d2bcbd0, type: 2}
+  m_Material: {fileID: -876546973899608171, guid: 90c612e12f0916444a0bbba1f6b9f5d4, type: 3}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -795,11 +795,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7569221736839538057, guid: b700e8e0c4b584246a9b1edb13857183, type: 3}
       propertyPath: looping
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7569221736839538057, guid: b700e8e0c4b584246a9b1edb13857183, type: 3}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569221736839538057, guid: b700e8e0c4b584246a9b1edb13857183, type: 3}
+      propertyPath: RotationModule.curve.scalar
+      value: -9.424778
       objectReference: {fileID: 0}
     - target: {fileID: 7658147951284482376, guid: b700e8e0c4b584246a9b1edb13857183, type: 3}
       propertyPath: m_Name

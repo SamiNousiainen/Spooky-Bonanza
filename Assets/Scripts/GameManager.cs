@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour {
 
             OnSceneChange.Invoke();
             SceneManager.LoadScene(sceneName);
-            dim.DOFade(0f, 2f);
+            dim.DOFade(0f, 3f);
             Time.timeScale = 1f;
 
         });
