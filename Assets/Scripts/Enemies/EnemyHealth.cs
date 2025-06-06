@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
     [SerializeField] private float currentHealth;
 
     [SerializeField] private GameObject poof;
+    [SerializeField] private ParticleSystem damageVFX;
 
     [Header("Candy drop settings")]
     [SerializeField] private GameObject candyPrefab;
@@ -32,6 +33,9 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
         currentHealth -= damage;
         PlayDamageSound();
         Knockback();
+        if (damageVFX != null) {
+            damageVFX.Play();
+        }
 
         if (currentHealth <= 0) {
 

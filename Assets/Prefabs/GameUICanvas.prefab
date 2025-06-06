@@ -5019,11 +5019,14 @@ MonoBehaviour:
   candyAmountText: {fileID: 271344279965808854}
   pumpkinAmountText: {fileID: 1941704998130341123}
   currentHealthText: {fileID: 5911592270703167595}
-  audioMixer: {fileID: 24100000, guid: d4b339bb57286e24aa8bcf8d2a8e9fcf, type: 2}
   m_settingsPanel: {fileID: 1828917001428676097}
   pausePanel: {fileID: 6067661301604003295}
   pauseMenu: {fileID: 5991377568169995468}
+  audioMixer: {fileID: 24100000, guid: d4b339bb57286e24aa8bcf8d2a8e9fcf, type: 2}
   backgroundDim: {fileID: 6006794556479840836}
+  masterSlider: {fileID: 5542659497012531203}
+  musicSlider: {fileID: 6726160062177009426}
+  sfxSlider: {fileID: 7253786689492297269}
 --- !u!1 &6870105216206273631
 GameObject:
   m_ObjectHideFlags: 0

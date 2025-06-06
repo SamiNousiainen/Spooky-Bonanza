@@ -178,6 +178,7 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 0
   poof: {fileID: 1361273709133992529, guid: 05ab4d098b0d4d74bacbd524322f148b, type: 3}
+  damageVFX: {fileID: 3218917577774762643}
   candyPrefab: {fileID: 3407659217935857711, guid: 8671cc187a3cfe6428b4588e19825fd2, type: 3}
   candyDropAmount: 4
   spawnForce: 2
@@ -367,13 +368,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7021846170026400183, guid: 465a7db43fc5f3d41bac3a25166f0cb3, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7891678226048582067, guid: 465a7db43fc5f3d41bac3a25166f0cb3, type: 3}
       propertyPath: m_Name
       value: VFX_TakeDamage
       objectReference: {fileID: 0}
     - target: {fileID: 7891678226048582067, guid: 465a7db43fc5f3d41bac3a25166f0cb3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -383,5 +388,10 @@ PrefabInstance:
 --- !u!4 &2043082046309107052 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5873542543901283912, guid: 465a7db43fc5f3d41bac3a25166f0cb3, type: 3}
+  m_PrefabInstance: {fileID: 5609655105559909156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3218917577774762643 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7021846170026400183, guid: 465a7db43fc5f3d41bac3a25166f0cb3, type: 3}
   m_PrefabInstance: {fileID: 5609655105559909156}
   m_PrefabAsset: {fileID: 0}

@@ -47,3 +47,4 @@ MonoBehaviour:
   sfxObject: {fileID: 6362865274286337215, guid: cd6f361de0c6ade4bbf0b6f206fd386a, type: 3}
   sfxObject2D: {fileID: 6362865274286337215, guid: 727d4237d74161c45a0cb8ed6af6a016, type: 3}
   audioLibrary: {fileID: 11400000, guid: a50c672c0cce912418c00f6322e4922d, type: 2}
+  audioMixer: {fileID: 24100000, guid: d4b339bb57286e24aa8bcf8d2a8e9fcf, type: 2}

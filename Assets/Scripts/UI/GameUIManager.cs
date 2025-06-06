@@ -22,11 +22,15 @@ public class GameUIManager : MonoBehaviour
 
     [Header("Pause Menu")]
 
-    [SerializeField] private AudioMixer audioMixer;
     public GameObject m_settingsPanel;
     public GameObject pausePanel;
     public GameObject pauseMenu;
+    [SerializeField] private AudioMixer audioMixer;
     [SerializeField] private Image backgroundDim;
+
+    [SerializeField] private Slider masterSlider;
+    [SerializeField] private Slider musicSlider;
+    [SerializeField] private Slider sfxSlider;
     
     private PlayerInput playerInput;
     public static bool alwaysMaxJump = false;
@@ -51,6 +55,10 @@ public class GameUIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        audioMixer.SetFloat("MasterVolume", Mathf.Log10(masterSlider.value) * 20f);
+        audioMixer.SetFloat("MusicVolume", Mathf.Log10(musicSlider.value) * 20f);
+        audioMixer.SetFloat("SFXVolume", Mathf.Log10(sfxSlider.value) * 20f);
     }
 
     private void OnEnable()
@@ -158,8 +166,8 @@ public class GameUIManager : MonoBehaviour
     {
         pauseMenu.SetActive(value);
         Time.timeScale = value ? 0f : 1f;
-        Cursor.visible = value;
-        Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
+        //Cursor.visible = value;
+        //Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
     }
 
     /// <summary>

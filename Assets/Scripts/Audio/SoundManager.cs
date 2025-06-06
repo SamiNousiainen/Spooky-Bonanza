@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour {
 
@@ -7,6 +8,7 @@ public class SoundManager : MonoBehaviour {
     [SerializeField] private AudioSource sfxObject;
     [SerializeField] private AudioSource sfxObject2D;
     [SerializeField] private AudioLibrary audioLibrary;
+    [SerializeField] private AudioMixer audioMixer;
 
     private void Awake() {
         if (instance == null) {
