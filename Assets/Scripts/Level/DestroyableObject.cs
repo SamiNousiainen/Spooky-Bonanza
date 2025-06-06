@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.Callbacks;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -46,6 +47,9 @@ public class DestroyableObject : MonoBehaviour, IDamageable {
         DropCandy();
 
         Rigidbody[] childRigidbodies = GetComponentsInChildren<Rigidbody>();
+
+        childRigidbodies[0].isKinematic = true; // Make the parent rigidbody kinematic to ensure it does not move the hierarchy after the vase physically no longer exists
+
         foreach (Rigidbody rb in childRigidbodies) {
             Vector3 direction = rb.transform.position - transform.position;
             rb.AddForce(direction.normalized * explosionForce, ForceMode.Impulse);
