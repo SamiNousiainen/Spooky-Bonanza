@@ -16,7 +16,8 @@ public class LevelChangeTrigger : MonoBehaviour {
     }
 
     private IEnumerator TriggerSceneChange() {
-        yield return new WaitForSeconds(1f);
+        SoundManager.instance.PlaySFX(SFXType.DoorOpen, transform, 0.8f);
+        yield return new WaitForSeconds(0.5f);
         if (GameManager.instance != null) {
             GameManager.instance.SceneChange(sceneToLoad);
         }

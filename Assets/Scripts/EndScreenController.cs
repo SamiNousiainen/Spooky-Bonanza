@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [System.Serializable]
@@ -29,5 +30,9 @@ public class EndScreenController : MonoBehaviour {
             entry.collectedPumpkin.SetActive(isCollected);
             entry.missingPumpkin.SetActive(!isCollected);
         }
+    }
+
+    public void ReturnToMenu() {
+        GameManager.instance.SceneChange("MainMenuScene");
     }
 }

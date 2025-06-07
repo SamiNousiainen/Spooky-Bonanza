@@ -56,4 +56,8 @@ public class MainMenuController : MonoBehaviour {
         };
     }
 
+    public void QuitGame() {
+        Application.Quit();
+    }
+
 }

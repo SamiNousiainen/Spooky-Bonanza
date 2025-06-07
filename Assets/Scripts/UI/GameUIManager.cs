@@ -5,13 +5,17 @@ using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using System.Collections.Generic;
+
 /// <summary>
 /// TODO, kaikki lev‰ll‰‰n
 /// </summary>
-public class GameUIManager : MonoBehaviour
-{
+public class GameUIManager : MonoBehaviour {
 
     public static GameUIManager instance;
+
+    [Header("Pumpkin Icons for HUD")]
+    [SerializeField] private List<PumpkinDisplayEntry> pumpkinIconDisplays;
 
     [Header("HUD")]
 
@@ -19,6 +23,7 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] private TMP_Text candyAmountText;
     [SerializeField] private TMP_Text pumpkinAmountText;
     [SerializeField] private TMP_Text currentHealthText;
+    [SerializeField] private GameObject pumpkinHUD;
 
     [Header("Pause Menu")]
 
@@ -74,7 +79,6 @@ public class GameUIManager : MonoBehaviour
 
     private void Start()
     {
-        UpdatePumpkinAmount();
         UpdateCandyAmount();
         UpdatePlayerHp();
 
@@ -93,10 +97,51 @@ public class GameUIManager : MonoBehaviour
             currentHealthText.text = Player.instance.GetComponent<PlayerHealth>().currentHealth.ToString();
     }
 
-    public void UpdatePumpkinAmount()
-    {
+    public void UpdateCollectedPumpkins() {
         pumpkinAmountText.text = InventoryManager.instance.Data.collectedPumpkins.Count.ToString();
+
+        List<string> collectedPumpkins = InventoryManager.instance.Data.collectedPumpkins;
+
+        foreach (var entry in pumpkinIconDisplays) {
+            bool isCollected = collectedPumpkins.Contains(entry.id);
+            
+            CanvasGroup collectedCg = entry.collectedPumpkin.GetComponent<CanvasGroup>();
+            CanvasGroup missingCg = entry.missingPumpkin.GetComponent<CanvasGroup>();
+
+            if (collectedCg != null) {
+                collectedCg.alpha = 1f;
+                collectedCg.DOFade(0f, 0.5f)
+                  .SetDelay(5f)
+                  .SetEase(Ease.InOutQuad)
+                  .OnComplete(() => {
+                      entry.collectedPumpkin.SetActive(false);        
+                  });         
+            }
+
+            if (missingCg != null) {
+                missingCg.alpha = 1f;
+                missingCg.DOFade(0f, 0.5f)
+                  .SetDelay(5f)
+                  .SetEase(Ease.InOutQuad)
+                  .OnComplete(() => {
+                      entry.missingPumpkin.SetActive(false);
+                  });
+            }
+
+            //Only do animation when showing a newly collected pumpkin
+            if (isCollected && !entry.collectedPumpkin.activeSelf) {
+                entry.collectedPumpkin.SetActive(true);
+                entry.collectedPumpkin.transform.localScale = Vector3.zero;
+                entry.collectedPumpkin.transform.DOScale(Vector3.one, 0.4f)
+                    .SetEase(Ease.OutBack);
+            } else {
+                entry.collectedPumpkin.SetActive(isCollected);
+            }
+
+            entry.missingPumpkin.SetActive(!isCollected);
+        }
     }
+
 
     public void UpdateCandyAmount()
     {

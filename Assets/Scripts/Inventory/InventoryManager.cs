@@ -51,7 +51,7 @@ public class InventoryManager : MonoBehaviour {
             Data.collectedPumpkins.Add(id);
             Debug.Log("pumpkin ID " + id + " collected");
             if (GameUIManager.instance != null) {
-                GameUIManager.instance.UpdatePumpkinAmount();
+                GameUIManager.instance.UpdateCollectedPumpkins();
             }
         }
     }
