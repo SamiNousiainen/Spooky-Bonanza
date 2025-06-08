@@ -2911,6 +2911,7 @@ Transform:
   - {fileID: 529521439}
   - {fileID: 1232002197}
   - {fileID: 1944335778}
+  - {fileID: 2037936651}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &343383400
@@ -11204,7 +11205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8374611293998836147, guid: a9cc9e4ef18ae054abd588f5ea755d6f, type: 3}
       propertyPath: transitionDuration
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8374611293998836147, guid: a9cc9e4ef18ae054abd588f5ea755d6f, type: 3}
       propertyPath: backEntrySettings.maxX
@@ -17997,6 +17998,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8965168977017548151, guid: f7f5bbb23dd5f3d47aea87cb44041814, type: 3}
   m_PrefabInstance: {fileID: 1141512798}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2037936650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2037936651}
+  - component: {fileID: 2037936652}
+  m_Layer: 12
+  m_Name: CameraBlocker (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2037936651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037936650}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.2000003, y: -12.88, z: -36.27}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 341335690}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2037936652
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037936650}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8, y: 12, z: 2.8}
+  m_Center: {x: 0, y: 0, z: 0.7}
 --- !u!1001 &2039099698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18143,7 +18197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2563974682586164315, guid: db29479025003884dbc5ad441701a23e, type: 3}
       propertyPath: m_Size.z
-      value: 3.5
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 2563974682586164315, guid: db29479025003884dbc5ad441701a23e, type: 3}
       propertyPath: m_Center.y
@@ -19178,9 +19232,9 @@ SceneRoots:
   - {fileID: 1527462004}
   - {fileID: 1556503334}
   - {fileID: 343383402}
-  - {fileID: 341335690}
   - {fileID: 605257273}
   - {fileID: 1001810336}
+  - {fileID: 341335690}
   - {fileID: 1585177915}
   - {fileID: 1607555559}
   - {fileID: 5347622165568834263}
