@@ -23,7 +23,7 @@ public class GameUIManager : MonoBehaviour {
     [SerializeField] private TMP_Text candyAmountText;
     [SerializeField] private TMP_Text pumpkinAmountText;
     [SerializeField] private TMP_Text currentHealthText;
-    [SerializeField] private GameObject pumpkinHUD;
+    [SerializeField] private CanvasGroup pumpkinHUD;
 
     [Header("Pause Menu")]
 
@@ -104,26 +104,14 @@ public class GameUIManager : MonoBehaviour {
 
         foreach (var entry in pumpkinIconDisplays) {
             bool isCollected = collectedPumpkins.Contains(entry.id);
-            
-            CanvasGroup collectedCg = entry.collectedPumpkin.GetComponent<CanvasGroup>();
-            CanvasGroup missingCg = entry.missingPumpkin.GetComponent<CanvasGroup>();
 
-            if (collectedCg != null) {
-                collectedCg.alpha = 1f;
-                collectedCg.DOFade(0f, 0.5f)
+            if (pumpkinHUD != null) {
+                pumpkinHUD.alpha = 1f;
+                pumpkinHUD.DOFade(0f, 0.5f)
                   .SetDelay(5f)
                   .SetEase(Ease.InOutQuad)
                   .OnComplete(() => {
-                      entry.collectedPumpkin.SetActive(false);        
-                  });         
-            }
-
-            if (missingCg != null) {
-                missingCg.alpha = 1f;
-                missingCg.DOFade(0f, 0.5f)
-                  .SetDelay(5f)
-                  .SetEase(Ease.InOutQuad)
-                  .OnComplete(() => {
+                      entry.collectedPumpkin.SetActive(false);
                       entry.missingPumpkin.SetActive(false);
                   });
             }
@@ -132,8 +120,9 @@ public class GameUIManager : MonoBehaviour {
             if (isCollected && !entry.collectedPumpkin.activeSelf) {
                 entry.collectedPumpkin.SetActive(true);
                 entry.collectedPumpkin.transform.localScale = Vector3.zero;
-                entry.collectedPumpkin.transform.DOScale(Vector3.one, 0.4f)
+                var tween = entry.collectedPumpkin.transform.DOScale(Vector3.one, 0.4f)
                     .SetEase(Ease.OutBack);
+                tween.SetUpdate(true);
             } else {
                 entry.collectedPumpkin.SetActive(isCollected);
             }
@@ -210,6 +199,7 @@ public class GameUIManager : MonoBehaviour {
     public void SetPauseGame(bool value)
     {
         pauseMenu.SetActive(value);
+        UpdateCollectedPumpkins();
         Time.timeScale = value ? 0f : 1f;
         //Cursor.visible = value;
         //Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;

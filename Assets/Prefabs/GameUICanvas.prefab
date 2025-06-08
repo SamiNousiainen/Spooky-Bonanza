@@ -302,7 +302,6 @@ GameObject:
   - component: {fileID: 41477742312523009}
   - component: {fileID: 6794866819733122095}
   - component: {fileID: 3751699965310372659}
-  - component: {fileID: 5264251937425960027}
   m_Layer: 5
   m_Name: PumpkinMissing3
   m_TagString: Untagged
@@ -367,18 +366,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &5264251937425960027
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573400864755235602}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &582703231740033562
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +377,6 @@ GameObject:
   - component: {fileID: 7014283382406408704}
   - component: {fileID: 792963275090777717}
   - component: {fileID: 7480716186844635948}
-  - component: {fileID: 4451151358053569540}
   m_Layer: 5
   m_Name: PumpkinMissing4
   m_TagString: Untagged
@@ -455,18 +441,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &4451151358053569540
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582703231740033562}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &677904190730536363
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,7 +2166,6 @@ GameObject:
   - component: {fileID: 771217541955812360}
   - component: {fileID: 1111978728237531913}
   - component: {fileID: 1375753254349026589}
-  - component: {fileID: 8816614513540739202}
   m_Layer: 5
   m_Name: Pumpkin1
   m_TagString: Untagged
@@ -2257,18 +2230,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &8816614513540739202
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2653598965511312427}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &2762355254499652455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2804,7 +2765,6 @@ GameObject:
   - component: {fileID: 5403790782262202009}
   - component: {fileID: 6922988506199505112}
   - component: {fileID: 5953350124821917865}
-  - component: {fileID: 5699875715290379719}
   m_Layer: 5
   m_Name: Pumpkin5
   m_TagString: Untagged
@@ -2869,18 +2829,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &5699875715290379719
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3249793472676135167}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &3630673888680717866
 GameObject:
   m_ObjectHideFlags: 0
@@ -3211,7 +3159,6 @@ GameObject:
   - component: {fileID: 8950045455598405289}
   - component: {fileID: 724153339398323607}
   - component: {fileID: 5064244309583656625}
-  - component: {fileID: 6475604986554893508}
   m_Layer: 5
   m_Name: Pumpkin3
   m_TagString: Untagged
@@ -3276,18 +3223,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &6475604986554893508
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3941356429440988571}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &4314228718491218192
 GameObject:
   m_ObjectHideFlags: 0
@@ -3299,7 +3234,6 @@ GameObject:
   - component: {fileID: 112136124458709076}
   - component: {fileID: 5369943418551442151}
   - component: {fileID: 8417736591435336458}
-  - component: {fileID: 4919968098074246339}
   m_Layer: 5
   m_Name: Pumpkin4
   m_TagString: Untagged
@@ -3364,18 +3298,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &4919968098074246339
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4314228718491218192}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &4384037866072131112
 GameObject:
   m_ObjectHideFlags: 0
@@ -3386,6 +3308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5985286091958715983}
   - component: {fileID: 4270120788473389949}
+  - component: {fileID: 7226624183166250014}
   m_Layer: 5
   m_Name: Pumpkin_icons
   m_TagString: Untagged
@@ -3430,6 +3353,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4384037866072131112}
   m_CullTransparentMesh: 1
+--- !u!225 &7226624183166250014
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4384037866072131112}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &4529289866942964826
 GameObject:
   m_ObjectHideFlags: 0
@@ -3441,7 +3376,6 @@ GameObject:
   - component: {fileID: 9195767756840386123}
   - component: {fileID: 6043980077205807689}
   - component: {fileID: 801247856061872608}
-  - component: {fileID: 3786215939631012918}
   m_Layer: 5
   m_Name: PumpkinMissing1
   m_TagString: Untagged
@@ -3506,18 +3440,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &3786215939631012918
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4529289866942964826}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &4731537403121277450
 GameObject:
   m_ObjectHideFlags: 0
@@ -3864,7 +3786,6 @@ GameObject:
   - component: {fileID: 7755811017185128077}
   - component: {fileID: 5620863652083723702}
   - component: {fileID: 8929004802063740537}
-  - component: {fileID: 1231357342672238714}
   m_Layer: 5
   m_Name: Pumpkin2
   m_TagString: Untagged
@@ -3929,18 +3850,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &1231357342672238714
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5415199292113529185}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &5452790505746200521
 GameObject:
   m_ObjectHideFlags: 0
@@ -5273,7 +5182,6 @@ GameObject:
   - component: {fileID: 6989935564839708716}
   - component: {fileID: 1957412922033313331}
   - component: {fileID: 6921242779944863494}
-  - component: {fileID: 1820447512539465606}
   m_Layer: 5
   m_Name: PumpkinMissing5
   m_TagString: Untagged
@@ -5338,18 +5246,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &1820447512539465606
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6452926818421887738}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &6470938113120141416
 GameObject:
   m_ObjectHideFlags: 0
@@ -5807,7 +5703,7 @@ MonoBehaviour:
   candyAmountText: {fileID: 271344279965808854}
   pumpkinAmountText: {fileID: 1941704998130341123}
   currentHealthText: {fileID: 5911592270703167595}
-  pumpkinHUD: {fileID: 0}
+  pumpkinHUD: {fileID: 7226624183166250014}
   m_settingsPanel: {fileID: 1828917001428676097}
   pausePanel: {fileID: 6067661301604003295}
   pauseMenu: {fileID: 5991377568169995468}
@@ -6348,7 +6244,6 @@ GameObject:
   - component: {fileID: 1655363097173444850}
   - component: {fileID: 5796392917472514350}
   - component: {fileID: 437539070388907167}
-  - component: {fileID: 5175757452194926170}
   m_Layer: 5
   m_Name: PumpkinMissing2
   m_TagString: Untagged
@@ -6413,18 +6308,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &5175757452194926170
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7816909477308700048}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &8153536754529110148
 GameObject:
   m_ObjectHideFlags: 0
