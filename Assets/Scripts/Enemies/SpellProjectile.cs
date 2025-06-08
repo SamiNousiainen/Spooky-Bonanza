@@ -50,10 +50,10 @@ public class SpellProjectile : MonoBehaviour {
 
 
             //Bounce towards closest enemy
-            EnemyHealth closestEnemy = FindClosestEnemy(transform.position, 10f);
+            WizardBehaviour closestEnemy = FindClosestEnemy(transform.position, 10f);
             Vector3 direction = closestEnemy.transform.position - transform.position;
 
-            //Slight offset to possibly make wizards spin when hit
+            //Slight offset to possibly make wizards spin when hit (funny)
             Vector3 offset = new Vector3(Random.Range(0.1f, 0.3f), 0f, Random.Range(0.1f, 0.3f));
             direction += offset;
 
@@ -69,13 +69,13 @@ public class SpellProjectile : MonoBehaviour {
         }
     }
 
-    public EnemyHealth FindClosestEnemy(Vector3 position, float radius) {
+    public WizardBehaviour FindClosestEnemy(Vector3 position, float radius) {
         Collider[] enemies = Physics.OverlapSphere(position, radius);
-        EnemyHealth closestEnemy = null;
+        WizardBehaviour closestEnemy = null;
         float shortestDistance = Mathf.Infinity;
 
         foreach (Collider collider in enemies) {
-            EnemyHealth enemy = collider.GetComponent<EnemyHealth>();
+            WizardBehaviour enemy = collider.GetComponent<WizardBehaviour>();
             if (enemy != null) {
                 float dist = Vector3.Distance(position, collider.transform.position);
                 if (dist < shortestDistance) {
