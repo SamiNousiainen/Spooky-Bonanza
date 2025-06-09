@@ -34,5 +34,6 @@ public class EndScreenController : MonoBehaviour {
 
     public void ReturnToMenu() {
         GameManager.instance.SceneChange("MainMenuScene");
+        MusicManager.instance.PlayOnlyBaseLayer();
     }
 }

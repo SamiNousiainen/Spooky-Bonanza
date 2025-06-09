@@ -7,13 +7,5 @@ public class AudioLibrary : ScriptableObject {
         public SFXType type;
         public AudioClip[] clips;
     }
-
-    [System.Serializable]
-    public struct MusicEntry {
-        public MusicType type;
-        public AudioClip clip;
-    }
-
     public SFXEntry[] sfxClips;
-    public MusicEntry[] musicClips;
 }

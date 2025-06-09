@@ -147,6 +147,7 @@ public class GameUIManager : MonoBehaviour {
             Time.timeScale = 1f;
             SaveSystem.Save();
             SceneManager.LoadSceneAsync("MainMenuScene");
+            MusicManager.instance.PlayOnlyBaseLayer();
             backgroundDim.DOFade(0f, 1f);
         };
     }
