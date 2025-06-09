@@ -23,6 +23,10 @@ public class PlayerCombat : MonoBehaviour
     private bool isGliding;
     private bool isBlocking;
 
+    private float glideBlockCooldown = 0.5f;
+    private float glideEndedTime = -Mathf.Infinity;
+    private bool wasGlidingOnLastFrame = false;
+
     private bool canAttack = true;
     public float attackCooldown = 0f;
 
@@ -61,6 +65,8 @@ public class PlayerCombat : MonoBehaviour
         HandleGlideAndBlockInput();
         HandleBlock();
         HandleGlide();
+
+        wasGlidingOnLastFrame = isGliding;
 
         if (isBlocking)
         {
@@ -175,13 +181,20 @@ public class PlayerCombat : MonoBehaviour
     {
         bool buttonPressed = inputReader.GlidePressed;
 
+        if (wasGlidingOnLastFrame && playerMovement.isGrounded)
+        {
+            glideEndedTime = Time.time;
+        }
+
+        bool glideBlockOnCooldown = Time.time < glideEndedTime + glideBlockCooldown;
+
         if (buttonPressed && !playerMovement.isGrounded && playerMovement.velocity.y < 0f)
         {
             isGliding = true;
             isBlocking = false;
         }
 
-        else if (buttonPressed && playerMovement.isGrounded)
+        else if (buttonPressed && playerMovement.isGrounded && !glideBlockOnCooldown)
         {
             isBlocking = true;
             isGliding = false;
