@@ -15,7 +15,10 @@ public class MusicManager : MonoBehaviour {
             DontDestroyOnLoad(gameObject);
         } else {
             Destroy(gameObject);
-        }
+        }   
+    }
+
+    private void Start() {
         //Set all volumes to 0 initially
         foreach (var source in musicLayers) {
             source.volume = 0f;
@@ -61,5 +64,14 @@ public class MusicManager : MonoBehaviour {
         FadeOutLayer(3);
         FadeOutLayer(4);
         FadeOutLayer(5);
+    }
+
+    public void PlayAllLayers() {
+        FadeInLayer(0);
+        FadeInLayer(1);
+        FadeInLayer(2);
+        FadeInLayer(3);
+        FadeInLayer(4);
+        FadeInLayer(5);
     }
 }

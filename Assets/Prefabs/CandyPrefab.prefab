@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attractionRange: 1.5
-  attractionSpeed: 5
+  attractionSpeed: 6
   snapDistance: 0.5
   possibleMeshes:
   - {fileID: 251014939817169093, guid: d514fdc8df731314fa4103e801032708, type: 3}

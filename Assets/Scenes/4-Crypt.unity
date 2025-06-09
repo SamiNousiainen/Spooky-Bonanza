@@ -2702,43 +2702,55 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1188283729973182712, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
       propertyPath: m_Size.x
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1188283729973182712, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
       propertyPath: m_Size.y
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1188283729973182712, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
       propertyPath: m_Size.z
-      value: 10
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 4661951246975152804, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
       propertyPath: m_Name
       value: MusicTrigger (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5688631860908470815, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
-      propertyPath: layersToFadeOut.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5688631860908470815, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
-      propertyPath: layersToFadeIn.Array.data[0].layerIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5688631860908470815, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
-      propertyPath: layersToFadeOut.Array.data[0].layerIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5688631860908470815, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
-      propertyPath: layersToFadeOut.Array.data[1].layerIndex
+      propertyPath: layersToFadeIn.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5688631860908470815, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
-      propertyPath: layersToFadeOut.Array.data[2].layerIndex
+      propertyPath: layersToFadeOut.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688631860908470815, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
+      propertyPath: layersToFadeIn.Array.data[0].layerIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688631860908470815, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
+      propertyPath: layersToFadeIn.Array.data[1].layerIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688631860908470815, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
+      propertyPath: layersToFadeIn.Array.data[2].layerIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688631860908470815, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
+      propertyPath: layersToFadeOut.Array.data[0].layerIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688631860908470815, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
+      propertyPath: layersToFadeOut.Array.data[1].layerIndex
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5688631860908470815, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
-      propertyPath: layersToFadeOut.Array.data[3].layerIndex
+      propertyPath: layersToFadeOut.Array.data[2].layerIndex
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688631860908470815, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
+      propertyPath: layersToFadeOut.Array.data[3].layerIndex
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5688631860908470815, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
       propertyPath: layersToFadeOut.Array.data[4].layerIndex
@@ -2754,7 +2766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8318590782856806287, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 174.37
+      value: 153.9
       objectReference: {fileID: 0}
     - target: {fileID: 8318590782856806287, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10693,7 +10705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8318590782856806287, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 77
+      value: 31.2
       objectReference: {fileID: 0}
     - target: {fileID: 8318590782856806287, guid: 5f99f4e4034c10e4dbee5d7d0842593b, type: 3}
       propertyPath: m_LocalRotation.w

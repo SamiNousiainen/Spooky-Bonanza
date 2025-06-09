@@ -20,6 +20,9 @@ public class EndScreenController : MonoBehaviour {
     [SerializeField] private TMP_Text totalCandyText;
 
     private void Start() {
+
+        MusicManager.instance.PlayAllLayers();
+
         totalCandyText.text = "Total candy collected: " + InventoryManager.instance.Data.candyCount.ToString();
 
         List<string> collectedPumpkins = InventoryManager.instance.Data.collectedPumpkins;
