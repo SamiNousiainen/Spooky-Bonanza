@@ -32,7 +32,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
 
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null) {
-            rb.freezeRotation = false;
+            rb.constraints = RigidbodyConstraints.None;
         }
         
         currentHealth -= damage;

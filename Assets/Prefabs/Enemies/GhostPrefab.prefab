@@ -101,8 +101,8 @@ MonoBehaviour:
   candyStealVFX: {fileID: 9098355589861162003}
   munchVFX: {fileID: 3026076537951989687}
   poof: {fileID: 1361273709133992529, guid: 05ab4d098b0d4d74bacbd524322f148b, type: 3}
-  attacking: {fileID: 2100000, guid: 4de488f9a5b198d4dbf6b2bdac358ddd, type: 2}
-  normal: {fileID: 2100000, guid: fdfd7077ba4091e4b993d228bef54ff4, type: 2}
+  attacking: {fileID: 2100000, guid: fdfd7077ba4091e4b993d228bef54ff4, type: 2}
+  normal: {fileID: 2100000, guid: 4de488f9a5b198d4dbf6b2bdac358ddd, type: 2}
   agent: {fileID: 7125191807010703543}
 --- !u!114 &1853302484587588244
 MonoBehaviour:

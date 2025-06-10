@@ -33,18 +33,13 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
     private void Awake() {
         agent.isStopped = true;
         ghostPatrolRoute = GetComponent<GhostPatrolRoute>();
+        GetComponentInChildren<Renderer>().material = normal;
     }
 
     private void Update() {
 
         Vector3 playerPos = Player.instance.transform.position;
         float distanceToPlayer = Vector3.Distance(transform.position, playerPos);
-
-        if (currentState == EnemyState.Chase || currentState == EnemyState.Attack) {
-            GetComponentInChildren<Renderer>().material = attacking;
-        } else {
-            GetComponentInChildren<Renderer>().material = normal;
-        }
 
         switch (currentState) {
 
@@ -59,6 +54,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
                 if (distanceToPlayer <= ghostProperties.detectionRange && CandyStolen == false) {
                     currentState = EnemyState.Chase;
+                    GetComponentInChildren<Renderer>().material = attacking;
                     Debug.Log("player detected");
                 }
                 break;
@@ -132,6 +128,7 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
         yield return new WaitForSeconds(1f);
         GetComponentInChildren<SuckCandy>().SuckingCandy = false;
+        GetComponentInChildren<Renderer>().material = normal;
     }
 
     private IEnumerator Vanish() {

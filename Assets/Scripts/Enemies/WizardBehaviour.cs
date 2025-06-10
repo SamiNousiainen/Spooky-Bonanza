@@ -1,5 +1,6 @@
 using KBCore.Refs;
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -15,6 +16,7 @@ public class WizardBehaviour : MonoBehaviour {
 
     //Components
     [HideInInspector, SerializeField, Self] private NavMeshAgent agent;
+    [SerializeField, Self] private Rigidbody rb;
 
     private EnemyState currentState = EnemyState.Default;
     void Start() {
@@ -32,7 +34,7 @@ public class WizardBehaviour : MonoBehaviour {
             case EnemyState.Default:
                 if (distanceToPlayer <= wizardProperties.detectionRange) {
                     currentState = EnemyState.Attack;
-                    GetComponent<Rigidbody>().rotation = Quaternion.LookRotation((player.position - transform.position).normalized);
+                    rb.rotation = Quaternion.LookRotation((player.position - transform.position).normalized);
                     attackTimer = wizardProperties.attackRate;
                 }
                 break;
@@ -44,7 +46,7 @@ public class WizardBehaviour : MonoBehaviour {
 
                 Quaternion targetRotation = Quaternion.LookRotation(direction);
 
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+                rb.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
                 attackTimer -= Time.deltaTime;
 
@@ -52,6 +54,8 @@ public class WizardBehaviour : MonoBehaviour {
                     animator.SetTrigger("attack");
                     Attack();
                     attackTimer = wizardProperties.attackRate;
+                    rb.constraints = RigidbodyConstraints.FreezeRotation;
+                    rb.constraints = RigidbodyConstraints.FreezePosition;
                 }
 
                 if (distanceToPlayer > wizardProperties.detectionRange) {
@@ -65,7 +69,7 @@ public class WizardBehaviour : MonoBehaviour {
         Vector3 direction = (player.position - castPoint.position).normalized;
         SoundManager.instance.PlaySFX(SFXType.WizardAttack, transform, 0.8f);
         GameObject spell = Instantiate(spellPrefab, castPoint.position, Quaternion.LookRotation(castPoint.position - player.position));
-        spell.transform.parent = transform;
+        spell.transform.parent = castPoint;
         Rigidbody spellRb = spell.GetComponent<Rigidbody>();
 
         StartCoroutine(LaunchSpell(spellRb, direction));
@@ -77,6 +81,7 @@ public class WizardBehaviour : MonoBehaviour {
         yield return new WaitForSeconds(0.5f);
         if (rigidbody != null) {
             rigidbody.transform.parent = null;
+            rigidbody.GetComponent<Collider>().enabled = true;
             rigidbody.linearVelocity = direction * wizardProperties.projectileSpeed;
         }
     }

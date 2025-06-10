@@ -200,6 +200,7 @@ MonoBehaviour:
   wizardProperties: {fileID: 11400000, guid: cdcae1440659fa94db8691023b471359, type: 2}
   animator: {fileID: 8132975346697755797}
   agent: {fileID: 0}
+  rb: {fileID: 7101201593469750846}
 --- !u!54 &7101201593469750846
 Rigidbody:
   m_ObjectHideFlags: 0
