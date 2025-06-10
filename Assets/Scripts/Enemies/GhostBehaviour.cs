@@ -19,6 +19,9 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
     [SerializeField] private GameObject munchVFX;
     [SerializeField] private GameObject poof;
 
+    [SerializeField] private Material attacking;
+    [SerializeField] private Material normal;
+
     private EnemyState currentState = EnemyState.Default;
     private GhostPatrolRoute ghostPatrolRoute;
 
@@ -36,6 +39,12 @@ public class GhostBehaviour : ValidatedMonoBehaviour {
 
         Vector3 playerPos = Player.instance.transform.position;
         float distanceToPlayer = Vector3.Distance(transform.position, playerPos);
+
+        if (currentState == EnemyState.Chase || currentState == EnemyState.Attack) {
+            GetComponentInChildren<Renderer>().material = attacking;
+        } else {
+            GetComponentInChildren<Renderer>().material = normal;
+        }
 
         switch (currentState) {
 
