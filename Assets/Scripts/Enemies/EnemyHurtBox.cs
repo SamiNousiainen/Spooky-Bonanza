@@ -10,6 +10,7 @@ public class EnemyHurtBox : MonoBehaviour {
             SoundManager.instance.PlaySFX(SFXType.PlayerTakeDamage, Player.instance.transform, 0.8f);
             Vector3 knockbackDirection = other.transform.position - transform.position;
             other.gameObject.GetComponent<PlayerMovement>().Knockback(new Vector3(knockbackDirection.x, 1f, knockbackDirection.z) * knockbackForce);
+            //other.gameObject.GetComponent<PlayerCombat>() laita glide cooldownille
             other.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
         }
     }

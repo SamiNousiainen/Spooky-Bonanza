@@ -223,4 +223,8 @@ public class PlayerCombat : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
+    public void GlideCooldown() {
+        //timer
+    }
+
 } // Class
