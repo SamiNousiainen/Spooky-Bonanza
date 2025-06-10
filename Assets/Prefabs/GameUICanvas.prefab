@@ -1824,8 +1824,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 293}
-  m_SizeDelta: {x: 592.1475, y: 63.3904}
+  m_AnchoredPosition: {x: 16.0198, y: 289.21}
+  m_SizeDelta: {x: 622.1871, y: 70.979}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &772152653816261621
 CanvasRenderer:
@@ -1876,7 +1876,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use WASD to move.
+  m_text: 'Use WASD to move.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb6f880630ae2e24a9e1fa7f911164e9, type: 2}
   m_sharedMaterial: {fileID: -392885519965954739, guid: cb6f880630ae2e24a9e1fa7f911164e9, type: 2}
@@ -4486,7 +4488,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Attack with M1. Hold Q to block.
+  m_text: Attack with M1. Hold M2 to block.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb6f880630ae2e24a9e1fa7f911164e9, type: 2}
   m_sharedMaterial: {fileID: -392885519965954739, guid: cb6f880630ae2e24a9e1fa7f911164e9, type: 2}

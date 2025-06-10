@@ -7,7 +7,7 @@ public class ShowTutorialText : MonoBehaviour
 {
     public TextMeshProUGUI sharedTextUI;
     public FadeOutText fadeScript; 
-    public float displayTime = 5f;
+    public float displayTime = 3f;
 
     private Coroutine showMessageCoroutine;
     private bool isPlayerInside = false;
