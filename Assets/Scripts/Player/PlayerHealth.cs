@@ -53,4 +53,9 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         GameUIManager.instance.UpdatePlayerHp();
     }
+
+    public void Heal(int amount) {
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, InventoryManager.instance.Data.maxHealth);
+        GameUIManager.instance.UpdatePlayerHp();
+    }
 } // Class

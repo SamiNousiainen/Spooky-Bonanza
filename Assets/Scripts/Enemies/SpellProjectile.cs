@@ -24,7 +24,6 @@ public class SpellProjectile : MonoBehaviour {
             SoundManager.instance.PlaySFX(SFXType.PlayerTakeDamage, Player.instance.transform, 0.8f);
         }
 
-        //Vase breaking (adjust collision layers for friendly fire)
         IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
 
         if (damageable != null) {

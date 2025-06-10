@@ -8,7 +8,7 @@ public class InventoryManager : MonoBehaviour {
 
     private const int StartingMaxHP = 3;
     private const int CappedMaxHP = 9;
-    private const int CandyPerHP = 10;
+    private const int CandyPerHP = 33;
 
     private void Awake() {
         if (instance == null) {
@@ -20,16 +20,27 @@ public class InventoryManager : MonoBehaviour {
     }
 
     public void AddCandy() {
-
         Data.candyCount++;
 
-        if (Data.maxHealth < 9) {
+        bool gainedMaxHP = false;
+
+        if (Data.maxHealth < CappedMaxHP) {
             SetMaxHP();
+            gainedMaxHP = true;
         }
+
+        if (gainedMaxHP == false && Player.instance != null) {
+            PlayerHealth playerHealth = Player.instance.GetComponent<PlayerHealth>();
+            if (playerHealth.currentHealth < Data.maxHealth) {
+                playerHealth.Heal(1);
+            }
+        }
+
         if (GameUIManager.instance != null) {
             GameUIManager.instance.UpdateCandyAmount();
         }
     }
+
 
     public void SetMaxHP() {
         int newMaxHP = Mathf.Clamp(StartingMaxHP + (Data.candyCount / CandyPerHP), StartingMaxHP, CappedMaxHP);

@@ -46,14 +46,14 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
                 Instantiate(poof, transform.position, Quaternion.identity);
             }
         }
-    }
+    }   
 
     private void DropCandy() {
 
-        //T‰‰ on varmaa aika tyhm‰ ratkasu
+        //T‰‰ on tyhm‰ ratkasu mutta on taas v‰h‰ kiire
         TryGetComponent(out GhostBehaviour ghost);
         if (ghost != null && ghost.CandyStolen == true) {
-            candyDropAmount += 3;
+            candyDropAmount += 10;
         }
 
         for (int i = 0; i < candyDropAmount; i++) {

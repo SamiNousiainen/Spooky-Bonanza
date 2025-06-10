@@ -18,6 +18,13 @@ public class SoundManager : MonoBehaviour {
         }
     }
 
+    private void Start() {
+        //purkka
+        audioMixer.SetFloat("MasterVolume", Mathf.Log10(0.5f) * 20f);
+        audioMixer.SetFloat("MusicVolume", Mathf.Log10(0.5f) * 20f);
+        audioMixer.SetFloat("SFXVolume", Mathf.Log10(0.5f) * 20f);
+    }
+
     public void PlaySFX(SFXType sfxType, Transform transform, float volume) {
 
         AudioClip clip = GetSFXClip(sfxType);
