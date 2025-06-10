@@ -55,7 +55,7 @@ public class WizardBehaviour : MonoBehaviour {
                     Attack();
                     attackTimer = wizardProperties.attackRate;
                     rb.constraints = RigidbodyConstraints.FreezeRotation;
-                    rb.constraints = RigidbodyConstraints.FreezePosition;
+                    rb.linearVelocity = Vector3.zero;
                 }
 
                 if (distanceToPlayer > wizardProperties.detectionRange) {

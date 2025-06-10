@@ -16,6 +16,8 @@ public class TransformAnimation : MonoBehaviour {
     async void Start() {
         await Task.Delay(Random.Range(0, startRandomnessSeconds * 1000));
 
+        DOTween.SetTweensCapacity(500, 50);
+
         //Safely start tweens
         if (this != null && gameObject != null) {
             rotationTween = transform.DORotate(

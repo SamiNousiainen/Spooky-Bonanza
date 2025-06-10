@@ -85,6 +85,9 @@ public class GameUIManager : MonoBehaviour {
         audioMixer.SetFloat("MasterVolume", Mathf.Log10(masterSlider.value) * 20f);
         audioMixer.SetFloat("MusicVolume", Mathf.Log10(musicSlider.value) * 20f);
         audioMixer.SetFloat("SFXVolume", Mathf.Log10(sfxSlider.value) * 20f);
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update()
@@ -202,8 +205,8 @@ public class GameUIManager : MonoBehaviour {
         pauseMenu.SetActive(value);
         UpdateCollectedPumpkins();
         Time.timeScale = value ? 0f : 1f;
-        //Cursor.visible = value;
-        //Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = value;
+        Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
     }
 
     /// <summary>
