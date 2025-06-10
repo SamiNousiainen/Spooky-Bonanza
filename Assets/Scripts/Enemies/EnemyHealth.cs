@@ -30,6 +30,11 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
     public void TakeDamage(float damage) {
         HasTakenDamage = true;
 
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null) {
+            rb.freezeRotation = false;
+        }
+        
         currentHealth -= damage;
         PlayDamageSound();
         Knockback();

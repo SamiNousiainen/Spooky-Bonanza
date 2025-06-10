@@ -64,6 +64,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: sateenvarjo_varsi_auki
     second: {fileID: 2100000, guid: c7387189ff2f9654f98b2b6d65dad40b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sateenvarjo_varsi_kiinni
+    second: {fileID: 2100000, guid: a2683c417d26dfc43bf61c2678cf3725, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -189,7 +194,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -305,7 +310,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
