@@ -147,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
 
         externalVelocity = knockbackDirection;
 
-        PlayerCombat.instance.LockGlideTemporarily(3f);
+        PlayerCombat.instance.LockGlideTemporarily(2f);
     }
 
     public void ApplyGlide(float glideFallSpeed)
