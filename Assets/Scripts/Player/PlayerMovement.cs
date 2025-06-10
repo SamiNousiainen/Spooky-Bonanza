@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleMovement()
     {
-        
+
 
         Vector2 input = inputReader.MoveInput;
 
@@ -110,12 +110,14 @@ public class PlayerMovement : MonoBehaviour
 
         //Apply horizontal movement only
 
-        if (canMove) {
+        if (canMove)
+        {
             characterController.Move(horizontalVelocity * Time.deltaTime);
         }
-        
 
-        if (direction.sqrMagnitude > 0f) {
+
+        if (direction.sqrMagnitude > 0f)
+        {
             Quaternion targetRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
         }
@@ -138,11 +140,14 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void Knockback(Vector3 knockbackDirection) {
+    public void Knockback(Vector3 knockbackDirection)
+    {
 
         velocity.y = 0f;
 
         externalVelocity = knockbackDirection;
+
+        PlayerCombat.instance.LockGlideTemporarily(2f);
     }
 
     public void ApplyGlide(float glideFallSpeed)
@@ -335,4 +340,3 @@ public class PlayerMovement : MonoBehaviour {
          Gizmos.DrawWireSphere(groundCheckTransform.position, groundCheckRadius);
      }
 }*/
-

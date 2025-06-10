@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using KBCore.Refs;
+using UnityEngine.Rendering;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -26,6 +27,11 @@ public class PlayerCombat : MonoBehaviour
     private float glideBlockCooldown = 0.5f;
     private float glideEndedTime = -Mathf.Infinity;
     private bool wasGlidingOnLastFrame = false;
+
+    [SerializeField] private float glideDisableDuration = 1f;
+    private float glideDisableUntilTime = -Mathf.Infinity;
+
+    private float glideLock = -Mathf.Infinity;
 
     private bool canAttack = true;
     public float attackCooldown = 0f;
@@ -187,14 +193,16 @@ public class PlayerCombat : MonoBehaviour
         }
 
         bool glideBlockOnCooldown = Time.time < glideEndedTime + glideBlockCooldown;
+        bool glideDisableOn = Time.time < glideDisableUntilTime;
+        bool glideLockOn = Time.time < glideLock;
 
-        if (buttonPressed && !playerMovement.isGrounded && playerMovement.velocity.y < 0f)
+        if (buttonPressed && !playerMovement.isGrounded && playerMovement.velocity.y < 0f && !glideDisableOn && !glideLockOn)
         {
             isGliding = true;
             isBlocking = false;
         }
 
-        else if (buttonPressed && playerMovement.isGrounded && !glideBlockOnCooldown)
+        else if (buttonPressed && playerMovement.isGrounded && !glideBlockOnCooldown && !glideLockOn)
         {
             isBlocking = true;
             isGliding = false;
@@ -223,8 +231,16 @@ public class PlayerCombat : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
-    public void GlideCooldown() {
-        //timer
+    public void GlideCooldown()
+    {
+        glideDisableUntilTime = Time.time + glideDisableDuration;
+        isGliding = false;
+    }
+
+    public void LockGlideTemporarily(float duration)
+    {
+        glideLock = Time.time + duration;
+        isGliding = false;
     }
 
 } // Class
