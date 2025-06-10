@@ -39,6 +39,31 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: hat_metal
     second: {fileID: 2100000, guid: 17b3ce2967130b64bba17c661ec1920c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pata
+    second: {fileID: 2100000, guid: e04cee28b0903a2498862d2b9062e49f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pata_koristeet
+    second: {fileID: 2100000, guid: e04cee28b0903a2498862d2b9062e49f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sateenvarjo_varjo_auki
+    second: {fileID: 2100000, guid: c7387189ff2f9654f98b2b6d65dad40b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sateenvarjo_varjo_kiinni
+    second: {fileID: 2100000, guid: a2683c417d26dfc43bf61c2678cf3725, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sateenvarjo_varsi_auki
+    second: {fileID: 2100000, guid: c7387189ff2f9654f98b2b6d65dad40b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
