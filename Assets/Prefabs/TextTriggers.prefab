@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedTextUI: {fileID: 0}
   fadeScript: {fileID: 0}
-  displayTime: 5
+  displayTime: 3
 --- !u!1 &930632599802485835
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedTextUI: {fileID: 0}
   fadeScript: {fileID: 0}
-  displayTime: 5
+  displayTime: 3
 --- !u!1 &1140634537222598491
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedTextUI: {fileID: 0}
   fadeScript: {fileID: 0}
-  displayTime: 5
+  displayTime: 3
 --- !u!1 &5385444580991439366
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedTextUI: {fileID: 0}
   fadeScript: {fileID: 0}
-  displayTime: 5
+  displayTime: 3
 --- !u!1 &6243051309703108390
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,7 +657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedTextUI: {fileID: 0}
   fadeScript: {fileID: 0}
-  displayTime: 5
+  displayTime: 3
 --- !u!1 &7473264073220108239
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,7 +781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedTextUI: {fileID: 0}
   fadeScript: {fileID: 0}
-  displayTime: 5
+  displayTime: 3
 --- !u!1 &7569218392835663450
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,4 +905,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedTextUI: {fileID: 0}
   fadeScript: {fileID: 0}
-  displayTime: 5
+  displayTime: 3
