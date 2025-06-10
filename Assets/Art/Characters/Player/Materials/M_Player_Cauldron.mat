@@ -157,7 +157,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: c800844aaef7ff447991572311a8d265, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapForMatCap:
@@ -251,8 +251,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _1st2nd_Shades_Feather: 0.0001
-    - _1st_ShadeColor_Feather: 0.0001
-    - _1st_ShadeColor_Step: 0.5
+    - _1st_ShadeColor_Feather: 0.5
+    - _1st_ShadeColor_Step: 0.7
     - _2nd_ShadeColor_Feather: 0.0001
     - _2nd_ShadeColor_Step: 0
     - _AORemapMax: 1
@@ -284,8 +284,8 @@ Material:
     - _AutoRenderQueue: 1
     - _BaseColorOverridden: 0
     - _BaseColorVisible: 1
-    - _BaseColor_Step: 0.5
-    - _BaseShade_Feather: 0.0001
+    - _BaseColor_Step: 0.7
+    - _BaseShade_Feather: 0.5
     - _Base_Speed: 0
     - _Blend: 0
     - _BlendMode: 0
@@ -525,7 +525,7 @@ Material:
     - _utsVersionY: 11
     - _utsVersionZ: 0
     m_Colors:
-    - _1st_ShadeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _1st_ShadeColor: {r: 0.56096476, g: 0.59543526, b: 0.6226415, a: 1}
     - _2nd_ShadeColor: {r: 1, g: 1, b: 1, a: 1}
     - _AngelRingMaskColor: {r: 0, g: 1, b: 0, a: 1}
     - _AngelRing_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -540,7 +540,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
-    - _Emissive_Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Emissive_Color: {r: 1.4582415, g: 2, b: 1.3301888, a: 1}
     - _FirstShadeMaskColor: {r: 0, g: 1, b: 1, a: 1}
     - _HighColor: {r: 0, g: 0, b: 0, a: 1}
     - _HighlightMaskColor: {r: 1, g: 1, b: 0, a: 1}
