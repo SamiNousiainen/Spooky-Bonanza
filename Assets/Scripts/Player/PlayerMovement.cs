@@ -37,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpBufferTime = 0.2f;
     [SerializeField] private float jumpBufferCounter;
 
+    [SerializeField, Child] private Animator animator;
+
     private Vector3 externalVelocity = Vector3.zero;
 
     private void OnValidate()
@@ -115,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
             characterController.Move(horizontalVelocity * Time.deltaTime);
         }
 
+        animator.SetFloat("xzVelocity", horizontalVelocity.magnitude, 0.1f, Time.deltaTime);
 
         if (direction.sqrMagnitude > 0f)
         {
@@ -211,6 +214,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!canMove)
             return;
+
+        if (isGrounded == true) {
+            animator.SetBool("isJumping", false);
+        } else {
+            animator.SetBool("isJumping", true);
+        }
+
+        animator.SetFloat("yVelocity", velocity.y, 0.1f, Time.deltaTime);
 
         bool bufferedJump = jumpBufferCounter > 0f;
 

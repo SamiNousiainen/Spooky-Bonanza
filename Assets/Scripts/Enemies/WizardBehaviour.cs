@@ -1,4 +1,5 @@
 using KBCore.Refs;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,6 +9,7 @@ public class WizardBehaviour : MonoBehaviour {
     [SerializeField] private GameObject spellPrefab;
     [SerializeField] private Transform castPoint;
     [SerializeField] private WizardProperties wizardProperties;
+    [SerializeField] private Animator animator;
     private Transform player;
     private float attackTimer;
 
@@ -41,11 +43,14 @@ public class WizardBehaviour : MonoBehaviour {
 
                 Quaternion targetRotation = Quaternion.LookRotation(direction);
 
+                GetComponent<Rigidbody>().rotation = targetRotation;
+
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
                 attackTimer -= Time.deltaTime;
 
                 if (attackTimer <= 0) {
+                    animator.SetTrigger("attack");
                     Attack();
                     attackTimer = wizardProperties.attackRate;
                 }
@@ -58,15 +63,21 @@ public class WizardBehaviour : MonoBehaviour {
     }
 
     private void Attack() {
-
-        //use animation trigger when anims are done
         Vector3 direction = (player.position - castPoint.position).normalized;
         SoundManager.instance.PlaySFX(SFXType.WizardAttack, transform, 0.8f);
         GameObject spell = Instantiate(spellPrefab, castPoint.position, Quaternion.LookRotation(castPoint.position - player.position));
         Rigidbody spellRb = spell.GetComponent<Rigidbody>();
 
-        spellRb.linearVelocity = direction * wizardProperties.projectileSpeed;
+        StartCoroutine(LaunchSpell(spellRb, direction));
+        
 
+    }
+
+    private IEnumerator LaunchSpell(Rigidbody rigidbody, Vector3 direction) {
+        yield return new WaitForSeconds(0.5f);
+        if (rigidbody != null) {
+            rigidbody.linearVelocity = direction * wizardProperties.projectileSpeed;
+        }
     }
 
     private void OnDrawGizmos() {

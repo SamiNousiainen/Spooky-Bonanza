@@ -17,6 +17,9 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private GameObject umbrella;
     [SerializeField] private GameObject shield;
 
+    [SerializeField] private GameObject umbrellaOpen;
+    [SerializeField] private GameObject umbrellaClosed;
+
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackRange;
     [SerializeField] private ParticleSystem attackVFX;
@@ -67,6 +70,14 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
+        //hirvee kiire taas smh
+        if (isGliding || isBlocking) {
+            umbrellaOpen.SetActive(true);
+            umbrellaClosed.SetActive(false);
+        } else {
+            umbrellaOpen.SetActive(false);
+            umbrellaClosed.SetActive(true);
+        }
 
         HandleGlideAndBlockInput();
         HandleBlock();
@@ -92,7 +103,7 @@ public class PlayerCombat : MonoBehaviour
                 isGliding = false;
                 Debug.Log("Glide cancelled");
             }
-            animator.Play("Armature|Attack 0");
+            animator.SetTrigger("attack");
             StartCoroutine(DealDamage());
             SoundManager.instance.PlaySFX(SFXType.PlayerAttack, transform, 0.8f);
         }
@@ -148,6 +159,8 @@ public class PlayerCombat : MonoBehaviour
 
     private void HandleBlock()
     {
+
+        animator.SetBool("isBlocking", isBlocking);
         if (!GameUIManager.IsGameplayInputAllowed() || isAttacking)
         {
             playerMovement.canMove = true;
@@ -173,18 +186,16 @@ public class PlayerCombat : MonoBehaviour
     private void HandleGlide()
     {
         bool isFalling = playerMovement.velocity.y < 0f;
-
-        if (isGliding && playerMovement.isGrounded == false && isFalling)
-        {
+        animator.SetBool("isGliding", isGliding);
+        if (isGliding && playerMovement.isGrounded == false && isFalling) {
             playerMovement.ApplyGlide(glideGravity);
-        }
-
-        umbrella.SetActive(isGliding && playerMovement.isGrounded == false && !isAttacking);
+        } 
 
     } // HandleGlide
 
     private void HandleGlideAndBlockInput()
     {
+
         bool buttonPressed = inputReader.GlidePressed;
 
         if (wasGlidingOnLastFrame && playerMovement.isGrounded)

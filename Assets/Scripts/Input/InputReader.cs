@@ -64,12 +64,12 @@ public class InputReader : ScriptableObject, PlayerInput.IPlayerActions
         if (context.started)
         {
             GlidePressed = true;
+
         }
         else if (context.canceled)
         {
             GlidePressed = false;
         }
-
     }
 
     public void OnBlock(InputAction.CallbackContext context)
@@ -77,6 +77,7 @@ public class InputReader : ScriptableObject, PlayerInput.IPlayerActions
         if (context.started)
         {
             BlockPressed = true;
+            SoundManager.instance.PlaySFX(SFXType.PlayerUmbrella, Player.instance.transform, 0.8f);
         }
         else if (context.canceled)
         {
