@@ -10,7 +10,7 @@ public class FadeOutText : MonoBehaviour
     [SerializeField] private bool fadingIn = true;
     [SerializeField] private bool autoReverse = false;
 
-    [SerializeField] private float alphaValue;
+    public float alphaValue;
     [SerializeField] private float fadeSpeed;
     [SerializeField] private float delayTimer = 0f;
     [SerializeField] private bool isDelaying = false;

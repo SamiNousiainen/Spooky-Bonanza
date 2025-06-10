@@ -4762,6 +4762,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 737872809364897883, guid: 85a7f6e2a62847842a8e6b5d9d30868b, type: 3}
   m_PrefabInstance: {fileID: 244695863}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &495283281 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 7288565765239891758, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+  m_PrefabInstance: {fileID: 1710700822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &497679129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13445,6 +13450,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7126580145467696645, guid: 33cf87c3d13c87d448c2e4a4d20fc1c5, type: 3}
   m_PrefabInstance: {fileID: 1539665745}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &1540088891 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 1001065493107265786, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+  m_PrefabInstance: {fileID: 1710700822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1550281895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14729,6 +14739,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+--- !u!225 &1710700823 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 684427058691043796, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+  m_PrefabInstance: {fileID: 1710700822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1710700824 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7365416202056036306, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
@@ -14751,6 +14766,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc7408c78df5a464699d249cee158e78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &1710700826 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 5942938955217099884, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+  m_PrefabInstance: {fileID: 1710700822}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1710700827 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 7689927980107826909, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+  m_PrefabInstance: {fileID: 1710700822}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1710700828 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 2870731078683320967, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+  m_PrefabInstance: {fileID: 1710700822}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1710700829 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 5231479774178678005, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+  m_PrefabInstance: {fileID: 1710700822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1712696921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17645,6 +17680,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8481499443166561756, guid: 82867973cbcf33a4d88d32be53489e6f, type: 3}
   m_PrefabInstance: {fileID: 1080978288}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &2000518377 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 4750361890818956646, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+  m_PrefabInstance: {fileID: 1710700822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2001213897 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 157391028411541589, guid: c5d74afd8b4b20a4c96b58649c1a9761, type: 3}
@@ -18474,6 +18514,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5499007494117925224, guid: 169f18caef677aa4492ea0bb0e1cdece, type: 3}
   m_PrefabInstance: {fileID: 2067750228}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &2075261843 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 8103669698210224004, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+  m_PrefabInstance: {fileID: 1710700822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2078449605 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2886057012931454885, guid: d37920947c8d3b045b2d1542b0b4621d, type: 3}
@@ -18682,6 +18727,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8481499443166561756, guid: 82867973cbcf33a4d88d32be53489e6f, type: 3}
   m_PrefabInstance: {fileID: 1836266881}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &2101982320 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 391144301460474838, guid: 9a3a945a3c803604aa286c77aa9981af, type: 3}
+  m_PrefabInstance: {fileID: 1710700822}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2102632691
 PrefabInstance:
@@ -19181,6 +19231,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1710700825}
     - target: {fileID: 21207538557770927, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 21207538557770927, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
       propertyPath: sharedTextUI
       value: 
       objectReference: {fileID: 1710700824}
@@ -19189,17 +19243,53 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 504861847}
     - target: {fileID: 184795648989505685, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 184795648989505685, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
       propertyPath: sharedTextUI
       value: 
       objectReference: {fileID: 504861846}
+    - target: {fileID: 184795648989505685, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: keybindInterval
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 184795648989505685, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: keybindIcons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 184795648989505685, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: 'keybindIcons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2075261843}
+    - target: {fileID: 184795648989505685, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: 'keybindIcons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2000518377}
     - target: {fileID: 702972231305918598, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
       propertyPath: fadeScript
       value: 
       objectReference: {fileID: 1032080497}
     - target: {fileID: 702972231305918598, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 702972231305918598, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
       propertyPath: sharedTextUI
       value: 
       objectReference: {fileID: 1032080496}
+    - target: {fileID: 702972231305918598, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: keybindIcons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 702972231305918598, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: 'keybindIcons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 495283281}
+    - target: {fileID: 702972231305918598, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: 'keybindIcons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2101982320}
     - target: {fileID: 2246906697833011993, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
       propertyPath: fadeScript
       value: 
@@ -19208,14 +19298,54 @@ PrefabInstance:
       propertyPath: sharedTextUI
       value: 
       objectReference: {fileID: 1887573479}
+    - target: {fileID: 2246906697833011993, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: keybindInterval
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3323443967758894002, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
       propertyPath: fadeScript
       value: 
       objectReference: {fileID: 24075271}
     - target: {fileID: 3323443967758894002, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323443967758894002, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
       propertyPath: sharedTextUI
       value: 
       objectReference: {fileID: 24075270}
+    - target: {fileID: 3323443967758894002, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: keybindInterval
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323443967758894002, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: iconDelayBetween
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323443967758894002, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: keybindIcons.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323443967758894002, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: 'keybindIcons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1710700829}
+    - target: {fileID: 3323443967758894002, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: 'keybindIcons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1710700828}
+    - target: {fileID: 3323443967758894002, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: 'keybindIcons.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1710700827}
+    - target: {fileID: 3323443967758894002, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: 'keybindIcons.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1710700826}
+    - target: {fileID: 3323443967758894002, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: 'keybindIcons.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1710700823}
     - target: {fileID: 3727865786428490876, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1335.8909
@@ -19261,13 +19391,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 955836916}
     - target: {fileID: 3816700095413188208, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816700095413188208, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
       propertyPath: sharedTextUI
       value: 
       objectReference: {fileID: 955836915}
+    - target: {fileID: 3816700095413188208, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: keybindIcons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816700095413188208, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: 'keybindIcons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2101982320}
+    - target: {fileID: 3816700095413188208, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: 'keybindIcons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1540088891}
     - target: {fileID: 4065339454094200424, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
       propertyPath: fadeScript
       value: 
       objectReference: {fileID: 345988248}
+    - target: {fileID: 4065339454094200424, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
+      propertyPath: displayTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4065339454094200424, guid: 7bde32876a153ca4c90beed9f7802c4c, type: 3}
       propertyPath: sharedTextUI
       value: 
