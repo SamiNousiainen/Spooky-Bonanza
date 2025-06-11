@@ -19,6 +19,11 @@ public class EndScreenController : MonoBehaviour {
     [Header("UI")]
     [SerializeField] private TMP_Text totalCandyText;
 
+    private void Awake() {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     private void Start() {
 
         MusicManager.instance.PlayAllLayers();
