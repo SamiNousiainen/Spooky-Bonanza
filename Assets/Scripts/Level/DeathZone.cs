@@ -18,7 +18,7 @@ public class DeathZone : MonoBehaviour {
             if (!GameUIManager.infiniteLives)
             {
                 playerHealth.TakeDamage(damage);
-                SoundManager.instance.PlaySFX(SFXType.PlayerFall, Player.instance.transform, 0.8f);
+                SoundManager.instance.Play2DSFX(SFXType.PlayerFall);
             }
 
             if (playerHealth.currentHealth > 0) {
