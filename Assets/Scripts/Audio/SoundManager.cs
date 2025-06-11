@@ -19,10 +19,11 @@ public class SoundManager : MonoBehaviour {
     }
 
     private void Start() {
-        //purkka
-        audioMixer.SetFloat("MasterVolume", Mathf.Log10(0.5f) * 20f);
-        audioMixer.SetFloat("MusicVolume", Mathf.Log10(0.5f) * 20f);
-        audioMixer.SetFloat("SFXVolume", Mathf.Log10(0.5f) * 20f);
+
+        var data = InventoryManager.instance.Data;
+        audioMixer.SetFloat("MasterVolume", Mathf.Log10(data.masterVolume) * 20f);
+        audioMixer.SetFloat("MusicVolume", Mathf.Log10(data.musicVolume) * 20f);
+        audioMixer.SetFloat("SFXVolume", Mathf.Log10(data.sfxVolume) * 20f);
     }
 
     public void PlaySFX(SFXType sfxType, Transform transform, float volume) {

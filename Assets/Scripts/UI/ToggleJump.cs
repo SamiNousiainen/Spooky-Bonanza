@@ -8,7 +8,7 @@ public class ToggleJump : MonoBehaviour
 
     void Start()
     {
-        toggle.isOn = GameUIManager.alwaysMaxJump;
+        toggle.isOn = InventoryManager.instance.Data.alwaysMaxJump;
 
         toggle.onValueChanged.AddListener(OnToggleChanged);
     }
@@ -16,6 +16,8 @@ public class ToggleJump : MonoBehaviour
     private void OnToggleChanged(bool isOn)
     {
         GameUIManager.alwaysMaxJump = isOn;
+        InventoryManager.instance.Data.alwaysMaxJump = isOn;
+        SaveSystem.Save();
         Debug.Log("alwaysMaxJump asetettu arvoon: " + isOn);
     }
 }

@@ -74,7 +74,12 @@ public class InventoryManager : MonoBehaviour {
     public void ResetData() {
         Data = new PlayerData {
             sceneName = "1-Onboarding",
-            maxHealth = 3 
+            maxHealth = 3,
+            masterVolume = 0.5f,
+            musicVolume = 0.5f,
+            sfxVolume = 0.5f,
+            alwaysMaxJump = false,
+            infiniteLives = false
         };
     }
 

@@ -41,15 +41,6 @@ public class GameUIManager : MonoBehaviour {
     public static bool alwaysMaxJump = false;
     public static bool infiniteLives = false;
 
-    //[SerializeField] private InputReader m_inputReader;
-    //[Space(5), Header("Level End")]
-    //[SerializeField] private GameObject m_levelEndPanel;
-    //[SerializeField] private TMP_Text m_levelEndTimerText;
-
-
-
-
-
     private void Awake()
     {
         if (instance == null)
@@ -82,10 +73,18 @@ public class GameUIManager : MonoBehaviour {
         UpdateCandyAmount();
         UpdatePlayerHp();
 
-        audioMixer.SetFloat("MasterVolume", Mathf.Log10(masterSlider.value) * 20f);
-        audioMixer.SetFloat("MusicVolume", Mathf.Log10(musicSlider.value) * 20f);
-        audioMixer.SetFloat("SFXVolume", Mathf.Log10(sfxSlider.value) * 20f);
+        var data = InventoryManager.instance.Data;
 
+        masterSlider.value = data.masterVolume;
+        musicSlider.value = data.musicVolume;
+        sfxSlider.value = data.sfxVolume;
+
+        audioMixer.SetFloat("MasterVolume", Mathf.Log10(data.masterVolume) * 20f);
+        audioMixer.SetFloat("MusicVolume", Mathf.Log10(data.musicVolume) * 20f);
+        audioMixer.SetFloat("SFXVolume", Mathf.Log10(data.sfxVolume) * 20f);
+
+        alwaysMaxJump = data.alwaysMaxJump;
+        infiniteLives = data.infiniteLives;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -148,6 +147,14 @@ public class GameUIManager : MonoBehaviour {
         fade.SetUpdate(true);
         fade.onComplete += () => {
             Time.timeScale = 1f;
+
+            var data = InventoryManager.instance.Data;
+            data.masterVolume = masterSlider.value;
+            data.musicVolume = musicSlider.value;
+            data.sfxVolume = sfxSlider.value;
+            data.alwaysMaxJump = alwaysMaxJump;
+            data.infiniteLives = infiniteLives;
+
             SaveSystem.Save();
             SceneManager.LoadSceneAsync("MainMenuScene");
             MusicManager.instance.PlayOnlyBaseLayer();
@@ -170,11 +177,15 @@ public class GameUIManager : MonoBehaviour {
     public void onToggleMaxJump(bool jumpValue)
     {
         alwaysMaxJump = jumpValue;
+        InventoryManager.instance.Data.alwaysMaxJump = jumpValue;
+        SaveSystem.Save();
     }
 
     public void OnToggleInfiniteLives(bool lives)
     {
         infiniteLives = lives;
+        InventoryManager.instance.Data.infiniteLives = lives;
+        SaveSystem.Save();
     }
 
     public static bool IsGameplayInputAllowed()
@@ -184,14 +195,21 @@ public class GameUIManager : MonoBehaviour {
 
     public void OnMasterVolumeChanged(float value) {
         audioMixer.SetFloat("MasterVolume", Mathf.Log10(value) * 20f);
+        InventoryManager.instance.Data.masterVolume = value;
+        SaveSystem.Save();
     }
 
     public void OnMusicVolumeChanged(float value) {
         audioMixer.SetFloat("MusicVolume", Mathf.Log10(value) * 20f);
+        InventoryManager.instance.Data.musicVolume = value;
+        SaveSystem.Save();
+
     }
 
     public void OnSFXVolumeChanged(float value) {
         audioMixer.SetFloat("SFXVolume", Mathf.Log10(value) * 20f);
+        InventoryManager.instance.Data.sfxVolume = value;
+        SaveSystem.Save();
     }
 
     #endregion
@@ -217,13 +235,6 @@ public class GameUIManager : MonoBehaviour {
         checkpointText.color = Color.white;
         checkpointText.DOFade(0f, 2f);
     }
-
-    /// <summary>
-    /// Convert linear slider values to logarithmic decibel values
-    /// </summary>
-    /// <param name="value"></param>
-    /// <returns></returns>
-    //private static float ToLogarithmicVolume(float value) => Mathf.Log10(value) * 20f;
 
 
     /// <summary>

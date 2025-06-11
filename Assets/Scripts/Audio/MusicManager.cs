@@ -36,7 +36,7 @@ public class MusicManager : MonoBehaviour {
 
     public void FadeInLayer(int layerIndex) {
         if (layerIndex >= 0 && layerIndex < musicLayers.Length) {
-            musicLayers[layerIndex].DOFade(1f, fadeDuration);
+            musicLayers[layerIndex].DOFade(InventoryManager.instance.Data.musicVolume, fadeDuration);
         } else {
             Debug.LogWarning("Music layer index out of bounds.");
         }

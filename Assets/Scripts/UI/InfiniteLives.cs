@@ -8,7 +8,7 @@ public class InfiniteLives : MonoBehaviour
 
     void Start()
     {
-        toggle.isOn = GameUIManager.infiniteLives;
+        toggle.isOn = InventoryManager.instance.Data.infiniteLives;
 
         toggle.onValueChanged.AddListener(OnToggleChanged);
     }
@@ -16,6 +16,8 @@ public class InfiniteLives : MonoBehaviour
     private void OnToggleChanged(bool isOn)
     {
         GameUIManager.infiniteLives = isOn;
+        InventoryManager.instance.Data.infiniteLives = isOn;
+        SaveSystem.Save();
         Debug.Log("Infinite Lives asetettu arvoon: " + isOn);
     }
 }
