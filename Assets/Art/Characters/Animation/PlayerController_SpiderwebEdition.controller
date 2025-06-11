@@ -20,7 +20,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 11e04bf2fedc0834da13719de7669a57, type: 2}
     m_Threshold: 3.1
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
+    m_TimeScale: 2
     m_CycleOffset: 0
     m_DirectBlendParameter: xzVelocity
     m_Mirror: 0
