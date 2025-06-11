@@ -317,8 +317,8 @@ MonoBehaviour:
   m_Material: {fileID: -876546973899608171, guid: 90c612e12f0916444a0bbba1f6b9f5d4, type: 3}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
+  m_StartAngleFade: 0
+  m_EndAngleFade: 58.70967
   m_UVScale: {x: 1, y: 1}
   m_UVBias: {x: 0, y: 0}
   m_DecalLayerMask: 1
@@ -917,7 +917,7 @@ Animator:
   m_GameObject: {fileID: 7859857230909561483}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: d855a2ac537b2184c9647bf0db4b4bdc, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2dd74f5386b9a5644bdea3d79e1c1009, type: 2}
+  m_Controller: {fileID: 9100000, guid: ab2fb421961427a48a9af8399935a6cb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
