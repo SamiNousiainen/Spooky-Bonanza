@@ -39099,6 +39099,8 @@ GameObject:
   - component: {fileID: 1285996304}
   - component: {fileID: 1285996307}
   - component: {fileID: 1285996306}
+  - component: {fileID: 1285996308}
+  - component: {fileID: 1285996309}
   m_Layer: 0
   m_Name: PlaceholderWater
   m_TagString: Untagged
@@ -39174,6 +39176,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285996303}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1285996308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285996303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc8eba4caa9ab9945bdae4f503038055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterParticles: {fileID: 81564441235722813, guid: 91243741ba6a4c34f8e692e3e51eddda, type: 3}
+--- !u!65 &1285996309
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285996303}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 0.3, z: 10}
+  m_Center: {x: 0, y: -0.03, z: 0}
 --- !u!4 &1286033970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 805836289447402716, guid: 1def645d403d74a43b699821b995f422, type: 3}
@@ -44646,6 +44682,8 @@ GameObject:
   - component: {fileID: 1443610708}
   - component: {fileID: 1443610710}
   - component: {fileID: 1443610709}
+  - component: {fileID: 1443610711}
+  - component: {fileID: 1443610712}
   m_Layer: 0
   m_Name: PlaceholderWater (1)
   m_TagString: Untagged
@@ -44721,6 +44759,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443610707}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1443610711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443610707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc8eba4caa9ab9945bdae4f503038055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterParticles: {fileID: 81564441235722813, guid: 91243741ba6a4c34f8e692e3e51eddda, type: 3}
+--- !u!65 &1443610712
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443610707}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 0.3, z: 10}
+  m_Center: {x: 0, y: -0.03, z: 0}
 --- !u!1 &1447957814
 GameObject:
   m_ObjectHideFlags: 0
