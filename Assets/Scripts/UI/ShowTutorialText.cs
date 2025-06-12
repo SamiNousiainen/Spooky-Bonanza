@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using DG.Tweening;
 
 public class ShowTutorialText : MonoBehaviour
 {
@@ -9,25 +10,30 @@ public class ShowTutorialText : MonoBehaviour
     public FadeOutText fadeScript;
     public float displayTime = 3f;
 
-    [SerializeField] private List<CanvasGroup> keybindIcons;
+    [SerializeField] private CanvasGroup keybindIcons;
     [SerializeField] private float keybindFadeDuration = 0.5f;
-    [SerializeField] private float keybindInterval = 1f;
+    //[SerializeField] private float keybindInterval = 1f;
+    [SerializeField] private TMP_Text text;
 
     private Coroutine showMessageCoroutine;
-    private bool isPlayerInside = false;
+    //private bool isPlayerInside = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !isPlayerInside)
+        if (other.CompareTag("Player"))
         {
-            isPlayerInside = true;
+            if (keybindIcons != null)
+            {
+                keybindIcons.DOFade(1f, keybindFadeDuration);
+            }
 
-            if (fadeScript != null)
-                fadeScript.FadeIn();
-            else
-                sharedTextUI.gameObject.SetActive(true);
+            text.DOFade(1f, keybindFadeDuration);
+            //if (fadeScript != null)
+            //    fadeScript.FadeIn();
+            //else
+            //    sharedTextUI.gameObject.SetActive(true);
 
-            showMessageCoroutine = StartCoroutine(ShowMessage());
+            //showMessageCoroutine = StartCoroutine(ShowMessage());
         }
     }
 
@@ -35,82 +41,89 @@ public class ShowTutorialText : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            isPlayerInside = false;
+             if (keybindIcons != null)
 
-            if (showMessageCoroutine != null)
-            {
-                StopCoroutine(showMessageCoroutine);
-                showMessageCoroutine = null;
-            }
+             keybindIcons.DOFade(0f, keybindFadeDuration);
+            
 
-            if (fadeScript != null)
-                fadeScript.FadeOut();
-            else
-                sharedTextUI.gameObject.SetActive(false);
+            text.DOFade(0f, keybindFadeDuration);
+            //    isPlayerInside = false;
 
-            StartCoroutine(FadeOutKeybinds());
-        }
-    }
+            //    if (showMessageCoroutine != null)
+            //    {
+            //        StopCoroutine(showMessageCoroutine);
+            //        showMessageCoroutine = null;
+            //    }
 
-    IEnumerator ShowMessage()
-    {
-        yield return new WaitForSeconds(1f);
+            //    if (fadeScript != null)
+            //        fadeScript.FadeOut();
+            //    else
+            //        sharedTextUI.gameObject.SetActive(false);
 
-        StartCoroutine(FadeInKeybindsOneByOne());
-
-        yield return new WaitForSeconds(displayTime);
-
-        if (isPlayerInside)
-        {
-            if (fadeScript != null)
-                fadeScript.FadeOut();
-            else
-                sharedTextUI.gameObject.SetActive(false);
-
-            StartCoroutine(FadeOutKeybinds());
-
-            Destroy(gameObject, keybindFadeDuration + 0.1f);
-        }
-    }
-
-    private IEnumerator FadeInKeybindsOneByOne()
-    {
-        for (int i = 0; i < keybindIcons.Count; i++)
-        {
-            CanvasGroup cg = keybindIcons[i];
-            cg.gameObject.SetActive(true);
-            StartCoroutine(FadeCanvasGroup(cg, 0f, 1f, keybindFadeDuration));
-            yield return new WaitForSeconds(keybindInterval);
-        }
-    }
-
-    private IEnumerator FadeOutKeybinds()
-    {
-        foreach (CanvasGroup cg in keybindIcons)
-        {
-            StartCoroutine(FadeCanvasGroup(cg, 1f, 0f, keybindFadeDuration));
+            //    StartCoroutine(FadeOutKeybinds());
+            //}
         }
 
-        yield return new WaitForSeconds(keybindFadeDuration);
+        //IEnumerator ShowMessage()
+        //{
+        //    yield return new WaitForSeconds(1f);
 
-        foreach (CanvasGroup cg in keybindIcons)
-        {
-            cg.gameObject.SetActive(false);
-        }
-    }
+        //    StartCoroutine(FadeInKeybindsOneByOne());
 
-    private IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float duration)
-    {
-        float time = 0f;
-        cg.alpha = start;
+        //    //yield return new WaitForSeconds(displayTime);
 
-        while (time < duration)
-        {
-            cg.alpha = Mathf.Lerp(start, end, time / duration);
-            time += Time.deltaTime;
-            yield return null;
-        }
+        //if (isPlayerInside)
+        //{
+        //    if (fadeScript != null)
+        //        fadeScript.FadeOut();
+        //    else
+        //        sharedTextUI.gameObject.SetActive(false);
 
-        cg.alpha = end;
+        //    StartCoroutine(FadeOutKeybinds());
+
+        //    Destroy(gameObject, keybindFadeDuration + 0.1f);
+        //}
+        //}
+
+        //private IEnumerator FadeInKeybindsOneByOne()
+        //{
+        //    for (int i = 0; i < keybindIcons.Count; i++)
+        //    {
+        //        CanvasGroup cg = keybindIcons[i];
+        //        cg.gameObject.SetActive(true);
+        //        StartCoroutine(FadeCanvasGroup(cg, 0f, 1f, keybindFadeDuration));
+        //        yield return new WaitForSeconds(keybindInterval);
+        //    }
+        //}
+
+        //private IEnumerator FadeOutKeybinds()
+        //{
+        //    foreach (CanvasGroup cg in keybindIcons)
+        //    {
+        //        StartCoroutine(FadeCanvasGroup(cg, 1f, 0f, keybindFadeDuration));
+        //    }
+
+        //    yield return new WaitForSeconds(keybindFadeDuration);
+
+        //    foreach (CanvasGroup cg in keybindIcons)
+        //    {
+        //        cg.gameObject.SetActive(false);
+        //    }
+        //}
+
+        //private IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float duration)
+        //{
+        //    float time = 0f;
+        //    cg.alpha = start;
+
+        //    while (time < duration)
+        //    {
+        //        cg.alpha = Mathf.Lerp(start, end, time / duration);
+        //        time += Time.deltaTime;
+        //        yield return null;
+        //    }
+
+        //    cg.alpha = end;
+        //}
     }
 }
